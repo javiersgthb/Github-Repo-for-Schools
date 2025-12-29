@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.82" dur="00:00:01.81">&gt;&gt; Joyce: Hi, this<br/>is Joyce Farrell.</p>
+    <p begin="00:00:02.63" dur="00:00:03.86">Let's finish talking about<br/>the program development cycle.</p>
+    <p begin="00:00:06.49" dur="00:00:01.71">In the last two videos, you learned</p>
+    <p begin="00:00:08.20" dur="00:00:03.17">that when a programmer develops<br/>a program the first step is</p>
+    <p begin="00:00:11.37" dur="00:00:02.40">to understand the<br/>problem and we talked</p>
+    <p begin="00:00:13.77" dur="00:00:03.80">about a number doubling program<br/>that lets a user type in a value</p>
+    <p begin="00:00:17.57" dur="00:00:03.21">and find out what 2<br/>times the value is.</p>
+    <p begin="00:00:20.78" dur="00:00:02.35">We then looked at<br/>planning the logic,</p>
+    <p begin="00:00:23.13" dur="00:00:03.99">and when we planned the logic,<br/>we looked at 2 tools: a flowchart</p>
+    <p begin="00:00:27.12" dur="00:00:03.20">and pseudocode, both of<br/>which express the logic</p>
+    <p begin="00:00:30.32" dur="00:00:01.23">of the program.</p>
+    <p begin="00:00:31.55" dur="00:00:03.93">In both of these, the user is<br/>allowed to input a number,</p>
+    <p begin="00:00:35.48" dur="00:00:03.22">the answer is computed<br/>as the number times 2,</p>
+    <p begin="00:00:38.70" dur="00:00:02.10">and then the answer is output.</p>
+    <p begin="00:00:40.80" dur="00:00:03.80">After the logic is planned,<br/>you can write the code</p>
+    <p begin="00:00:44.60" dur="00:00:02.47">in a computer programming<br/>language, and we looked</p>
+    <p begin="00:00:47.07" dur="00:00:02.93">at an example written in Java.</p>
+    <p begin="00:00:50.00" dur="00:00:04.10">After the code is written, you<br/>use a compiler or an interpreter</p>
+    <p begin="00:00:54.10" dur="00:00:03.90">to translate that<br/>code into 1s and 0s,</p>
+    <p begin="00:00:58.00" dur="00:00:01.70">it becomes machine language</p>
+    <p begin="00:00:59.70" dur="00:00:03.95">or the internal circuitry<br/>language of the computer.</p>
+    <p begin="00:01:03.65" dur="00:00:03.46">When the program is successfully<br/>translated, you can test</p>
+    <p begin="00:01:07.11" dur="00:00:01.15">the program.</p>
+    <p begin="00:01:08.26" dur="00:00:04.03">Testing the program involves<br/>executing it several times</p>
+    <p begin="00:01:12.29" dur="00:00:02.66">to make sure that the<br/>output is correct.</p>
+    <p begin="00:01:14.95" dur="00:00:03.16">For example, with the Java<br/>program, one way to run it is</p>
+    <p begin="00:01:18.11" dur="00:00:02.68">to go to the Command<br/>Prompt and type java</p>
+    <p begin="00:01:20.79" dur="00:00:01.98">and the name of the program.</p>
+    <p begin="00:01:22.77" dur="00:00:02.73">When you hit Enter, you see<br/>the prompt that was part</p>
+    <p begin="00:01:25.50" dur="00:00:01.65">of the program, Enter a number</p>
+    <p begin="00:01:27.15" dur="00:00:02.64">and 2 little right-facing<br/>arrows.</p>
+    <p begin="00:01:29.79" dur="00:00:03.91">You might type a 7 and when<br/>you hit Enter, the output is the</p>
+    <p begin="00:01:33.70" dur="00:00:03.01">Answer is 14. That's correct</p>
+    <p begin="00:01:36.71" dur="00:00:03.00">and you have one successful<br/>test of the program.</p>
+    <p begin="00:01:39.71" dur="00:00:02.07">An experienced programmer knows</p>
+    <p begin="00:01:41.78" dur="00:00:03.21">that you had better test<br/>the program many more times</p>
+    <p begin="00:01:44.99" dur="00:00:03.45">to make sure it's correct<br/>with other values as well,</p>
+    <p begin="00:01:48.44" dur="00:00:04.26">so you might run the program<br/>again and type in 124.</p>
+    <p begin="00:01:52.70" dur="00:00:04.80">If the answer comes up 248, you<br/>become increasingly confident</p>
+    <p begin="00:01:57.50" dur="00:00:02.29">that this program does, indeed,</p>
+    <p begin="00:01:59.79" dur="00:00:03.02">double numbers that<br/>the user inputs.</p>
+    <p begin="00:02:02.81" dur="00:00:03.59">You would then run the program<br/>many more times and, finally,</p>
+    <p begin="00:02:06.40" dur="00:00:03.52">you would be satisfied<br/>that it is correct.</p>
+    <p begin="00:02:09.92" dur="00:00:03.01">After the program has<br/>been tested, you can put it</p>
+    <p begin="00:02:12.93" dur="00:00:01.38">into production.</p>
+    <p begin="00:02:14.31" dur="00:00:02.31">Putting it into production<br/>means turning it</p>
+    <p begin="00:02:16.62" dur="00:00:02.53">over to the clients<br/>who will use it.</p>
+    <p begin="00:02:19.15" dur="00:00:02.17">It might also involve<br/>training the clients.</p>
+    <p begin="00:02:21.32" dur="00:00:02.94">You might hold a class for<br/>them in how to use the program.</p>
+    <p begin="00:02:24.26" dur="00:00:03.32">You might publish a booklet for<br/>them on how to use the program.</p>
+    <p begin="00:02:27.58" dur="00:00:03.79">It might involve all sorts<br/>of tasks to turn it over</p>
+    <p begin="00:02:31.37" dur="00:00:02.51">and make it a viable program.</p>
+    <p begin="00:02:33.88" dur="00:00:06.22">After a program is in production,<br/>over time you may need</p>
+    <p begin="00:02:40.10" dur="00:00:02.30">to maintain the program.</p>
+    <p begin="00:02:42.40" dur="00:00:03.07">For example, suppose your<br/>user comes to you and says,</p>
+    <p begin="00:02:45.47" dur="00:00:03.24">"You know the number doubling<br/>program has been working great,</p>
+    <p begin="00:02:48.71" dur="00:00:02.91">but the other day<br/>something terrible happened.</p>
+    <p begin="00:02:51.62" dur="00:00:02.76">We were running the program<br/>and it said enter a number</p>
+    <p begin="00:02:54.38" dur="00:00:02.52">and a user typed in 7, s-e-v-e-n.</p>
+    <p begin="00:02:56.90" dur="00:00:03.67">The user pressed the Enter key,</p>
+    <p begin="00:03:00.57" dur="00:00:02.74">and, oh my goodness, all these<br/>error messages appeared</p>
+    <p begin="00:03:03.31" dur="00:00:02.11">and we didn't know what to do."</p>
+    <p begin="00:03:05.42" dur="00:00:01.56">Well, the problem,<br/>if you can read</p>
+    <p begin="00:03:06.98" dur="00:00:02.77">that first error message<br/>line and kind of figure</p>
+    <p begin="00:03:09.75" dur="00:00:03.46">out what it means it says,<br/>"InputMismatchException."</p>
+    <p begin="00:03:13.21" dur="00:00:02.05">The problem is the<br/>user typed a word</p>
+    <p begin="00:03:15.26" dur="00:00:03.22">and the program was<br/>only expecting a digit.</p>
+    <p begin="00:03:18.48" dur="00:00:02.15">You might handle this<br/>in any number of ways.</p>
+    <p begin="00:03:20.63" dur="00:00:02.63">You might change the prompt<br/>to say something like,</p>
+    <p begin="00:03:23.26" dur="00:00:03.30">"Enter a number and make sure<br/>it's a digit and not a word."</p>
+    <p begin="00:03:26.56" dur="00:00:03.47">You might instead allow<br/>the user to enter a word,</p>
+    <p begin="00:03:30.03" dur="00:00:01.27">but change the word</p>
+    <p begin="00:03:31.30" dur="00:00:03.16">into a number internally<br/>in the program.</p>
+    <p begin="00:03:34.46" dur="00:00:02.96">You might handle the problem<br/>in any number of ways.</p>
+    <p begin="00:03:37.42" dur="00:00:03.31">It's up to your client<br/>what they want you to do.</p>
+    <p begin="00:03:40.73" dur="00:00:03.40">But making the changes that<br/>are necessary is maintaining</p>
+    <p begin="00:03:44.13" dur="00:00:02.12">the program.</p>
+    <p begin="00:03:46.25" dur="00:00:03.81">Over time your client may come<br/>to you and say, "You know,</p>
+    <p begin="00:03:50.06" dur="00:00:02.92">we'd like some more<br/>changes to this program."</p>
+    <p begin="00:03:52.98" dur="00:00:01.78">For example, what<br/>if the client wants</p>
+    <p begin="00:03:54.76" dur="00:00:03.29">to let the user multiply<br/>any 2 values, not just 2</p>
+    <p begin="00:03:58.05" dur="00:00:03.46">but maybe triple or<br/>quadruple any value?</p>
+    <p begin="00:04:01.51" dur="00:00:02.58">Or suppose the client says,<br/>"You know, this program is</p>
+    <p begin="00:04:04.09" dur="00:00:03.17">so successful let's start<br/>charging money, and I want you</p>
+    <p begin="00:04:07.26" dur="00:00:02.88">to keep track of the<br/>money the user owes us</p>
+    <p begin="00:04:10.14" dur="00:00:03.35">and let's let the user put<br/>the fee on a credit card,</p>
+    <p begin="00:04:13.49" dur="00:00:03.14">so add that capability<br/>to the program."</p>
+    <p begin="00:04:16.63" dur="00:00:01.83">And, of course, if the<br/>user's going to put the fee</p>
+    <p begin="00:04:18.46" dur="00:00:02.66">on a credit card, let's<br/>have the program dial</p>
+    <p begin="00:04:21.12" dur="00:00:01.66">into the credit card company</p>
+    <p begin="00:04:22.78" dur="00:00:04.73">and make sure the user has money<br/>available on a credit card.</p>
+    <p begin="00:04:27.51" dur="00:00:01.83">And, you know, our good users,</p>
+    <p begin="00:04:29.34" dur="00:00:03.19">after they use the program 10<br/>times, let's give them a discount</p>
+    <p begin="00:04:32.53" dur="00:00:04.00">and not charge $.10<br/>per use but only $.08,</p>
+    <p begin="00:04:36.53" dur="00:00:02.30">and so on and so on and so on.</p>"
+    <p begin="00:04:38.83" dur="00:00:02.87">And the user might have<br/>so many new requirements</p>
+    <p begin="00:04:41.70" dur="00:00:02.22">that you might say,<br/>"Wait a minute,</p>
+    <p begin="00:04:43.92" dur="00:00:04.53">there's so many issues here, I<br/>better understand the problem</p>
+    <p begin="00:04:48.45" dur="00:00:02.85">all over again and<br/>let's sit down and talk</p>
+    <p begin="00:04:51.30" dur="00:00:02.91">about all the changes<br/>that need to be made."</p>
+    <p begin="00:04:54.21" dur="00:00:03.05">And when you understand the<br/>new problem, you might then want</p>
+    <p begin="00:04:57.26" dur="00:00:04.88">to plan the logic for the<br/>new program, write its code,</p>
+    <p begin="00:05:02.14" dur="00:00:05.08">translate that code into machine<br/>language, then test the new</p>
+    <p begin="00:05:07.22" dur="00:00:03.45">program and see if it<br/>works correctly, and put it</p>
+    <p begin="00:05:10.67" dur="00:00:03.92">into production with all the new<br/>instructions for the clients.</p>
+    <p begin="00:05:14.59" dur="00:00:05.08">And over time that new program<br/>may need to be maintained.</p>
+    <p begin="00:05:19.67" dur="00:00:03.39">And the program development<br/>cycle may continue over</p>
+    <p begin="00:05:23.06" dur="00:00:05.33">and over again many times<br/>over the life of the program.</p>
+    <p begin="00:05:28.39" dur="00:00:01.39">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

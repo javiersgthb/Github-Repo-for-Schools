@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:01.06" dur="00:00:02.31">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:03.37" dur="00:00:03.97">I want to talk to you about<br/>understanding computer files.</p>
+    <p begin="00:00:07.34" dur="00:00:03.68">When you store data in a<br/>computer, you have two choices.</p>
+    <p begin="00:00:11.02" dur="00:00:03.99">Temporary volatile memory,<br/>also called RAM, which stands</p>
+    <p begin="00:00:15.01" dur="00:00:01.77">for random access memory.</p>
+    <p begin="00:00:16.78" dur="00:00:02.56">This is where you store<br/>data that the program</p>
+    <p begin="00:00:19.34" dur="00:00:03.55">that you're using<br/>currently is working with.</p>
+    <p begin="00:00:22.89" dur="00:00:03.94">You also can store data in<br/>permanent, nonvolatile storage</p>
+    <p begin="00:00:26.83" dur="00:00:02.82">for longer periods<br/>of time, maybe days</p>
+    <p begin="00:00:29.65" dur="00:00:02.42">or weeks between using it.</p>
+    <p begin="00:00:32.07" dur="00:00:01.45">Hardware devices that are used</p>
+    <p begin="00:00:33.52" dur="00:00:07.52">for nonvolatile storage include<br/>hard disks, DVDs, USB drives,</p>
+    <p begin="00:00:41.04" dur="00:00:01.25">and on larger systems,</p>
+    <p begin="00:00:42.29" dur="00:00:03.21">frequently reels<br/>of magnetic tape.</p>
+    <p begin="00:00:45.50" dur="00:00:03.75">Every file that you store in<br/>a computer system has a name.</p>
+    <p begin="00:00:49.25" dur="00:00:03.46">And the name often ends with<br/>a dot and an extension,</p>
+    <p begin="00:00:52.71" dur="00:00:03.35">and the extension tells you<br/>the type of file that it is.</p>
+    <p begin="00:00:56.06" dur="00:00:05.09">For example, you might store a<br/>document called TermPaper.doc.</p>
+    <p begin="00:01:01.15" dur="00:00:04.05">And the .doc would indicate that<br/>it's a word-processing document</p>
+    <p begin="00:01:05.20" dur="00:00:03.14">that can be used by a<br/>word-processing program.</p>
+    <p begin="00:01:08.34" dur="00:00:03.92">Another file might be<br/>called GraduationPhoto.jpg.</p>
+    <p begin="00:01:12.26" dur="00:00:04.90">And jpg is an extension that<br/>means it's a photograph file.</p>
+    <p begin="00:01:17.16" dur="00:00:02.76">Employees.dat might<br/>be a data file.</p>
+    <p begin="00:01:19.92" dur="00:00:02.51">This might be a file that<br/>holds the facts and figures</p>
+    <p begin="00:01:22.43" dur="00:00:03.57">about your employees that could<br/>be used by a personnel program</p>
+    <p begin="00:01:26.00" dur="00:00:03.34">or a payroll program<br/>in your organization.</p>
+    <p begin="00:01:29.34" dur="00:00:04.30">Besides a name, every<br/>file has a date and a time</p>
+    <p begin="00:01:33.64" dur="00:00:01.73">that it was last modified.</p>
+    <p begin="00:01:35.37" dur="00:00:03.06">And that information is<br/>stored on your system.</p>
+    <p begin="00:01:38.43" dur="00:00:05.12">And besides a name and a<br/>time, every file has a size.</p>
+    <p begin="00:01:43.55" dur="00:00:02.40">The size of computer<br/>files is measured</p>
+    <p begin="00:01:45.95" dur="00:00:02.72">in bits at the lowest level.</p>
+    <p begin="00:01:48.67" dur="00:00:04.13">Bits are the little zeros and<br/>ones that make up the circuitry</p>
+    <p begin="00:01:52.80" dur="00:00:01.94">of the computer system.</p>
+    <p begin="00:01:54.74" dur="00:00:03.01">Bits are so small that when<br/>people talk about data,</p>
+    <p begin="00:01:57.75" dur="00:00:01.82">they seldom refer to bits.</p>
+    <p begin="00:01:59.57" dur="00:00:02.52">Instead, they refer to bytes.</p>
+    <p begin="00:02:02.09" dur="00:00:02.51">It takes eight bits<br/>to make a byte.</p>
+    <p begin="00:02:04.60" dur="00:00:03.52">And typically, eight bits are<br/>required to store a character,</p>
+    <p begin="00:02:08.12" dur="00:00:03.06">such as an A or a B or a 7.</p>
+    <p begin="00:02:11.18" dur="00:00:02.96">Bytes are so small that<br/>when people talk about data,</p>
+    <p begin="00:02:14.14" dur="00:00:02.59">they more frequently<br/>talk about kilobytes.</p>
+    <p begin="00:02:16.73" dur="00:00:03.16">A kilobyte is approximately<br/>1,000 bytes.</p>
+    <p begin="00:02:19.89" dur="00:00:04.92">So, a small file might be one<br/>or two kilobytes in size.</p>
+    <p begin="00:02:24.81" dur="00:00:03.88">Sometimes kilobytes are too<br/>small to refer to large files,</p>
+    <p begin="00:02:28.69" dur="00:00:02.17">so you might talk<br/>about megabytes,</p>
+    <p begin="00:02:30.86" dur="00:00:02.17">which are millions of bytes.</p>
+    <p begin="00:02:33.03" dur="00:00:03.81">And computer memory itself is<br/>often measured in gigabytes,</p>
+    <p begin="00:02:36.84" dur="00:00:02.49">which are billions of bytes.</p>
+    <p begin="00:02:39.33" dur="00:00:02.35">There are also additional<br/>terms that refer</p>
+    <p begin="00:02:41.68" dur="00:00:03.29">to larger quantities of storage.</p>
+    <p begin="00:02:46.19" dur="00:00:02.68">When you store files<br/>on a hardware device,</p>
+    <p begin="00:02:48.87" dur="00:00:05.51">such as a hard drive, you might<br/>organize the files into folders.</p>
+    <p begin="00:02:54.38" dur="00:00:04.34">And within a folder, you might<br/>have additional subfolders.</p>
+    <p begin="00:02:58.72" dur="00:00:01.46">And within a subfolder,</p>
+    <p begin="00:03:00.18" dur="00:00:03.44">you might have even more<br/>additional subfolders.</p>
+    <p begin="00:03:03.62" dur="00:00:02.11">The complete list of<br/>the hardware device,</p>
+    <p begin="00:03:05.73" dur="00:00:03.75">plus all the folders that lead<br/>to the ultimate file location,</p>
+    <p begin="00:03:09.48" dur="00:00:02.39">is called the file's path.</p>
+    <p begin="00:03:14.29" dur="00:00:02.29">Let's take a look at<br/>some typical files stored</p>
+    <p begin="00:03:16.58" dur="00:00:01.26">on a computer.</p>
+    <p begin="00:03:17.84" dur="00:00:02.83">For example, if you're using<br/>the Vista operating system</p>
+    <p begin="00:03:20.67" dur="00:00:02.30">and you open up the<br/>computer icon,</p>
+    <p begin="00:03:22.97" dur="00:00:02.13">you might see some<br/>hardware devices</p>
+    <p begin="00:03:25.10" dur="00:00:01.75">that are part of your computer.</p>
+    <p begin="00:03:26.85" dur="00:00:02.36">This computer happens<br/>to have an E drive,</p>
+    <p begin="00:03:29.21" dur="00:00:02.50">an E Drive and a C drive.</p>
+    <p begin="00:03:31.71" dur="00:00:02.61">If you open up the C<br/>Ddrive by double-clicking,</p>
+    <p begin="00:03:34.32" dur="00:00:03.28">you might see some folders<br/>that are stored on that drive.</p>
+    <p begin="00:03:37.60" dur="00:00:04.45">And I have one called<br/>FileDemonstration.</p>
+    <p begin="00:03:42.05" dur="00:00:01.88">If I open up FileDemonstration,</p>
+    <p begin="00:03:43.93" dur="00:00:02.28">you can see that the<br/>path is the C drive,</p>
+    <p begin="00:03:46.21" dur="00:00:01.94">the FileDemonstration folder,</p>
+    <p begin="00:03:48.15" dur="00:00:03.69">and then there are some<br/>individual files stored there.</p>
+    <p begin="00:03:51.84" dur="00:00:02.79">For example, I have one<br/>called ShoppingList.</p>
+    <p begin="00:03:54.63" dur="00:00:03.09">It has a date and time<br/>that it was last modified.</p>
+    <p begin="00:03:57.72" dur="00:00:01.46">And it's a text document.</p>
+    <p begin="00:03:59.18" dur="00:00:01.74">And that means you can read it.</p>
+    <p begin="00:04:00.92" dur="00:00:04.58">And it's one kilobyte in size,<br/>approximately 1,000 bytes.</p>
+    <p begin="00:04:05.50" dur="00:00:01.78">If you open up the<br/>shopping list,</p>
+    <p begin="00:04:07.28" dur="00:00:02.81">you can see that it's just<br/>a short shopping list.</p>
+    <p begin="00:04:10.09" dur="00:00:02.62">As a matter of fact,<br/>it has far fewer</p>
+    <p begin="00:04:12.71" dur="00:00:02.79">than 1,000 bytes stored in it.</p>
+    <p begin="00:04:15.50" dur="00:00:05.04">If you right-click on ShoppingList<br/>and choose its properties,</p>
+    <p begin="00:04:20.54" dur="00:00:04.18">you can see the name of the<br/>file and what program opens it.</p>
+    <p begin="00:04:24.72" dur="00:00:03.53">And you can see that it<br/>is only 35 bytes in size.</p>
+    <p begin="00:04:28.25" dur="00:00:03.90">That's how many letters it took<br/>to store the shopping list.</p>
+    <p begin="00:04:32.15" dur="00:00:03.52">But when you look into my<br/>computer, the smallest size</p>
+    <p begin="00:04:35.67" dur="00:00:02.10">that is ever shown<br/>is one kilobyte.</p>
+    <p begin="00:04:37.77" dur="00:00:04.22">So, it's showing you the least<br/>number it can show you for this.</p>
+    <p begin="00:04:41.99" dur="00:00:02.80">I also have something<br/>called TestDraw.</p>
+    <p begin="00:04:44.79" dur="00:00:01.68">It's a CLASS file.</p>
+    <p begin="00:04:46.47" dur="00:00:01.94">It happens to be<br/>a program written</p>
+    <p begin="00:04:48.41" dur="00:00:04.19">in the Java programming<br/>language that has been compiled.</p>
+    <p begin="00:04:52.60" dur="00:00:03.55">If you open up this file,<br/>it's not very readable.</p>
+    <p begin="00:04:56.15" dur="00:00:02.52">There's a few words in<br/>there that you can identify,</p>
+    <p begin="00:04:58.67" dur="00:00:03.22">but there's also a<br/>lot of other codes.</p>
+    <p begin="00:05:01.89" dur="00:00:04.34">These codes are in binary and<br/>are readable to the computer,</p>
+    <p begin="00:05:06.23" dur="00:00:03.20">but not very readable to you.</p>
+    <p begin="00:05:09.43" dur="00:00:05.37">I happen to have a JPEG<br/>file, which is 105 kilobytes,</p>
+    <p begin="00:05:14.80" dur="00:00:02.88">much larger than any<br/>of these other files.</p>
+    <p begin="00:05:17.68" dur="00:00:02.77">Pictures take up<br/>a lot of storage.</p>
+    <p begin="00:05:20.45" dur="00:00:03.20">If you open that,<br/>you see a picture.</p>
+    <p begin="00:05:25.35" dur="00:00:02.57">The employee file<br/>is a data file.</p>
+    <p begin="00:05:27.92" dur="00:00:03.50">It's very typical of the kinds<br/>of files you'll use as inputs</p>
+    <p begin="00:05:31.42" dur="00:00:01.99">into computer programs.</p>
+    <p begin="00:05:33.41" dur="00:00:04.83">For example, this one happens<br/>to have employee ID numbers,</p>
+    <p begin="00:05:38.24" dur="00:00:03.85">employees' last names,<br/>first names, and pay rates.</p>
+    <p begin="00:05:42.09" dur="00:00:01.75">And if you wrote a<br/>computer program,</p>
+    <p begin="00:05:43.84" dur="00:00:02.97">you might have a statement<br/>such as input, ID number,</p>
+    <p begin="00:05:46.81" dur="00:00:02.16">last name, first name, pay rate.</p>
+    <p begin="00:05:48.97" dur="00:00:03.44">And it would use this<br/>employee data file.</p>
+    <p begin="00:05:56.29" dur="00:00:02.94">Let's take a little closer<br/>look at the Employees data file</p>
+    <p begin="00:05:59.23" dur="00:00:03.07">and talk for a minute<br/>about the data hierarchy.</p>
+    <p begin="00:06:02.30" dur="00:00:02.52">The smallest piece<br/>of data that's useful</p>
+    <p begin="00:06:04.82" dur="00:00:02.07">to humans is the character.</p>
+    <p begin="00:06:06.89" dur="00:00:04.13">For example, the M<br/>here in Mary Ann.</p>
+    <p begin="00:06:11.02" dur="00:00:03.59">Characters are grouped<br/>together to make up fields.</p>
+    <p begin="00:06:14.61" dur="00:00:02.17">A field is a unit<br/>of information,</p>
+    <p begin="00:06:16.78" dur="00:00:02.88">such as a first name,<br/>highlighted here.</p>
+    <p begin="00:06:19.66" dur="00:00:03.50">Other fields in this data file<br/>seem to be an employee number</p>
+    <p begin="00:06:23.16" dur="00:00:02.87">and a last name and<br/>a rate of pay.</p>
+    <p begin="00:06:26.03" dur="00:00:02.82">Fields are grouped<br/>together to make up records.</p>
+    <p begin="00:06:28.85" dur="00:00:02.93">A record consists of all<br/>the fields that have to do</p>
+    <p begin="00:06:31.78" dur="00:00:03.72">with one entity, such as<br/>a person, place, or thing.</p>
+    <p begin="00:06:35.50" dur="00:00:03.21">And records are grouped<br/>together to make up files.</p>
+    <p begin="00:06:38.71" dur="00:00:03.94">A data file consists of all of<br/>the records that go together</p>
+    <p begin="00:06:42.65" dur="00:00:03.32">to solve some business problem.</p>
+    <p begin="00:06:45.97" dur="00:00:01.04">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

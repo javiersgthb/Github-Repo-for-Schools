@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.20" dur="00:00:01.81">&gt;&gt; Hi. This is Joyce Farrell.</p>
+    <p begin="00:00:02.01" dur="00:00:02.13">Let's look at gui components.</p>
+    <p begin="00:00:04.14" dur="00:00:02.71">Gui components are<br/>all the little icons</p>
+    <p begin="00:00:06.85" dur="00:00:01.72">and pictorial devices<br/>you're used</p>
+    <p begin="00:00:08.57" dur="00:00:02.30">to using with many programs.</p>
+    <p begin="00:00:10.87" dur="00:00:02.29">They're graphical<br/>user interfaces.</p>
+    <p begin="00:00:13.16" dur="00:00:02.45">That is, they're pictures<br/>that the user can use</p>
+    <p begin="00:00:15.61" dur="00:00:01.95">to interact with a program.</p>
+    <p begin="00:00:17.56" dur="00:00:03.76">They include things like<br/>buttons, labels, and text boxes.</p>
+    <p begin="00:00:21.32" dur="00:00:02.52">When you program a gui program,</p>
+    <p begin="00:00:23.84" dur="00:00:03.36">you frequently use an integrated<br/>development environment,</p>
+    <p begin="00:00:27.20" dur="00:00:02.47">which is an environment<br/>that makes it easy for you</p>
+    <p begin="00:00:29.67" dur="00:00:03.29">to manipulate items<br/>like buttons and labels.</p>
+    <p begin="00:00:32.96" dur="00:00:04.21">Here's a demonstration program<br/>that allows you to enter a name.</p>
+    <p begin="00:00:37.17" dur="00:00:02.00">Let's say I type in a name</p>
+    <p begin="00:00:39.17" dur="00:00:03.43">and when I click the<br/>button, there's a greeting.</p>
+    <p begin="00:00:42.60" dur="00:00:05.07">It has a label, a text box,<br/>a button and another label.</p>
+    <p begin="00:00:49.25" dur="00:00:03.70">This is the Microsoft<br/>Visual C Sharp integrated</p>
+    <p begin="00:00:52.95" dur="00:00:01.79">development environment.</p>
+    <p begin="00:00:54.74" dur="00:00:02.50">There are different integrated<br/>development environments</p>
+    <p begin="00:00:57.24" dur="00:00:03.57">for other programming languages,<br/>but this one is quite typical.</p>
+    <p begin="00:01:00.81" dur="00:00:02.21">There's a form here in<br/>the middle that I can use</p>
+    <p begin="00:01:03.02" dur="00:00:01.74">to start my application.</p>
+    <p begin="00:01:04.76" dur="00:00:02.97">And over here, there are some<br/>gui components like a button</p>
+    <p begin="00:01:07.73" dur="00:00:02.63">and a check box that I<br/>can drag onto the form</p>
+    <p begin="00:01:10.36" dur="00:00:02.45">to create my application.</p>
+    <p begin="00:01:12.81" dur="00:00:03.01">Right now, the name of<br/>this form is Form 1.</p>
+    <p begin="00:01:15.82" dur="00:00:02.71">And if you look over<br/>here, the properties</p>
+    <p begin="00:01:18.53" dur="00:00:03.80">of Form 1 include the fact<br/>that its text is Form 1.</p>
+    <p begin="00:01:22.33" dur="00:00:03.91">Well, I don't want its text<br/>to be Form 1, so I'm going</p>
+    <p begin="00:01:26.24" dur="00:00:05.23">to delete that and I'm<br/>going to type demonstration.</p>
+    <p begin="00:01:31.47" dur="00:00:02.97">When I press Enter,<br/>or click back on Form,</p>
+    <p begin="00:01:34.44" dur="00:00:02.36">it's going to say demonstration.</p>
+    <p begin="00:01:36.80" dur="00:00:03.86">Let me take a gui component<br/>like a label and drag it here.</p>
+    <p begin="00:01:40.66" dur="00:00:03.30">And right now, the<br/>label's name is Label 1</p>
+    <p begin="00:01:43.96" dur="00:00:02.48">and its text is Label 1,</p>
+    <p begin="00:01:46.44" dur="00:00:05.38">but I want to change its<br/>text to be: enter a name.</p>
+    <p begin="00:01:51.82" dur="00:00:04.56">And there it is.</p>
+    <p begin="00:01:56.38" dur="00:00:01.45">Enter a name.</p>
+    <p begin="00:01:57.83" dur="00:00:05.12">Let me get a text box and put<br/>it next to that and that's</p>
+    <p begin="00:02:02.95" dur="00:00:01.86">where the user will<br/>be entering the name.</p>
+    <p begin="00:02:04.81" dur="00:00:02.30">I'm not going to change<br/>the text in the text box</p>
+    <p begin="00:02:07.11" dur="00:00:02.02">because I want the<br/>user to do that.</p>
+    <p begin="00:02:09.13" dur="00:00:03.32">I'm going to get<br/>button and drag it here.</p>
+    <p begin="00:02:12.45" dur="00:00:03.34">And I don't want the button<br/>to say Button 1, so I'm going</p>
+    <p begin="00:02:15.79" dur="00:00:04.02">to change its text<br/>to say: click here.</p>
+    <p begin="00:02:19.81" dur="00:00:04.35">And then finally, I want<br/>a label here that's going</p>
+    <p begin="00:02:24.16" dur="00:00:03.94">to greet the user, so I'm going<br/>to put another label there.</p>
+    <p begin="00:02:28.10" dur="00:00:01.24">It's called Label 2.</p>
+    <p begin="00:02:29.34" dur="00:00:02.48">I don't want its<br/>text to say label 2,</p>
+    <p begin="00:02:31.82" dur="00:00:03.44">I actually want its text to<br/>start out saying nothing.</p>
+    <p begin="00:02:35.26" dur="00:00:03.82">So I'm just going<br/>to delete its text.</p>
+    <p begin="00:02:39.08" dur="00:00:03.61">Also, that label is kind of<br/>small, so under the properties</p>
+    <p begin="00:02:42.69" dur="00:00:05.71">of Label 2, I'm going to scroll<br/>up -- and let's find its font</p>
+    <p begin="00:02:48.40" dur="00:00:04.45">and instead of 8, let's make<br/>it something a little bit more</p>
+    <p begin="00:02:52.85" dur="00:00:02.55">noticeable like 24.</p>
+    <p begin="00:02:55.40" dur="00:00:03.56">OK. So now I have a<br/>label, a text box,</p>
+    <p begin="00:02:58.96" dur="00:00:02.01">a button and another label.</p>
+    <p begin="00:03:00.97" dur="00:00:02.97">In order to get some<br/>actions, I need to write code</p>
+    <p begin="00:03:03.94" dur="00:00:02.95">for what happens when the<br/>user clicks the button.</p>
+    <p begin="00:03:06.89" dur="00:00:03.88">If I double click the button,<br/>I can get to some C Sharp code.</p>
+    <p begin="00:03:10.77" dur="00:00:01.99">Now you'd have to<br/>learn a lot of C Sharp</p>
+    <p begin="00:03:12.76" dur="00:00:02.47">to understand what<br/>everything here means.</p>
+    <p begin="00:03:15.23" dur="00:00:03.10">But right now, I just need<br/>to add a single statement</p>
+    <p begin="00:03:18.33" dur="00:00:01.64">to the Button 1 click method.</p>
+    <p begin="00:03:19.97" dur="00:00:02.29">This is the method<br/>that will execute</p>
+    <p begin="00:03:22.26" dur="00:00:01.98">when Button 1 is clicked.</p>
+    <p begin="00:03:24.24" dur="00:00:03.96">What I want to do is change<br/>the text in that Label 2.</p>
+    <p begin="00:03:28.20" dur="00:00:03.90">So I start typing<br/>Label 2, and when I do,</p>
+    <p begin="00:03:32.10" dur="00:00:02.56">the automatic statement<br/>completion feature</p>
+    <p begin="00:03:34.66" dur="00:00:03.45">of C Sharp helps me out<br/>by giving me some choices</p>
+    <p begin="00:03:38.11" dur="00:00:02.44">and I can just double<br/>click on Label 2</p>
+    <p begin="00:03:40.55" dur="00:00:10.32">and then I can set its text to<br/>Hello, with a comma and a space,</p>
+    <p begin="00:03:50.87" dur="00:00:04.21">plus whatever the user<br/>has typed in text Box 1.</p>
+    <p begin="00:03:55.08" dur="00:00:05.85">That will be Text Box 1's text.</p>
+    <p begin="00:04:00.93" dur="00:00:02.79">In C Sharp, every statement<br/>ends with a semicolon,</p>
+    <p begin="00:04:03.72" dur="00:00:02.46">so I'll type a semicolon.</p>
+    <p begin="00:04:06.18" dur="00:00:03.31">Looking back at the form,<br/>there's still nothing there</p>
+    <p begin="00:04:09.49" dur="00:00:03.05">in Label 2 because the user<br/>hasn't clicked a button yet.</p>
+    <p begin="00:04:12.54" dur="00:00:02.31">We haven't run the program yet.</p>
+    <p begin="00:04:14.85" dur="00:00:05.46">To run the program, one way is<br/>to go to debug and pick Start.</p>
+    <p begin="00:04:20.31" dur="00:00:01.20">The form shows up.</p>
+    <p begin="00:04:21.51" dur="00:00:02.58">It's ready for me<br/>to enter a name.</p>
+    <p begin="00:04:24.09" dur="00:00:03.94">I'm going to type a name<br/>and click the button.</p>
+    <p begin="00:04:28.03" dur="00:00:02.63">And there's the greeting.</p>
+    <p begin="00:04:30.66" dur="00:00:03.09">If I type a different name,</p>
+    <p begin="00:04:33.75" dur="00:00:03.92">click the button,<br/>there's the greeting.</p>
+    <p begin="00:04:37.67" dur="00:00:02.54">That's a quick look<br/>at how you might start</p>
+    <p begin="00:04:40.21" dur="00:00:07.87">to create an application<br/>using gui components.</p>
+   </div>
+  </body>
+</tt>

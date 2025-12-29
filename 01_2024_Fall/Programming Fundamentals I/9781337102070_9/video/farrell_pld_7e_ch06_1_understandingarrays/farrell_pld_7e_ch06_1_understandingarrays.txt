@@ -1,0 +1,152 @@
+
+
+ 
+    
+  
+>> Hi, this is Joyce Farrell. 
+
+ Let's talk about arrays. 
+
+    An array is a list of continuous values stored 
+
+    in computer memory. 
+
+    Every array has a specified size. 
+
+    Every array is made up of a number of items called elements. 
+
+    Each element in an array must have the same data type. 
+
+    And every element can be accessed using a subscript. 
+
+    A subscript is a whole number value ranging from zero 
+
+    to one less than the size of the array. 
+
+    For example, if you want 
+
+    to declare a four-element numeric array, you give it a data type, 
+
+    num, and a name like money, 
+
+    and then you indicate the size of the array. 
+
+    In this case, it's a four-element array, 
+
+    so four memory locations are reserved. 
+
+    The names of those locations are money[0], 
+
+    money[1], money[2], and money[3]. 
+
+    The subscripts appearing within the square brackets range 
+
+    from zero to one less than the size of the array. 
+
+    You can assign a value to an array element. 
+
+    For example, perhaps you want to say money[0] equals 14. 
+
+    That assigns 14 to element zero of the array. 
+
+    You don't have to assign values in order. 
+
+    The next statement you make might be money[3] equals 82, 
+
+    and that would assign an 82 to the last element 
+
+    of this array, money[3]. 
+
+    You then might say money[1] equals 6. 
+
+    Or you might change a value at an element in the array 
+
+    and say money[0] equals 9 and change its value. 
+
+    You can perform arithmetic; 
+
+    money[0] plus 10 is assigned to money[3]. 
+
+    So now money[3] has the value 19. 
+
+    What happens if you try to assign money[2] to money[1]? 
+
+    In this case, it's illegal, 
+
+    because money[2] has not been initialized, 
+
+    so it has garbage value and cannot be assigned. 
+
+    How about if you try to assign 20 to money[4]? 
+
+    In this case, because it's a four-element array, 
+
+    that statement is not valid, because there is no element 4. 
+
+    A four-element array only has spots 0, 1, 2, and 3. 
+
+    You can initialize an array when you declare it, 
+
+    by giving it values to start. 
+
+    For example, if you want all zeros, you might make a statement 
+
+    like num money[4] equals and then list the zeros. 
+
+    You can use a loop with an array, 
+
+    which is often the most efficient way 
+
+    to handle an array. 
+
+    For example, suppose you declare a numeric variable named x, 
+
+    and assign it zero. 
+
+    Then you could start a loop, while x is less than 4. 
+
+    Well, it is because it's zero. 
+
+    You could assign money[x], which is money[0], the value zero. 
+
+    That stores as zero at the spot money[0]. 
+
+    Then you add 1 to x making it 1, 
+
+    and reach the end of the loop body. 
+
+    When you go to the top of the loop and check 
+
+    to see whether x is less than 4, it is, because it's 1, 
+
+    so you enter the loop and assign it a zero 
+
+    to money[x], which is money[1]. 
+
+    Then you add 1 to x making it 2, and reach the end 
+
+    of the loop body and check again. 
+
+    And since 2 is less than 4, you enter the loop body again. 
+
+    You can assign a zero to money[2]; add 1 to x making it 3, 
+
+    reach the end of the loop body. 
+
+    3 is less than 4, so you assign a zero to spot money[3]. 
+
+    Then x becomes 4, and you reached the end 
+
+    of the loop body. 
+
+    Now when you check if x is less than 4, it's not less 
+
+    than 4, because it is 4. 
+
+    So, the loop ends, and you have successfully assigned zero 
+
+    to each array element. 
+
+    Thanks for watching. 
+
+   

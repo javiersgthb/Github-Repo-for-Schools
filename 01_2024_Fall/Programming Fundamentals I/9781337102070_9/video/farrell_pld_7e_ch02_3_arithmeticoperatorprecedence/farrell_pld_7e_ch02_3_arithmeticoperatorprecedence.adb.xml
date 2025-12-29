@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:01.02" dur="00:00:01.64">&gt;&gt; Joyce: Hi, this is Joyce<br/>Farrell.</p>
+    <p begin="00:00:02.66" dur="00:00:03.53">Let's talk about arithmetic<br/>operator precedence.</p>
+    <p begin="00:00:06.19" dur="00:00:01.64">When you have arithmetic<br/>statements</p>
+    <p begin="00:00:07.83" dur="00:00:03.41">in a computer program, there<br/>are rules of precedence.</p>
+    <p begin="00:00:11.24" dur="00:00:02.25">These are the rules<br/>that dictate the order</p>
+    <p begin="00:00:13.49" dur="00:00:03.33">in which arithmetic<br/>operations are carried out.</p>
+    <p begin="00:00:16.82" dur="00:00:02.25">When you have more<br/>than one operation</p>
+    <p begin="00:00:19.07" dur="00:00:05.17">in a statement, anything within<br/>parentheses is evaluated first.</p>
+    <p begin="00:00:24.24" dur="00:00:01.10">After expressions</p>
+    <p begin="00:00:25.34" dur="00:00:03.04">within parentheses are<br/>evaluated, multiplication</p>
+    <p begin="00:00:28.38" dur="00:00:03.64">and division are evaluated<br/>moving from left to right.</p>
+    <p begin="00:00:32.02" dur="00:00:01.41">After all multiplication</p>
+    <p begin="00:00:33.43" dur="00:00:02.36">and division have been<br/>evaluated, addition</p>
+    <p begin="00:00:35.79" dur="00:00:03.95">and subtraction are evaluated<br/>moving from left to right.</p>
+    <p begin="00:00:39.74" dur="00:00:02.43">Finally, if there is<br/>an assignment operation</p>
+    <p begin="00:00:42.17" dur="00:00:04.09">in the statement,<br/>assignment executes last.</p>
+    <p begin="00:00:46.26" dur="00:00:01.86">Let's look at an example.</p>
+    <p begin="00:00:48.12" dur="00:00:04.49">Suppose you have a programming<br/>statement answer equals 2 plus 3</p>
+    <p begin="00:00:52.61" dur="00:00:03.16">times parentheses 5 minus 1.</p>
+    <p begin="00:00:55.77" dur="00:00:00.84">Looking at the rules</p>
+    <p begin="00:00:56.61" dur="00:00:04.31">of precedence, the first one is<br/>do anything within parentheses.</p>
+    <p begin="00:01:00.92" dur="00:00:04.75">In this case, 5 minus 1 is within<br/>parentheses, so that evaluates</p>
+    <p begin="00:01:05.67" dur="00:00:05.92">to 4, so the expression becomes<br/>answer equals 2 plus 3 times 4.</p>
+    <p begin="00:01:11.59" dur="00:00:02.85">When the expression inside<br/>parentheses has been reduced</p>
+    <p begin="00:01:14.44" dur="00:00:03.53">to a single value, you can<br/>eliminate the parentheses,</p>
+    <p begin="00:01:17.97" dur="00:00:05.35">so the expression becomes<br/>answer equals 2 plus 3 times 4.</p>
+    <p begin="00:01:23.32" dur="00:00:02.93">The next rule of precedence<br/>is to do multiplication</p>
+    <p begin="00:01:26.25" dur="00:00:03.07">and division moving<br/>from left to right.</p>
+    <p begin="00:01:29.32" dur="00:00:01.96">There's no division<br/>in this statement,</p>
+    <p begin="00:01:31.28" dur="00:00:04.58">so the first multiplication<br/>statement multiplies 3 times 4,</p>
+    <p begin="00:01:35.86" dur="00:00:04.29">so the expression becomes<br/>answer equals 2 plus 12.</p>
+    <p begin="00:01:40.15" dur="00:00:02.78">There's no more multiplication<br/>or division, so you can look</p>
+    <p begin="00:01:42.93" dur="00:00:01.72">at the third rule of precedence,</p>
+    <p begin="00:01:44.65" dur="00:00:03.16">which says do any<br/>addition or subtraction.</p>
+    <p begin="00:01:47.81" dur="00:00:02.09">In this case, there's<br/>some addition,</p>
+    <p begin="00:01:49.90" dur="00:00:05.20">so 2 plus 12 is 14,<br/>answer equals 14.</p>
+    <p begin="00:01:55.10" dur="00:00:02.29">The last rule of<br/>precedence says</p>
+    <p begin="00:01:57.39" dur="00:00:03.58">use the assignment operator<br/>to assign the value to 14,</p>
+    <p begin="00:02:00.97" dur="00:00:05.24">and at this point, in memory, the<br/>spot called answer gets a 14</p>
+    <p begin="00:02:06.21" dur="00:00:02.44">stored in it.</p>
+    <p begin="00:02:08.65" dur="00:00:02.28">Let's look at another example:</p>
+    <p begin="00:02:10.93" dur="00:00:03.17">result equals 24<br/>divided by 2 divided</p>
+    <p begin="00:02:14.10" dur="00:00:04.69">by parentheses 2 times<br/>parentheses 1 plus 2.</p>
+    <p begin="00:02:18.79" dur="00:00:03.13">Notice that for every opening<br/>parentheses there's always a</p>
+    <p begin="00:02:21.92" dur="00:00:02.17">closing parentheses.</p>
+    <p begin="00:02:24.09" dur="00:00:03.39">Looking at the rules of<br/>precedence, number 1 says</p>
+    <p begin="00:02:27.48" dur="00:00:02.82">do the operations<br/>inside parentheses.</p>
+    <p begin="00:02:30.30" dur="00:00:01.38">When there are multiple sets</p>
+    <p begin="00:02:31.68" dur="00:00:03.94">of parentheses, you take the<br/>inside parentheses first.</p>
+    <p begin="00:02:35.62" dur="00:00:04.46">The inside parentheses, in<br/>this case, contain 1 plus 2,</p>
+    <p begin="00:02:40.08" dur="00:00:04.03">so the expression changes<br/>to result is 24 divided</p>
+    <p begin="00:02:44.11" dur="00:00:06.35">by 2 divided by 2 times 3,<br/>because of 1 plus 2 is 3.</p>
+    <p begin="00:02:50.46" dur="00:00:04.24">The rules of precedence still<br/>say parentheses are operated</p>
+    <p begin="00:02:54.70" dur="00:00:03.08">on next. So 2 times 3 is 6,</p>
+    <p begin="00:02:57.78" dur="00:00:05.55">so result becomes 24<br/>divided by 2 divided by 6.</p>
+    <p begin="00:03:03.33" dur="00:00:02.07">Since there are no more<br/>parentheses, you can look</p>
+    <p begin="00:03:05.40" dur="00:00:03.34">at the next rule of precedence<br/>that says do multiplication</p>
+    <p begin="00:03:08.74" dur="00:00:02.80">or division from left to right.</p>
+    <p begin="00:03:11.54" dur="00:00:04.29">So moving from left to<br/>right, 24 divided by 2 is 12,</p>
+    <p begin="00:03:15.83" dur="00:00:04.58">so the expression<br/>becomes 12 divided by 6.</p>
+    <p begin="00:03:20.41" dur="00:00:03.10">Then still doing multiplication<br/>or division from left</p>
+    <p begin="00:03:23.51" dur="00:00:04.53">to right, 12 divided by 6 is 2.</p>
+    <p begin="00:03:28.04" dur="00:00:01.02">Looking at the next rule</p>
+    <p begin="00:03:29.06" dur="00:00:03.01">of precedence we do any<br/>addition or subtraction.</p>
+    <p begin="00:03:32.07" dur="00:00:02.98">In this case, there is no<br/>addition or subtraction.</p>
+    <p begin="00:03:35.05" dur="00:00:03.88">That's okay, we just move to<br/>the next rule of precedence.</p>
+    <p begin="00:03:38.93" dur="00:00:02.89">The last one says<br/>make the assignment,</p>
+    <p begin="00:03:41.82" dur="00:00:04.94">so in memory, a spot called<br/>result finally has the value 2</p>
+    <p begin="00:03:46.76" dur="00:00:02.18">assigned to it.</p>
+    <p begin="00:03:48.94" dur="00:00:02.38">Those are the rules<br/>of precedence</p>
+    <p begin="00:03:51.32" dur="00:00:02.38">in arithmetic expressions.</p>
+    <p begin="00:03:53.70" dur="00:00:01.05">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

@@ -1,0 +1,186 @@
+
+
+ 
+    
+  
+>> Joyce Farrell: Hi. 
+
+    This is Joyce Farrell. 
+
+    Let's talk about data types. 
+
+    There are data types in every computer programming language 
+
+    because a data type defines what values can be stored in an item, 
+
+    how much memory is allocated for the item, and what kinds 
+
+    of operations can be performed on the item. 
+
+    In every programming language, 
+
+    there are at least two broad data types. 
+
+    Numeric data is numbers. 
+
+    Numeric data can hold digits. 
+
+    It optionally can hold a plus or minus sign in front 
+
+    of the number to indicate positive or negative. 
+
+    Perhaps there can be a decimal point and decimal places, 
+
+    but there's no other punctuation allowed in numeric data. 
+
+    No dollar signs, percent signs, or commas. 
+
+    The other broad type of data is string data. 
+
+    Just about anything can be contained in string data as long 
+
+    as it's enclosed in quotation marks. 
+
+    There can be letters, digits, punctuation, spaces, 
+
+    anything as long as it's within quotation marks. 
+
+    Let's look at the data down the left-hand column of this table, 
+
+    and try to identify each piece of data as either numeric 
+
+    or string or neither and illegal. 
+
+    For example, 14? 
+
+    That's numeric data. 
+
+    That's a number. 
+
+    Ninety-eight point six contains a decimal point. 
+
+    That's numeric data. 
+
+    Joe in quotes is valid string data. 
+
+    String data is often something like a first name, 
+
+    a last name, a city, or a state. 
+
+    Negative 3, valid numeric data. 
+
+    How about 2,000 with a comma in it? 
+
+    At first, that looks like numeric data, 
+
+    but numeric data cannot have punctuation such as a comma. 
+
+    Therefore 2,000 with a comma in it is illegal. 
+
+    How about 58 in quotes? 
+
+    Fifty-eight might look like numeric data, 
+
+    but if it's in quotes, it's a string. 
+
+    A hundred dollars? 
+
+    Seems to be numeric, but numeric data cannot have a dollar sign, 
+
+    so a hundred dollars is illegal. 
+
+    What do you think about a hundred dollars in quotes? 
+
+    Anything in quotes is a valid string. 
+
+    So, negative 25 in quotes? If you said string, 
+
+    you're absolutely right. 
+
+    And 44 Pine Lane in quotes? 
+
+    It has digits, it has spaces, it has letters. 
+
+    It is a valid string. 
+
+    Numeric data. 
+
+    Again, digits, 
+
+    maybe plus or minus, maybe decimal point. 
+
+    String in double quotes. 
+
+    Any digits that are in combination 
+
+    with other characters that are not inside quotes, 
+
+    those pieces of data are illegal. 
+
+    Why are there data types? 
+
+    A data type defines what values can be stored in an item. 
+
+    7, 70, minus 7, 7.77 are all numeric. 
+
+    Book in quotes, 234 in quotes, Hello Sam in quotes, 
+
+    those are all strings. 
+
+    A data type tells you how much memory is allocated 
+
+    for the item. 
+
+    This differs between programming languages, but for example, 
+
+    in some languages, a number like 7 might be stored in four bytes 
+
+    of memory, but a string like book might be stored 
+
+    in 16 bytes of memory. 
+
+    A data type also tells you what kinds 
+
+    of operations are allowed with the data. 
+
+    If you put a plus sign between numeric items, 
+
+    that always creates an arithmetic expression 
+
+    that performs addition. 
+
+    And the value of 7 plus 2 is 9. 
+
+    If you place a plus between two strings, 
+
+    in many programming languages, that concatenates the strings. 
+
+    It means adds them end to end, and the result 
+
+    of book plus keeper is bookkeeper. 
+
+    How about the string 7 plus the string 2? 
+
+    They're strings, so they're concatenated, 
+
+    and the result is the string 72. 
+
+    In every programming language, 
+
+    two numeric values can be subtracted. 
+
+    Seven minus 2, that expression has the value 5. 
+
+    But in most programming languages, book minus keeper, 
+
+    minus is not defined for string values, and that's illegal 
+
+    and will cause an error in your program. 
+
+    That's a summary of data types. 
+
+    Thanks for watching. 
+
+    [ Silence ] 
+
+   

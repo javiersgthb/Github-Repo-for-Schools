@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.82" dur="00:00:01.78">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:02.60" dur="00:00:01.14">Let's<br/>take a quick look</p>
+    <p begin="00:00:03.74" dur="00:00:03.18">at the logic behind<br/>merging files.</p>
+    <p begin="00:00:06.92" dur="00:00:03.46">You can merge files when<br/>you have two or more files</p>
+    <p begin="00:00:10.38" dur="00:00:01.85">that are in the same format.</p>
+    <p begin="00:00:12.23" dur="00:00:01.56">That means that the records</p>
+    <p begin="00:00:13.79" dur="00:00:04.45">in both files contain the<br/>same fields, in the same order.</p>
+    <p begin="00:00:18.24" dur="00:00:01.68">You also can merge files</p>
+    <p begin="00:00:19.92" dur="00:00:03.37">when the two files are<br/>sorted using the same field.</p>
+    <p begin="00:00:23.29" dur="00:00:03.54">In other words, if the two<br/>files hold customer records,</p>
+    <p begin="00:00:26.83" dur="00:00:03.28">both have to be sorted in ID<br/>number order, or both have</p>
+    <p begin="00:00:30.11" dur="00:00:03.71">to be sorted by last name of<br/>the customer, or maybe both have</p>
+    <p begin="00:00:33.82" dur="00:00:01.57">to be sorted by zip code.</p>
+    <p begin="00:00:35.39" dur="00:00:02.82">It doesn't matter which field<br/>they're sorted by, but they have</p>
+    <p begin="00:00:38.21" dur="00:00:02.99">to be sorted using<br/>the same field.</p>
+    <p begin="00:00:41.20" dur="00:00:01.99">For example, let's<br/>take a simple file</p>
+    <p begin="00:00:43.19" dur="00:00:02.86">that just stores the first<br/>name of your friends.</p>
+    <p begin="00:00:46.05" dur="00:00:04.16">You have 5 friends and<br/>they're in alphabetical order.</p>
+    <p begin="00:00:50.21" dur="00:00:03.54">Suppose I also have a file of<br/>friends, and my friends are</p>
+    <p begin="00:00:53.75" dur="00:00:02.08">in alphabetical order.</p>
+    <p begin="00:00:55.83" dur="00:00:03.45">What you might want to do<br/>is create a merged listed</p>
+    <p begin="00:00:59.28" dur="00:00:03.70">in which all the names<br/>are in alphabetical order</p>
+    <p begin="00:01:02.98" dur="00:00:02.46">and the merged file<br/>contains each record</p>
+    <p begin="00:01:05.44" dur="00:00:02.81">from the first two files.</p>
+    <p begin="00:01:08.25" dur="00:00:02.47">Here's how the logic would work.</p>
+    <p begin="00:01:10.72" dur="00:00:03.45">You read in one record<br/>from each of the files.</p>
+    <p begin="00:01:14.17" dur="00:00:02.57">So, in this case, your<br/>first friend is Beth,</p>
+    <p begin="00:01:16.74" dur="00:00:02.06">and my first friend is Ann.</p>
+    <p begin="00:01:18.80" dur="00:00:04.32">You compare the two and<br/>see which one is less.</p>
+    <p begin="00:01:23.12" dur="00:00:02.25">The one that's less<br/>alphabetically is the one</p>
+    <p begin="00:01:25.37" dur="00:00:02.53">that comes first alphabetically.</p>
+    <p begin="00:01:27.90" dur="00:00:03.01">In other words, in<br/>this case it's Ann.</p>
+    <p begin="00:01:30.91" dur="00:00:02.59">So, you would write<br/>Ann to the output file</p>
+    <p begin="00:01:33.50" dur="00:00:04.08">and read the next record<br/>in the My friends file.</p>
+    <p begin="00:01:37.58" dur="00:00:03.46">Then you compare Beth and Don.</p>
+    <p begin="00:01:41.04" dur="00:00:03.52">Beth is less alphabetically,<br/>so you write Beth</p>
+    <p begin="00:01:44.56" dur="00:00:02.86">to the output file,<br/>and read another record</p>
+    <p begin="00:01:47.42" dur="00:00:03.55">from the Your friends<br/>file, which is Carl.</p>
+    <p begin="00:01:50.97" dur="00:00:02.10">You compare Carl and Don.</p>
+    <p begin="00:01:53.07" dur="00:00:04.73">Carl is less, so you write<br/>Carl to output and read George.</p>
+    <p begin="00:01:57.80" dur="00:00:04.35">You compare Don and George,<br/>Don is less, so you write Don</p>
+    <p begin="00:02:02.15" dur="00:00:03.92">to output file, and read<br/>Emily from My friends file.</p>
+    <p begin="00:02:06.07" dur="00:00:03.09">When you compare George<br/>and Emily, Emily is less,</p>
+    <p begin="00:02:09.16" dur="00:00:03.45">so it gets sent to<br/>output and you read Fred.</p>
+    <p begin="00:02:12.61" dur="00:00:04.49">George and Fred, Fred is less,<br/>so you send Fred to output</p>
+    <p begin="00:02:17.10" dur="00:00:04.08">and you read past<br/>the end of the file.</p>
+    <p begin="00:02:21.18" dur="00:00:02.84">You can't quit the program yet<br/>because there are still more</p>
+    <p begin="00:02:24.02" dur="00:00:02.71">of Your friends to<br/>be sent to output.</p>
+    <p begin="00:02:26.73" dur="00:00:03.95">So, a trick the programmers use<br/>is to put a very high value</p>
+    <p begin="00:02:30.68" dur="00:00:03.96">in memory in the spot where<br/>the My friends name would be.</p>
+    <p begin="00:02:34.64" dur="00:00:02.05">By a high value, we<br/>mean something</p>
+    <p begin="00:02:36.69" dur="00:00:02.24">that alphabetically<br/>will always fall</p>
+    <p begin="00:02:38.93" dur="00:00:02.97">after every name in the list.</p>
+    <p begin="00:02:41.90" dur="00:00:01.13">In this case, ZZZZZ will work.</p>
+    <p begin="00:02:43.03" dur="00:00:05.99">If we were sorting on a numeric<br/>field, we might use a value</p>
+    <p begin="00:02:49.02" dur="00:00:03.10">like 99999.</p>
+    <p begin="00:02:52.12" dur="00:00:04.96">Anyhow, we now compare George<br/>and ZZZ, and George is less,</p>
+    <p begin="00:02:57.08" dur="00:00:04.15">so George is written to output<br/>and we read Hannah into memory.</p>
+    <p begin="00:03:01.23" dur="00:00:03.04">Hannah is less than<br/>ZZZ, so Hannah is sent</p>
+    <p begin="00:03:04.27" dur="00:00:02.55">to output and we read Iris.</p>
+    <p begin="00:03:06.82" dur="00:00:04.32">Iris is less than ZZZ,<br/>so we send Iris to output</p>
+    <p begin="00:03:11.14" dur="00:00:03.74">and set Your friends<br/>name to ZZZ.</p>
+    <p begin="00:03:14.88" dur="00:00:04.85">When both names are the Zs,<br/>that's the end of the program,</p>
+    <p begin="00:03:19.73" dur="00:00:05.11">and you've produced a<br/>final merged friends list.</p>
+    <p begin="00:03:24.84" dur="00:00:01.21">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

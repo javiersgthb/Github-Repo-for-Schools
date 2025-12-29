@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.89" dur="00:00:02.02">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:02.91" dur="00:00:02.46">Let's look<br/>at control break logic.</p>
+    <p begin="00:00:05.37" dur="00:00:03.05">Here's a typical data<br/>file of company clients.</p>
+    <p begin="00:00:08.42" dur="00:00:02.63">The file contains the<br/>last name and the state</p>
+    <p begin="00:00:11.05" dur="00:00:02.08">of residence of each client.</p>
+    <p begin="00:00:13.13" dur="00:00:03.31">A real data file might have many<br/>more fields, but this is enough</p>
+    <p begin="00:00:16.44" dur="00:00:02.75">for us to understand a<br/>control break report.</p>
+    <p begin="00:00:19.19" dur="00:00:04.83">So all the Alabama residents<br/>come first, then North Carolina,</p>
+    <p begin="00:00:24.02" dur="00:00:04.50">then South Carolina, and finally<br/>all the residents in Tennessee.</p>
+    <p begin="00:00:28.52" dur="00:00:02.10">Here's a report that<br/>you might want</p>
+    <p begin="00:00:30.62" dur="00:00:02.56">to create from this data file.</p>
+    <p begin="00:00:33.18" dur="00:00:02.12">It has a heading,<br/>company clients,</p>
+    <p begin="00:00:35.30" dur="00:00:03.48">and then it lists all<br/>the clients in Alabama.</p>
+    <p begin="00:00:38.78" dur="00:00:03.70">Then there's a count for the<br/>number of Alabama residents.</p>
+    <p begin="00:00:42.48" dur="00:00:04.39">Then it lists the residents<br/>from North Carolina and a count,</p>
+    <p begin="00:00:46.87" dur="00:00:02.73">the two from South<br/>Carolina and their count,</p>
+    <p begin="00:00:49.60" dur="00:00:04.49">and finally the last 3 from<br/>Tennessee and their count.</p>
+    <p begin="00:00:54.09" dur="00:00:02.92">Here's the mainline<br/>logic for this program.</p>
+    <p begin="00:00:57.01" dur="00:00:04.44">You would start the program and<br/>then make some declarations.</p>
+    <p begin="00:01:01.45" dur="00:00:02.35">There's a spot in<br/>memory for the input file</p>
+    <p begin="00:01:03.80" dur="00:00:02.85">that holds the clients'<br/>names and states.</p>
+    <p begin="00:01:06.65" dur="00:00:03.12">There's a title for the top of<br/>the report, that's a constant</p>
+    <p begin="00:01:09.77" dur="00:00:02.06">that holds Company Clients.</p>
+    <p begin="00:01:11.83" dur="00:00:04.07">And there's room for a name<br/>and a state for each client.</p>
+    <p begin="00:01:15.90" dur="00:00:02.22">Account, which is<br/>initialized to zero,</p>
+    <p begin="00:01:18.12" dur="00:00:03.40">and a string called oldState,<br/>which will be used</p>
+    <p begin="00:01:21.52" dur="00:00:02.50">to hold the state that<br/>we're currently working</p>
+    <p begin="00:01:24.02" dur="00:00:02.34">on to compare it to<br/>a new state to see</p>
+    <p begin="00:01:26.36" dur="00:00:02.61">if it's time for<br/>a control break.</p>
+    <p begin="00:01:28.97" dur="00:00:02.36">After the declarations<br/>have been made,</p>
+    <p begin="00:01:31.33" dur="00:00:02.34">it's time to perform<br/>the getReady() module.</p>
+    <p begin="00:01:33.67" dur="00:00:06.21">In the getReady() module, the<br/>first thing you do is output the</p>
+    <p begin="00:01:39.88" dur="00:00:03.38">title, Company Clients,<br/>onto the report.</p>
+    <p begin="00:01:43.26" dur="00:00:01.77">Then you can open<br/>the input files,</p>
+    <p begin="00:01:45.03" dur="00:00:03.76">so they're all the clients'<br/>names and states are available.</p>
+    <p begin="00:01:48.79" dur="00:00:03.27">When you input the name and<br/>the state from the input file,</p>
+    <p begin="00:01:52.06" dur="00:00:03.82">the first record, Walters in<br/>Alabama, goes into memory.</p>
+    <p begin="00:01:55.88" dur="00:00:03.13">Then you set oldState<br/>to the current state.</p>
+    <p begin="00:01:59.01" dur="00:00:02.05">So, at the beginning<br/>of the program, state</p>
+    <p begin="00:02:01.06" dur="00:00:02.39">and oldState are both Alabama.</p>
+    <p begin="00:02:03.45" dur="00:00:03.48">You return from the getReady()<br/>module and go back</p>
+    <p begin="00:02:06.93" dur="00:00:03.10">to the mainline logic, where<br/>you check for end of file.</p>
+    <p begin="00:02:10.03" dur="00:00:02.96">It's not end of file because<br/>we've only read just the first</p>
+    <p begin="00:02:12.99" dur="00:00:02.12">record into memory,<br/>so you can go</p>
+    <p begin="00:02:15.11" dur="00:00:02.66">to the produceReport() module.</p>
+    <p begin="00:02:17.77" dur="00:00:01.87">Within the <br/>produceReport() module,</p>
+    <p begin="00:02:19.64" dur="00:00:02.75">the first thing you do is<br/>compare the current state</p>
+    <p begin="00:02:22.39" dur="00:00:01.57">to the old state.</p>
+    <p begin="00:02:23.96" dur="00:00:03.47">The state in memory for the<br/>current record is Alabama,</p>
+    <p begin="00:02:27.43" dur="00:00:03.17">and the old state is Alabama,<br/>because we just set them equal</p>
+    <p begin="00:02:30.60" dur="00:00:02.84">at the end of the<br/>getReady() module.</p>
+    <p begin="00:02:33.44" dur="00:00:02.71">So, it's not time to do<br/>a control break report.</p>
+    <p begin="00:02:36.15" dur="00:00:04.63">State and oldState are<br/>equal, so you output the name</p>
+    <p begin="00:02:40.78" dur="00:00:02.56">and the state from<br/>memory onto the report.</p>
+    <p begin="00:02:43.34" dur="00:00:02.84">That's Walters and Alabama.</p>
+    <p begin="00:02:46.18" dur="00:00:02.94">Then you add 1 to count,<br/>so count becomes 1,</p>
+    <p begin="00:02:49.12" dur="00:00:02.49">and you've produced 1 record.</p>
+    <p begin="00:02:51.61" dur="00:00:03.96">You can then input the next name<br/>and state from the input file.</p>
+    <p begin="00:02:55.57" dur="00:00:03.83">In this case, they're<br/>Harris and Alabama.</p>
+    <p begin="00:02:59.40" dur="00:00:03.11">When you exit the <br/>produceReport() module and return</p>
+    <p begin="00:03:02.51" dur="00:00:03.39">to the mainline logic,<br/>it's still not end of file,</p>
+    <p begin="00:03:05.90" dur="00:00:03.21">so you go back to the<br/>produceReport() module.</p>
+    <p begin="00:03:09.11" dur="00:00:03.24">There you compare<br/>state to oldState.</p>
+    <p begin="00:03:12.35" dur="00:00:02.31">The new state for<br/>Harris is Alabama,</p>
+    <p begin="00:03:14.66" dur="00:00:04.00">and the oldState was<br/>Alabama, so they are equal,</p>
+    <p begin="00:03:18.66" dur="00:00:03.20">and you simply output<br/>Harris and Alabama.</p>
+    <p begin="00:03:21.86" dur="00:00:02.39">You add 1 to count,<br/>so count becomes 2,</p>
+    <p begin="00:03:24.25" dur="00:00:02.14">because you've produced<br/>2 records,</p>
+    <p begin="00:03:26.39" dur="00:00:03.12">and you get the next name and<br/>state from the input file.</p>
+    <p begin="00:03:29.51" dur="00:00:03.25">In this case, they're<br/>Parker and Alabama.</p>
+    <p begin="00:03:32.76" dur="00:00:03.34">You'll leave the produceReport()<br/>module, go back to mainline,</p>
+    <p begin="00:03:36.10" dur="00:00:01.54">check for end of file.</p>
+    <p begin="00:03:37.64" dur="00:00:01.50">You're not at end of file yet,</p>
+    <p begin="00:03:39.14" dur="00:00:03.32">so you can go back<br/>to produceReport().</p>
+    <p begin="00:03:42.46" dur="00:00:04.15">In the produceReport() module,<br/>you compare state and oldState.</p>
+    <p begin="00:03:46.61" dur="00:00:02.70">They're both Alabama,<br/>so you output Parker</p>
+    <p begin="00:03:49.31" dur="00:00:02.11">and Alabama onto the report.</p>
+    <p begin="00:03:51.42" dur="00:00:05.06">Count becomes 3, and you get the<br/>next record from the input file.</p>
+    <p begin="00:03:56.48" dur="00:00:02.61">The next record happens<br/>to hold Jenkins</p>
+    <p begin="00:03:59.09" dur="00:00:02.06">from North Carolina.</p>
+    <p begin="00:04:01.15" dur="00:00:03.44">You return from the produceReport()<br/>module, check for end</p>
+    <p begin="00:04:04.59" dur="00:00:04.09">of file, and go back to<br/>the produceReport() module.</p>
+    <p begin="00:04:08.68" dur="00:00:03.23">Now in the pproduceReport()<br/>module, when you compare state</p>
+    <p begin="00:04:11.91" dur="00:00:02.64">to oldState, they<br/>are not equal.</p>
+    <p begin="00:04:14.55" dur="00:00:02.17">It's true that they<br/>are not equal.</p>
+    <p begin="00:04:16.72" dur="00:00:01.94">The current state<br/>is North Carolina,</p>
+    <p begin="00:04:18.66" dur="00:00:02.23">but the oldState is Alabama,</p>
+    <p begin="00:04:20.89" dur="00:00:03.66">so it's time to perform<br/>the control break module.</p>
+    <p begin="00:04:24.55" dur="00:00:06.75">In the control break module,<br/>you output the count 4 Alabama;</p>
+    <p begin="00:04:31.30" dur="00:00:01.85">the oldState is 3.</p>
+    <p begin="00:04:33.15" dur="00:00:02.84">It's important to use oldState<br/>because that's the one</p>
+    <p begin="00:04:35.99" dur="00:00:02.25">for which you're<br/>producing the count.</p>
+    <p begin="00:04:38.24" dur="00:00:04.04">Then because the new state is<br/>going to be North Carolina,</p>
+    <p begin="00:04:42.28" dur="00:00:04.35">you set the count to zero, so<br/>it's ready for the new state.</p>
+    <p begin="00:04:46.63" dur="00:00:03.12">Finally, you set<br/>oldState to state.</p>
+    <p begin="00:04:49.75" dur="00:00:03.11">So oldState becomes<br/>North Carolina.</p>
+    <p begin="00:04:52.86" dur="00:00:04.04">OldState is the control break<br/>field that you now set equal</p>
+    <p begin="00:04:56.90" dur="00:00:03.73">to the current state<br/>that you're working on.</p>
+    <p begin="00:05:00.63" dur="00:00:02.69">When you return from the<br/>controlBrake() module,</p>
+    <p begin="00:05:03.32" dur="00:00:02.18">you go back to the<br/>produceReport() module</p>
+    <p begin="00:05:05.50" dur="00:00:04.00">where you can now output the<br/>name and the state for Jenkins.</p>
+    <p begin="00:05:09.50" dur="00:00:02.45">Jenkins has been waiting<br/>in memory, while the count</p>
+    <p begin="00:05:11.95" dur="00:00:03.68">for Alabama was produced,<br/>and the count reset to zero,</p>
+    <p begin="00:05:15.63" dur="00:00:02.18">and the old state set to state.</p>
+    <p begin="00:05:17.81" dur="00:00:02.88">So now it's Jerkin's<br/>time to be output.</p>
+    <p begin="00:05:20.69" dur="00:00:02.04">You then add 1 to count.</p>
+    <p begin="00:05:22.73" dur="00:00:02.95">There's 1 record<br/>for the new state,</p>
+    <p begin="00:05:25.68" dur="00:00:03.65">and you input the next name<br/>and state from the input file.</p>
+    <p begin="00:05:29.33" dur="00:00:03.40">These happen to be Louis<br/>and South Carolina.</p>
+    <p begin="00:05:32.73" dur="00:00:03.67">You return from produceReport(),<br/>go back to the mainline logic,</p>
+    <p begin="00:05:36.40" dur="00:00:04.53">check for end of file, and go<br/>back to produceReport() again.</p>
+    <p begin="00:05:40.93" dur="00:00:03.14">When you get back into produceReport(),<br/>you compare state</p>
+    <p begin="00:05:44.07" dur="00:00:01.31">to old state.</p>
+    <p begin="00:05:45.38" dur="00:00:03.11">They're different again,<br/>state is South Carolina</p>
+    <p begin="00:05:48.49" dur="00:00:02.30">and oldState is North Carolina.</p>
+    <p begin="00:05:50.79" dur="00:00:02.60">So, it's time for<br/>another control break.</p>
+    <p begin="00:05:53.39" dur="00:00:02.98">In the controlBreak()<br/>module, you output the count</p>
+    <p begin="00:05:56.37" dur="00:00:01.30">for the old state.</p>
+    <p begin="00:05:57.67" dur="00:00:03.11">The count for North<br/>Carolina in just 1.</p>
+    <p begin="00:06:00.78" dur="00:00:02.92">Then count is set to<br/>zero for the new state,</p>
+    <p begin="00:06:03.70" dur="00:00:04.37">and oldState is updated to<br/>be equal to South Carolina.</p>
+    <p begin="00:06:08.07" dur="00:00:03.09">You then can return from<br/>the controlBreak() module.</p>
+    <p begin="00:06:11.16" dur="00:00:03.65">If you continued on you'd<br/>output all the records</p>
+    <p begin="00:06:14.81" dur="00:00:03.40">for South Carolina, and then<br/>you'd output their count,</p>
+    <p begin="00:06:18.21" dur="00:00:02.98">and then you would output all<br/>the records for Tennessee.</p>
+    <p begin="00:06:21.19" dur="00:00:02.50">And as you continued reading<br/>records from Tennessee,</p>
+    <p begin="00:06:23.69" dur="00:00:03.61">at one point you'd go to<br/>input the next name and state,</p>
+    <p begin="00:06:27.30" dur="00:00:02.01">and you would reach<br/>the end of file.</p>
+    <p begin="00:06:29.31" dur="00:00:03.32">You would not yet have produced<br/>the count for Tennessee,</p>
+    <p begin="00:06:32.63" dur="00:00:01.51">because you would not<br/>know you were going</p>
+    <p begin="00:06:34.14" dur="00:00:01.71">to reach the last record.</p>
+    <p begin="00:06:35.85" dur="00:00:03.43">So, you would return from<br/>the produceReport() module,</p>
+    <p begin="00:06:39.28" dur="00:00:04.09">go back to the mainline logic,<br/>and this time it is end of file,</p>
+    <p begin="00:06:43.37" dur="00:00:02.50">so you can call the<br/>finishUp() module.</p>
+    <p begin="00:06:45.87" dur="00:00:03.38">In the finishUp() module<br/>you'd output the count</p>
+    <p begin="00:06:49.25" dur="00:00:02.03">for the last state, Tennessee.</p>
+    <p begin="00:06:51.28" dur="00:00:02.49">In this case, it's count 3.</p>
+    <p begin="00:06:53.77" dur="00:00:03.48">And then you can close<br/>the input file and return</p>
+    <p begin="00:06:57.25" dur="00:00:01.72">from the finishUp() module.</p>
+    <p begin="00:06:58.97" dur="00:00:03.39">Back in the mainline logic<br/>you stop the program.</p>
+    <p begin="00:07:02.36" dur="00:00:04.61">And you've successfully produced<br/>the control break report.</p>
+    <p begin="00:07:06.97" dur="00:00:02.18">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:01.27" dur="00:00:02.32">&gt;&gt; Joyce: Hi, this<br/>is Joyce Farrell.</p>
+    <p begin="00:00:03.59" dur="00:00:04.30">Let's talk about the<br/>program development cycle.</p>
+    <p begin="00:00:07.89" dur="00:00:02.89">When you start to write a<br/>computer program, you first must</p>
+    <p begin="00:00:10.78" dur="00:00:01.51">understand the problem.</p>
+    <p begin="00:00:12.29" dur="00:00:02.60">For example, suppose a<br/>friend comes to you and says,</p>
+    <p begin="00:00:14.89" dur="00:00:02.15">"You know I run a<br/>small accounting firm,</p>
+    <p begin="00:00:17.04" dur="00:00:02.47">and people keep stopping<br/>in the office and asking me</p>
+    <p begin="00:00:19.51" dur="00:00:03.54">to multiply numbers by 2 for<br/>them. So far I've been happy</p>
+    <p begin="00:00:23.05" dur="00:00:02.59">to do it, but it's taking<br/>up a lot of my time,</p>
+    <p begin="00:00:25.64" dur="00:00:02.49">and I was thinking maybe we<br/>could automate the process</p>
+    <p begin="00:00:28.13" dur="00:00:03.58">by writing a program and<br/>letting my clients use it and put</p>
+    <p begin="00:00:31.71" dur="00:00:02.98">in their own numbers and have<br/>the program multiply numbers</p>
+    <p begin="00:00:34.69" dur="00:00:01.68">by 2 for them."</p>
+    <p begin="00:00:36.37" dur="00:00:02.40">Once you've understood<br/>the problem, you are ready</p>
+    <p begin="00:00:38.77" dur="00:00:03.30">to plan the logic for<br/>this computer program.</p>
+    <p begin="00:00:42.07" dur="00:00:01.54">When programmers plan the logic</p>
+    <p begin="00:00:43.61" dur="00:00:03.52">for a program they<br/>typically use 1 of 2 tools.</p>
+    <p begin="00:00:47.13" dur="00:00:04.68">They either write pseudocode<br/>or they draw a flowchart.</p>
+    <p begin="00:00:51.81" dur="00:00:02.54">The pseudocode for the number<br/>doubling problem might look</p>
+    <p begin="00:00:54.35" dur="00:00:02.91">like this: you would say start</p>
+    <p begin="00:00:57.26" dur="00:00:02.22">and then you would<br/>say input myNumber.</p>
+    <p begin="00:00:59.48" dur="00:00:03.19">myNumber would just be a name<br/>you have chosen for a spot</p>
+    <p begin="00:01:02.67" dur="00:00:03.80">in memory where the<br/>user's number is stored.</p>
+    <p begin="00:01:06.47" dur="00:00:02.09">Then you might put<br/>a statement in like,</p>
+    <p begin="00:01:08.56" dur="00:00:03.66">set myAnswer equals<br/>myNumber times 2.</p>
+    <p begin="00:01:12.22" dur="00:00:03.24">myAnswer would be another<br/>name you have chosen for a spot</p>
+    <p begin="00:01:15.46" dur="00:00:02.81">in memory where the<br/>answer would be stored.</p>
+    <p begin="00:01:18.27" dur="00:00:02.02">Then you could output myAnswer</p>
+    <p begin="00:01:20.29" dur="00:00:04.55">so the user would see the<br/>result and stop the program.</p>
+    <p begin="00:01:24.84" dur="00:00:02.88">Instead of writing this<br/>pseudocode, you might prefer</p>
+    <p begin="00:01:27.72" dur="00:00:01.08">to draw a flowchart.</p>
+    <p begin="00:01:28.80" dur="00:00:04.02">If you drew a flowchart for<br/>the number-doubling program you</p>
+    <p begin="00:01:32.82" dur="00:00:03.79">would use a start symbol,<br/>then use an input symbol</p>
+    <p begin="00:01:36.61" dur="00:00:02.27">to say input myNumber.</p>
+    <p begin="00:01:38.88" dur="00:00:03.84">You'd add a processing symbol<br/>in which you set myAnswer equal</p>
+    <p begin="00:01:42.72" dur="00:00:04.09">to myNumber times 2,<br/>add an output symbol</p>
+    <p begin="00:01:46.81" dur="00:00:04.77">where you output the value of<br/>myAnswer and stop the program.</p>
+    <p begin="00:01:51.58" dur="00:00:02.66">If you look at the flowchart<br/>and the pseudocode side-</p>
+    <p begin="00:01:54.24" dur="00:00:04.75">by-side you can see that they<br/>contain exactly the same steps.</p>
+    <p begin="00:01:58.99" dur="00:00:02.72">One is in a more pictorial<br/>form. The other is more</p>
+    <p begin="00:02:01.71" dur="00:00:04.91">in paragraph form, but both<br/>get a number, double it,</p>
+    <p begin="00:02:06.62" dur="00:00:03.18">and produce the answer.</p>
+    <p begin="00:02:09.80" dur="00:00:03.43">After you've planned the logic<br/>for a computer program, you need</p>
+    <p begin="00:02:13.23" dur="00:00:02.41">to write the code, which<br/>means writing the program</p>
+    <p begin="00:02:15.64" dur="00:00:02.28">in a computer programming<br/>language,</p>
+    <p begin="00:02:17.92" dur="00:00:02.61">then you translate the<br/>code into machine language</p>
+    <p begin="00:02:20.53" dur="00:00:02.05">that the computer<br/>can understand,</p>
+    <p begin="00:02:22.58" dur="00:00:02.83">you test the program,<br/>then you put the program</p>
+    <p begin="00:02:25.41" dur="00:00:04.13">into production, and, finally,<br/>you maintain the program.</p>
+    <p begin="00:02:29.54" dur="00:00:04.74">We will talk about these last<br/>5 steps in the next 2 videos.</p>
+    <p begin="00:02:34.28" dur="00:00:01.91">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

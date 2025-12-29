@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.84" dur="00:00:01.82">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:02.66" dur="00:00:01.68">Let's examine looping.</p>
+    <p begin="00:00:04.34" dur="00:00:02.16">Suppose you want to write<br/>a program that outputs</p>
+    <p begin="00:00:06.50" dur="00:00:03.04">hello four times and<br/>then outputs goodbye.</p>
+    <p begin="00:00:09.54" dur="00:00:02.55">This is the perfect<br/>place to use a loop.</p>
+    <p begin="00:00:12.09" dur="00:00:04.13">You can start the program and<br/>declare a loop control variable.</p>
+    <p begin="00:00:16.22" dur="00:00:04.11">We'll call this one "count,"<br/>and we'll initialize it to zero.</p>
+    <p begin="00:00:20.33" dur="00:00:03.51">Then you compare the loop<br/>control variable to some value.</p>
+    <p begin="00:00:23.84" dur="00:00:02.21">Count is less than four.</p>
+    <p begin="00:00:26.05" dur="00:00:01.99">That's true, because<br/>count is zero,</p>
+    <p begin="00:00:28.04" dur="00:00:03.45">so you enter the loop<br/>body, output hello,</p>
+    <p begin="00:00:31.49" dur="00:00:02.10">and then add one to count.</p>
+    <p begin="00:00:33.59" dur="00:00:02.98">Within a loop body, you<br/>always must alter the loop</p>
+    <p begin="00:00:36.57" dur="00:00:01.08">control variable.</p>
+    <p begin="00:00:37.65" dur="00:00:02.81">So here, count becomes one.</p>
+    <p begin="00:00:40.46" dur="00:00:02.02">Is count still less than four?</p>
+    <p begin="00:00:42.48" dur="00:00:01.26">Yes, it is,</p>
+    <p begin="00:00:43.74" dur="00:00:05.24">so you output hello a second<br/>time, and then count becomes two.</p>
+    <p begin="00:00:48.98" dur="00:00:02.70">You compare count to four<br/>again; it's still less,</p>
+    <p begin="00:00:51.68" dur="00:00:04.40">so you output hello,<br/>and count becomes three.</p>
+    <p begin="00:00:56.08" dur="00:00:03.02">You compare count to<br/>four; it's still less,</p>
+    <p begin="00:00:59.10" dur="00:00:03.61">so you output hello,<br/>and count becomes four.</p>
+    <p begin="00:01:02.71" dur="00:00:03.75">This time when you compare count<br/>to four, it's no longer less.</p>
+    <p begin="00:01:06.46" dur="00:00:01.88">You don't enter the loop again.</p>
+    <p begin="00:01:08.34" dur="00:00:03.89">You output goodbye, and<br/>you stop the program.</p>
+    <p begin="00:01:13.57" dur="00:00:02.73">When you use a loop control<br/>variable in a program,</p>
+    <p begin="00:01:16.30" dur="00:00:02.53">you must do three<br/>things with it.</p>
+    <p begin="00:01:18.83" dur="00:00:03.25">You must initialize the<br/>loop control variable.</p>
+    <p begin="00:01:22.08" dur="00:00:03.19">In this case, we're setting<br/>the loop control variable equal</p>
+    <p begin="00:01:25.27" dur="00:00:01.38">to zero.</p>
+    <p begin="00:01:26.65" dur="00:00:03.74">Initializing it doesn't have<br/>to happen when it's declared,</p>
+    <p begin="00:01:30.39" dur="00:00:03.31">but it has to happen<br/>before the loop body starts.</p>
+    <p begin="00:01:33.70" dur="00:00:03.36">And initializing doesn't mean<br/>it has to be set to zero.</p>
+    <p begin="00:01:37.06" dur="00:00:04.90">The loop control variable just<br/>has to be set to some value.</p>
+    <p begin="00:01:41.96" dur="00:00:03.03">In every loop, the loop<br/>control variable is tested.</p>
+    <p begin="00:01:44.99" dur="00:00:05.34">In this case, we're testing,<br/>is count less than four.</p>
+    <p begin="00:01:50.33" dur="00:00:01.82">And in the body of every loop,</p>
+    <p begin="00:01:52.15" dur="00:00:02.62">the loop control<br/>variable must be altered.</p>
+    <p begin="00:01:54.77" dur="00:00:03.39">In this case, we're altering<br/>count by adding one to it.</p>
+    <p begin="00:01:58.16" dur="00:00:01.56">You don't have to add one.</p>
+    <p begin="00:01:59.72" dur="00:00:03.00">In other loops, you might<br/>add two, or five, or ten.</p>
+    <p begin="00:02:02.72" dur="00:00:02.39">Other loops, you might<br/>perform subtraction,</p>
+    <p begin="00:02:05.11" dur="00:00:02.56">and still other loops, you<br/>might change the value of count</p>
+    <p begin="00:02:07.67" dur="00:00:01.91">by getting user input.</p>
+    <p begin="00:02:09.58" dur="00:00:03.73">But in some way, the variable<br/>must be altered somewhere</p>
+    <p begin="00:02:13.31" dur="00:00:02.55">within the loop.</p>
+    <p begin="00:02:15.86" dur="00:00:03.78">Let's look at a loop in which<br/>the loop control variable was</p>
+    <p begin="00:02:19.64" dur="00:00:01.78">not initialized.</p>
+    <p begin="00:02:21.42" dur="00:00:03.84">In this case, the program<br/>starts and count is declared,</p>
+    <p begin="00:02:25.26" dur="00:00:02.89">but not given an initial value.</p>
+    <p begin="00:02:28.15" dur="00:00:01.35">When you compare count to four,</p>
+    <p begin="00:02:29.50" dur="00:00:02.63">one of several things<br/>might happen depending</p>
+    <p begin="00:02:32.13" dur="00:00:02.66">on the programming<br/>language you're using.</p>
+    <p begin="00:02:34.79" dur="00:00:03.14">Some languages won't<br/>compile the program,</p>
+    <p begin="00:02:37.93" dur="00:00:02.59">and count will not be<br/>allowed to be compared to four</p>
+    <p begin="00:02:40.52" dur="00:00:01.80">until it's given a value.</p>
+    <p begin="00:02:42.32" dur="00:00:03.38">In other programming languages,<br/>count might just have garbage</p>
+    <p begin="00:02:45.70" dur="00:00:03.43">in it, and it might be greater<br/>than four or less than four,</p>
+    <p begin="00:02:49.13" dur="00:00:03.15">and you can't predict which<br/>way the logic will travel</p>
+    <p begin="00:02:52.28" dur="00:00:01.57">after this question.</p>
+    <p begin="00:02:53.85" dur="00:00:05.42">In any event, not initializing<br/>the count variable is a mistake.</p>
+    <p begin="00:02:59.27" dur="00:00:04.81">It's also a mistake to<br/>not test the loop control</p>
+    <p begin="00:03:04.08" dur="00:00:01.66">variable correctly.</p>
+    <p begin="00:03:05.74" dur="00:00:02.84">In this program, we wanted to<br/>make sure that count was less</p>
+    <p begin="00:03:08.58" dur="00:00:02.44">than four, but what if<br/>,by mistake, we said</p>
+    <p begin="00:03:11.02" dur="00:00:01.98">is count equal to four.</p>
+    <p begin="00:03:13.00" dur="00:00:03.82">In that case, when the count<br/>was zero, it would not be equal</p>
+    <p begin="00:03:16.82" dur="00:00:03.13">to four right away, and the<br/>program would output goodbye</p>
+    <p begin="00:03:19.95" dur="00:00:02.00">and never output hello.</p>
+    <p begin="00:03:21.95" dur="00:00:03.71">Or by mistake, you might have<br/>typed, count less than 44,</p>
+    <p begin="00:03:25.66" dur="00:00:03.90">instead of just four, and<br/>you'd get 44 hellos instead</p>
+    <p begin="00:03:29.56" dur="00:00:02.55">of only the four<br/>that you wanted.</p>
+    <p begin="00:03:32.11" dur="00:00:03.67">In any event, if you don't<br/>compare the loop control</p>
+    <p begin="00:03:35.78" dur="00:00:03.23">variable correctly when<br/>you start the program,</p>
+    <p begin="00:03:39.01" dur="00:00:02.98">and initialize count, you<br/>don't know what the answer</p>
+    <p begin="00:03:41.99" dur="00:00:03.20">to this question will be or<br/>it'll be an incorrect answer,</p>
+    <p begin="00:03:45.19" dur="00:00:04.38">and you won't get the<br/>program that you wanted.</p>
+    <p begin="00:03:49.57" dur="00:00:02.29">Finally, it's also a mistake not</p>
+    <p begin="00:03:51.86" dur="00:00:02.96">to correctly alter the<br/>loop control variable.</p>
+    <p begin="00:03:54.82" dur="00:00:01.09">You might make a mistake</p>
+    <p begin="00:03:55.91" dur="00:00:02.56">by adding too much<br/>or adding too little.</p>
+    <p begin="00:03:58.47" dur="00:00:03.55">In this case, the programmer<br/>just forgot to type plus one,</p>
+    <p begin="00:04:02.02" dur="00:00:04.60">so count remains equal to<br/>itself and never increases.</p>
+    <p begin="00:04:06.62" dur="00:00:02.82">When this program<br/>starts, count is zero.</p>
+    <p begin="00:04:09.44" dur="00:00:01.26">Is it less than four?</p>
+    <p begin="00:04:10.70" dur="00:00:01.45">Yes, it's zero,</p>
+    <p begin="00:04:12.15" dur="00:00:03.91">so you output hello,<br/>and count remains zero.</p>
+    <p begin="00:04:16.06" dur="00:00:01.74">Is it still less than four?</p>
+    <p begin="00:04:17.80" dur="00:00:04.84">Well, yes it is, so you output<br/>hello, and count remains zero.</p>
+    <p begin="00:04:22.64" dur="00:00:01.82">Is it still less than four?</p>
+    <p begin="00:04:24.46" dur="00:00:03.11">Yes, it's going to be<br/>less than four forever.</p>
+    <p begin="00:04:27.57" dur="00:00:03.42">You have an infinite loop<br/>and an incorrect program.</p>
+    <p begin="00:04:30.99" dur="00:00:06.23">In any good loop, you must<br/>initialize the loop control</p>
+    <p begin="00:04:37.22" dur="00:00:03.88">variable, make sure you're<br/>making the correct test</p>
+    <p begin="00:04:41.10" dur="00:00:02.99">to start the loop, and<br/>somewhere within the loop,</p>
+    <p begin="00:04:44.09" dur="00:00:04.83">you have to alter the loop<br/>control variable correctly.</p>
+    <p begin="00:04:48.92" dur="00:00:00.95">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

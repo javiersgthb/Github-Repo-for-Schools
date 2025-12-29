@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.42" dur="00:00:01.74">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:02.16" dur="00:00:04.05">This is an introduction to<br/>object-oriented programming.</p>
+    <p begin="00:00:06.21" dur="00:00:03.43">The features of object-oriented<br/>programming languages include</p>
+    <p begin="00:00:09.64" dur="00:00:01.44">several that are not included</p>
+    <p begin="00:00:11.08" dur="00:00:02.61">in procedural programming<br/>languages.</p>
+    <p begin="00:00:13.69" dur="00:00:03.65">For example, object-oriented<br/>programs have classes.</p>
+    <p begin="00:00:17.34" dur="00:00:02.70">Classes are categories<br/>of objects.</p>
+    <p begin="00:00:20.04" dur="00:00:01.59">They also have objects.</p>
+    <p begin="00:00:21.63" dur="00:00:03.42">Objects are instances<br/>of classes.</p>
+    <p begin="00:00:25.05" dur="00:00:03.27">Classes are similar to<br/>a blueprint or a recipe.</p>
+    <p begin="00:00:28.32" dur="00:00:02.02">It describes what<br/>an object will be</p>
+    <p begin="00:00:30.34" dur="00:00:02.44">like when one is<br/>actually created.</p>
+    <p begin="00:00:32.78" dur="00:00:04.04">An object is more like an actual<br/>house or an actual cookie,</p>
+    <p begin="00:00:36.82" dur="00:00:02.03">something that is<br/>already created</p>
+    <p begin="00:00:38.85" dur="00:00:03.25">from the blueprint<br/>or the recipe.</p>
+    <p begin="00:00:42.10" dur="00:00:02.49">Object-oriented programming<br/>languages also</p>
+    <p begin="00:00:44.59" dur="00:00:01.85">support encapsulation.</p>
+    <p begin="00:00:46.44" dur="00:00:02.53">That means that the data<br/>and methods that pertain</p>
+    <p begin="00:00:48.97" dur="00:00:04.31">to an object are stored<br/>as a single entity.</p>
+    <p begin="00:00:53.28" dur="00:00:01.59">Inheritance is another feature</p>
+    <p begin="00:00:54.87" dur="00:00:02.35">of object-oriented<br/>programming languages.</p>
+    <p begin="00:00:57.22" dur="00:00:01.60">Inheritance gives<br/>you the ability</p>
+    <p begin="00:00:58.82" dur="00:00:03.33">to extend existing<br/>classes and make new ones</p>
+    <p begin="00:01:02.15" dur="00:00:02.88">that are based on the originals.</p>
+    <p begin="00:01:05.03" dur="00:00:02.29">Object-oriented programming<br/>languages also</p>
+    <p begin="00:01:07.32" dur="00:00:01.99">support polymorphism.</p>
+    <p begin="00:01:09.31" dur="00:00:01.51">This is the ability of a method</p>
+    <p begin="00:01:10.82" dur="00:00:05.34">to act correctly even though<br/>it uses different object types.</p>
+    <p begin="00:01:16.16" dur="00:00:01.35">Let's take a look at a class.</p>
+    <p begin="00:01:17.51" dur="00:00:03.45">Suppose you decide to start a<br/>business that produces videos</p>
+    <p begin="00:01:20.96" dur="00:00:01.73">and you decide that<br/>the attributes</p>
+    <p begin="00:01:22.69" dur="00:00:03.71">of a video will include a<br/>title and a running time.</p>
+    <p begin="00:01:26.40" dur="00:00:03.67">You also decide methods you'll<br/>need include methods to create,</p>
+    <p begin="00:01:30.07" dur="00:00:02.91">distribute and play the videos.</p>
+    <p begin="00:01:32.98" dur="00:00:02.13">This is a class description.</p>
+    <p begin="00:01:35.11" dur="00:00:04.11">When you actually create an<br/>object, it will have a title</p>
+    <p begin="00:01:39.22" dur="00:00:02.60">and a running time and it<br/>will have access to all</p>
+    <p begin="00:01:41.82" dur="00:00:02.01">of the methods in its class.</p>
+    <p begin="00:01:43.83" dur="00:00:01.99">You then can create<br/>a different object</p>
+    <p begin="00:01:45.82" dur="00:00:01.99">that perhaps has<br/>a different title</p>
+    <p begin="00:01:47.81" dur="00:00:03.18">or a different running<br/>time and so on.</p>
+    <p begin="00:01:50.99" dur="00:00:02.29">You can create any<br/>number of objects</p>
+    <p begin="00:01:53.28" dur="00:00:02.57">from the original blueprint.</p>
+    <p begin="00:01:56.93" dur="00:00:03.72">Encapsulation is the feature of<br/>combining all of the attributes</p>
+    <p begin="00:02:00.65" dur="00:00:02.57">and methods into<br/>a single package.</p>
+    <p begin="00:02:03.22" dur="00:00:04.20">When you create an object from<br/>a class, it contains everything</p>
+    <p begin="00:02:07.42" dur="00:00:02.12">that belongs to the class.</p>
+    <p begin="00:02:09.54" dur="00:00:03.30">Therefore, when you write a<br/>method, such as one like this</p>
+    <p begin="00:02:12.84" dur="00:00:02.56">that accepts a video<br/>as a parameter,</p>
+    <p begin="00:02:15.40" dur="00:00:03.48">you can pass the<br/>object in as a group.</p>
+    <p begin="00:02:18.88" dur="00:00:02.65">You don't have to send<br/>the title, running time</p>
+    <p begin="00:02:21.53" dur="00:00:03.56">or other attributes separately<br/>and the method has access</p>
+    <p begin="00:02:25.09" dur="00:00:03.28">to everything that<br/>the class has.</p>
+    <p begin="00:02:28.37" dur="00:00:01.47">Inheritance is the ability</p>
+    <p begin="00:02:29.84" dur="00:00:02.57">to create a class<br/>from an existing one.</p>
+    <p begin="00:02:32.41" dur="00:00:03.47">Suppose you decide you're going<br/>to produce educational videos</p>
+    <p begin="00:02:35.88" dur="00:00:02.45">and you decide that their<br/>attributes should be a title,</p>
+    <p begin="00:02:38.33" dur="00:00:02.05">a running time and a grade level</p>
+    <p begin="00:02:40.38" dur="00:00:02.27">and that their methods<br/>should include create,</p>
+    <p begin="00:02:42.65" dur="00:00:01.63">distribute and play.</p>
+    <p begin="00:02:44.28" dur="00:00:03.24">Well you've already created<br/>most of this with a video.</p>
+    <p begin="00:02:47.52" dur="00:00:02.40">The only new thing here<br/>is the grade level.</p>
+    <p begin="00:02:49.92" dur="00:00:03.68">Everything else already<br/>exists in another class.</p>
+    <p begin="00:02:53.60" dur="00:00:02.68">So instead of creating<br/>the educational video</p>
+    <p begin="00:02:56.28" dur="00:00:03.72">from the start, you<br/>can inherit from video.</p>
+    <p begin="00:03:00.00" dur="00:00:03.57">When you create the educational<br/>video class, all you have</p>
+    <p begin="00:03:03.57" dur="00:00:03.82">to do is add one new<br/>attribute, grade level,</p>
+    <p begin="00:03:07.39" dur="00:00:04.25">and take everything else<br/>from the existing class.</p>
+    <p begin="00:03:11.64" dur="00:00:04.36">When you create an object<br/>that is an educational video,</p>
+    <p begin="00:03:16.00" dur="00:00:03.31">it not only has a grade<br/>level, it also has a title</p>
+    <p begin="00:03:19.31" dur="00:00:04.15">and a running time and access<br/>to all the video methods.</p>
+    <p begin="00:03:24.90" dur="00:00:02.94">If you create another<br/>educational video object,</p>
+    <p begin="00:03:27.84" dur="00:00:03.09">same thing, it could have<br/>the same or different title,</p>
+    <p begin="00:03:30.93" dur="00:00:01.89">same or different<br/>running time and same</p>
+    <p begin="00:03:32.82" dur="00:00:02.41">or different grade level.</p>
+    <p begin="00:03:35.23" dur="00:00:03.13">Polymorphism gives you the<br/>ability to write a single method</p>
+    <p begin="00:03:38.36" dur="00:00:03.19">that works appropriately with<br/>different kinds of objects.</p>
+    <p begin="00:03:41.55" dur="00:00:03.52">For example, suppose you<br/>create a video object.</p>
+    <p begin="00:03:45.07" dur="00:00:04.35">Then suppose you also create<br/>an educational video object.</p>
+    <p begin="00:03:49.42" dur="00:00:03.32">A method that accepts a<br/>video object knows how</p>
+    <p begin="00:03:52.74" dur="00:00:03.02">to work appropriately<br/>if you send it a video.</p>
+    <p begin="00:03:55.76" dur="00:00:03.41">It knows how to distribute<br/>a video, for example.</p>
+    <p begin="00:03:59.17" dur="00:00:02.19">And it also knows how<br/>to work appropriately</p>
+    <p begin="00:04:01.36" dur="00:00:02.10">if you send it an<br/>educational video.</p>
+    <p begin="00:04:03.46" dur="00:00:02.36">It knows how to distribute that.</p>
+    <p begin="00:04:05.82" dur="00:00:03.88">Polymorphism allows you to<br/>write one method that can work</p>
+    <p begin="00:04:09.70" dur="00:00:03.47">with multiple types of objects.</p>
+    <p begin="00:04:13.17" dur="00:00:03.74">Again, the features of object-<br/>oriented programs include</p>
+    <p begin="00:04:16.91" dur="00:00:03.54">classes and objects,<br/>encapsulation,</p>
+    <p begin="00:04:20.45" dur="00:00:03.54">inheritance and polymorphism.</p>
+    <p begin="00:04:23.99" dur="00:00:04.66">That's a brief introduction to<br/>object-oriented programming.</p>
+    <p begin="00:04:28.65" dur="00:00:01.04">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

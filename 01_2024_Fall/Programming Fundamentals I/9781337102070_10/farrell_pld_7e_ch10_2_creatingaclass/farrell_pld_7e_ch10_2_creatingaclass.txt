@@ -1,0 +1,149 @@
+
+
+ 
+    
+ >>Hi, this is Joyce Farrell. 
+
+    Let's look at creating a class. 
+
+    Suppose you decide to start a house sitting business 
+
+    and you decide that one 
+
+    of the classes you'll need is a house sitting contract 
+
+    that holds data about each contract you have 
+
+    with the client. 
+
+    You might decide some of the data 
+
+    that you'll need is a clients name as a string and the number 
+
+    of days of the contract as a numeric variable. 
+
+    Typically when you create a class you make most data 
+
+    to be private. 
+
+    Making the data private constructs a sort of barrier 
+
+    around it that prevents outside classes or outside programs 
+
+    from using the data in any way 
+
+    that the class has not approved of. 
+
+    For example, suppose you start a program 
+
+    and you declare a house sitting contract object, named contract. 
+
+    If you decide to assign a value to contract.client, 
+
+    when you attempt to access the client, you can't get in. 
+
+    The data is private. 
+
+    This statement is illegal. 
+
+    Instead what you have to do is create a method with a name 
+
+    like set client that can accept a clients name as a parameter 
+
+    and make the assignment. 
+
+    This method is public, meaning an outside program can use it. 
+
+    So in your program if you say, contract.set client and pass 
+
+    in an argument, this is a call to the set client method. 
+
+    The name is passed in as a parameter to the method. 
+
+    The method makes the assignment and the method is allowed 
+
+    to make the assignment because it's part of the same class. 
+
+    A class method can get at its own classes data. 
+
+    Here's a more detailed public method called set days. 
+
+    It accepts the number of days in a contract and assigns it only 
+
+    if it's within the proper range. 
+
+    This method declares a maximum number of days and checks 
+
+    to make sure the days passed and don't exceed that. 
+
+    This is a better example of why you sometimes want methods 
+
+    to protect your private data from being set in ways 
+
+    that the class does not agree with. 
+
+    So if you make a statement in your program 
+
+    like contract set days, this calls the public method 
+
+    and sends in the argument as a parameter. 
+
+    The parameter can then be assigned and the method can get 
+
+    at its own data and make the assignment. 
+
+    Here's a statement that attempts 
+
+    to output the contracts clients name. 
+
+    When you try to get the clients name, it can't get 
+
+    out because the data is private. 
+
+    This is an illegal statement. 
+
+    Instead, what you might want 
+
+    to do is add a public method called get client 
+
+    that returns the clients name to an outside program. 
+
+    You might add a name to your program, a string, 
+
+    and then you might assign contract.get client 
+
+    to that name. 
+
+    Contract.get client is a method call and the method 
+
+    in the class can access its own data 
+
+    and that can be returned to the outside. 
+
+    Then you might output the name. 
+
+    Incidentally these two statements, 
+
+    name equals contract.get client 
+
+    and then output name could be combined into one, 
+
+    output contract.get client. 
+
+    You could add another public method to your class 
+
+    to return the private days 
+
+    and then you could output the days within the program. 
+
+    When you finish a class you typically add an end class 
+
+    statement and when you finish your program, of course, 
+
+    you typically add a stop statement. 
+
+    That's a quick look at creating and using a class. 
+
+    Thanks for watching. 
+
+   

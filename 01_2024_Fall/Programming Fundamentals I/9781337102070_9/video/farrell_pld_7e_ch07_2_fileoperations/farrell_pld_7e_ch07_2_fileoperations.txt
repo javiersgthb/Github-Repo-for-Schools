@@ -1,0 +1,154 @@
+
+
+ 
+    
+  
+>> Hi, this is Joyce Farrell. 
+
+    Let's take a look at typical file operations. 
+
+    When you write a computer program that uses data files, 
+
+    typical operations include opening the files, reading data 
+
+    from the input file, which means making a copy of the data 
+
+    and putting it into memory, writing the information 
+
+    in memory to an output file, so it can be stored for later use, 
+
+    and closing the files. 
+
+    For example, let's assume you have an employee data file 
+
+    with name, address, and pay rate, and you want 
+
+    to give each employee a $2 raise. 
+
+    You would open the files, 
+
+    then read the first record into memory. 
+
+    In memory, you would alter the employee's pay rate 
+
+    to increase it by $2. 
+
+    So, instead of $12, this employee should make $14, 
+
+    and you'd write all the information to an output file. 
+
+    Then you could read the next input record, this one happens 
+
+    to make $15.75, so you output the same information 
+
+    with $17.75. 
+
+    The next record is $10, so you'll output it with $12. 
+
+    And the last record is $21, so you output it with $23. 
+
+    When you're done, you have two files in your possession, 
+
+    one has the original data, 
+
+    and the new, updated file has the current, improved 
+
+    or altered data. 
+
+    Let's look at a program that performs this process. 
+
+    You start the program and make your declarations. 
+
+    You declare a spot in memory where the name 
+
+    of the input file can be stored. 
+
+    We're calling our spot employeeData. 
+
+    You also declare a location for the output file. 
+
+    We're calling our's updatedData. 
+
+    You then have some variables and a constant 
+
+    to use in the program. 
+
+    We have a spot for the name, address, and pay rate 
+
+    of each employee, and a constant to hold the $2 raise. 
+
+    You can then call the housekeeping module. 
+
+    And in that module you can open the EmployeeData.dat file. 
+
+    Opening the file locates it on the disk 
+
+    and associates the file name with our program's internal name, 
+
+    which is employeeData. 
+
+    Similarly, you can open the output file 
+
+    by finding a location for it on the storage device, 
+
+    and associating its name with our program's internal name, 
+
+    which is updatedData. 
+
+    Then when you input the name, address, and pay rate 
+
+    from the input file you make copies of the information 
+
+    and store it in memory at the respective locations. 
+
+    After you've read this first record into memory, 
+
+    you can return from the housekeeping section and go back 
+
+    to the mainline logic. 
+
+    It's not end of file, because you've just read the first 
+
+    record into memory, so you can perform the detailLoop. 
+
+    In the detailLoop, you can take the pay rate 
+
+    in memory and add the raise. 
+
+    So the $12 pay rate becomes $14. 
+
+    Then you're ready to output the same name, the same address, 
+
+    and the new updated pay rate to the output file. 
+
+    Then you can get the next record from the file, 
+
+    in this case let's assume it's Zimmerman 
+
+    with a $15.75 pay rate. 
+
+    You return from the detailLoop and check for end of file. 
+
+    Because it's not end of file, 
+
+    you could go apply the pay raise, get the next record, 
+
+    and continue on until one time when you read 
+
+    from the input file, it is end of file. 
+
+    You then can perform the finish module. 
+
+    In the finish module, you close the employeeData file 
+
+    as you close the updatedData file. 
+
+    When you return from finish, you're ready to end the program, 
+
+    and you've successfully created a new file 
+
+    with new, updated information. 
+
+    Thanks for watching. 
+
+   

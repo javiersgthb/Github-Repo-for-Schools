@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <!-- Created by CaptionSync from Automatic Sync Technologies www.automaticsync.com -->
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.46" dur="00:00:01.75">&gt;&gt; Hi. This is Joyce Ferrell,</p>
+    <p begin="00:00:02.21" dur="00:00:02.69">and this video looks<br/>at nested loops.</p>
+    <p begin="00:00:04.90" dur="00:00:03.91">When you have two loops, you<br/>can remove the body of one</p>
+    <p begin="00:00:08.81" dur="00:00:02.10">and insert another loop.</p>
+    <p begin="00:00:10.91" dur="00:00:03.86">Then you have a loop within a<br/>loop, creating nested loops.</p>
+    <p begin="00:00:14.77" dur="00:00:03.87">Let's look at an application<br/>where nested loops are useful.</p>
+    <p begin="00:00:18.64" dur="00:00:02.30">Suppose that you're<br/>paid twice a month,</p>
+    <p begin="00:00:20.94" dur="00:00:02.83">and suppose that you<br/>decide to save $50</p>
+    <p begin="00:00:23.77" dur="00:00:02.14">from your next paycheck.</p>
+    <p begin="00:00:25.91" dur="00:00:05.65">The next check, your goal is to<br/>save an additional $5, or $55.</p>
+    <p begin="00:00:31.56" dur="00:00:04.17">Then, with the next checks,<br/>you want to save $60, $65,</p>
+    <p begin="00:00:35.73" dur="00:00:03.39">and so on -- $5 more<br/>each paycheck.</p>
+    <p begin="00:00:39.12" dur="00:00:02.93">How much will you<br/>have after a year?</p>
+    <p begin="00:00:42.05" dur="00:00:03.20">The output might look like this.</p>
+    <p begin="00:00:45.25" dur="00:00:03.60">After Month 1, Paycheck<br/>1, you'd have $50.</p>
+    <p begin="00:00:48.85" dur="00:00:01.82">Then, after Month 1, Paycheck 2,</p>
+    <p begin="00:00:50.67" dur="00:00:04.18">you'd have $55 more,<br/>for a total of $105.</p>
+    <p begin="00:00:54.85" dur="00:00:02.50">After Month 2, Paycheck 1,</p>
+    <p begin="00:00:57.35" dur="00:00:05.00">you'd have $60 more,<br/>for a total of $165.</p>
+    <p begin="00:01:02.35" dur="00:00:05.78">Then you'd have 65<br/>more, 70, 75, and so on.</p>
+    <p begin="00:01:08.13" dur="00:00:03.00">Here's how you might<br/>write the application.</p>
+    <p begin="00:01:11.13" dur="00:00:03.67">You declare a variable to<br/>hold the months 1 through 12.</p>
+    <p begin="00:01:14.80" dur="00:00:02.96">You declare another variable<br/>to hold the paychecks</p>
+    <p begin="00:01:17.76" dur="00:00:02.58">within each month, 1 or 2.</p>
+    <p begin="00:01:20.34" dur="00:00:02.50">You'd start with $50 saved,</p>
+    <p begin="00:01:22.84" dur="00:00:02.88">and you'd start with<br/>$50 saved total.</p>
+    <p begin="00:01:25.72" dur="00:00:04.27">The core tasks of the program<br/>are these: You output the word</p>
+    <p begin="00:01:29.99" dur="00:00:01.59">"Month" and the month<br/>that you're in,</p>
+    <p begin="00:01:31.58" dur="00:00:02.96">and the word "Paycheck"<br/>and the paycheck number</p>
+    <p begin="00:01:34.54" dur="00:00:01.79">that you're on within the month.</p>
+    <p begin="00:01:36.33" dur="00:00:04.05">And, you'd also output<br/>the total saved so far.</p>
+    <p begin="00:01:40.38" dur="00:00:03.89">Then you'd add $5 to the amount<br/>saved for that paycheck --</p>
+    <p begin="00:01:44.27" dur="00:00:04.68">in other words, this will be<br/>55, then 60, then 65, and so on.</p>
+    <p begin="00:01:48.95" dur="00:00:02.64">And then you would add<br/>that paycheck amount saved</p>
+    <p begin="00:01:51.59" dur="00:00:03.08">to the grand total saved so far.</p>
+    <p begin="00:01:54.67" dur="00:00:03.46">These core tasks can<br/>be placed inside a loop</p>
+    <p begin="00:01:58.13" dur="00:00:02.97">that controls the<br/>paychecks within a month.</p>
+    <p begin="00:02:01.10" dur="00:00:01.92">You'd set paycheck to 1 --</p>
+    <p begin="00:02:03.02" dur="00:00:02.15">that's the loop control<br/>variable.</p>
+    <p begin="00:02:05.17" dur="00:00:02.12">Then you'd compare<br/>paycheck to 2.</p>
+    <p begin="00:02:07.29" dur="00:00:03.11">If it's less than or equal<br/>to 2 -- which it is --</p>
+    <p begin="00:02:10.40" dur="00:00:02.54">you'd perform output<br/>for Paycheck 1,</p>
+    <p begin="00:02:12.94" dur="00:00:03.40">then add 1 to the<br/>paycheck number, giving 2.</p>
+    <p begin="00:02:16.34" dur="00:00:02.70">You'd check again, and the<br/>paycheck number is still less</p>
+    <p begin="00:02:19.04" dur="00:00:02.60">than or equal to<br/>2, because it is 2,</p>
+    <p begin="00:02:21.64" dur="00:00:02.98">so you'd perform the output<br/>and the arithmetic again,</p>
+    <p begin="00:02:24.62" dur="00:00:02.41">and make the paycheck number 3.</p>
+    <p begin="00:02:27.03" dur="00:00:03.35">Then paycheck would no longer<br/>be less than or equal to 2,</p>
+    <p begin="00:02:30.38" dur="00:00:01.57">and this loop would end,</p>
+    <p begin="00:02:31.95" dur="00:00:03.60">having produced two<br/>savings output lines.</p>
+    <p begin="00:02:35.55" dur="00:00:03.90">These tasks can go<br/>inside an outer loop</p>
+    <p begin="00:02:39.45" dur="00:00:01.79">that controls the months.</p>
+    <p begin="00:02:41.24" dur="00:00:03.38">The loop control variable<br/>for this loop is month,</p>
+    <p begin="00:02:44.62" dur="00:00:01.59">and you'd set it to 1.</p>
+    <p begin="00:02:46.21" dur="00:00:03.53">Then you'd compare month to<br/>12, and while it's less than</p>
+    <p begin="00:02:49.74" dur="00:00:03.49">or equal to 12, you'd<br/>perform all the tasks</p>
+    <p begin="00:02:53.23" dur="00:00:03.79">that produce two<br/>paycheck savings lines.</p>
+    <p begin="00:02:57.02" dur="00:00:02.05">Then you'd add 1 to month</p>
+    <p begin="00:02:59.07" dur="00:00:04.39">and perform this loop again<br/>-- ultimately, 12 times.</p>
+    <p begin="00:03:03.46" dur="00:00:03.78">So you have a loop<br/>within a loop,</p>
+    <p begin="00:03:07.24" dur="00:00:03.32">2 paychecks within<br/>each of 12 months.</p>
+    <p begin="00:03:10.56" dur="00:00:03.97">The output would show figures<br/>from Month 1, Paycheck 1;</p>
+    <p begin="00:03:14.53" dur="00:00:05.22">Month 1, Paycheck 2; then<br/>Month 2, Paycheck 1; Month 2,</p>
+    <p begin="00:03:19.75" dur="00:00:02.65">Paycheck 2; and so on.</p>
+    <p begin="00:03:22.40" dur="00:00:04.25">You've successfully used nested<br/>loops to solve this problem.</p>
+    <p begin="00:03:26.65" dur="00:00:01.56">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

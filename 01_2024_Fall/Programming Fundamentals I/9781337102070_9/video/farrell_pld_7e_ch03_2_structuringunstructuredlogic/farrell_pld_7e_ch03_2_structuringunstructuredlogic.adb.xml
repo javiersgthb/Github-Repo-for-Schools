@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:01.18" dur="00:00:00.31">&gt; Joyce Farrell: Hi.</p>
+    <p begin="00:00:01.49" dur="00:00:01.60">This is Joyce Farrell.</p>
+    <p begin="00:00:03.09" dur="00:00:01.05">In this video, we're going</p>
+    <p begin="00:00:04.14" dur="00:00:03.68">to structure some<br/>unstructured logic.</p>
+    <p begin="00:00:07.82" dur="00:00:01.03">The three structures</p>
+    <p begin="00:00:08.85" dur="00:00:04.90">in structured programming are<br/>sequence, selection, and loop.</p>
+    <p begin="00:00:13.75" dur="00:00:02.66">In sequence, one of<br/>them follows the other,</p>
+    <p begin="00:00:16.41" dur="00:00:02.57">with a selection a<br/>question is asked and one</p>
+    <p begin="00:00:18.98" dur="00:00:03.09">of two logical paths is<br/>traveled, and with a loop,</p>
+    <p begin="00:00:22.07" dur="00:00:02.83">a question is asked and<br/>while the question continues</p>
+    <p begin="00:00:24.90" dur="00:00:04.42">to be true, the loop body<br/>continues to execute.</p>
+    <p begin="00:00:29.32" dur="00:00:03.46">The three structures,<br/>sequence, selection, and loop,</p>
+    <p begin="00:00:32.78" dur="00:00:04.16">can be used to solve<br/>any programming problem.</p>
+    <p begin="00:00:36.94" dur="00:00:03.84">You must combine them by<br/>stacking them or nesting them,</p>
+    <p begin="00:00:40.78" dur="00:00:01.93">but if you get the<br/>right combinations,</p>
+    <p begin="00:00:42.71" dur="00:00:05.14">every programming problem can be<br/>solved using just these three.</p>
+    <p begin="00:00:47.85" dur="00:00:04.11">Let's take a look at an<br/>unstructured flowchart segment.</p>
+    <p begin="00:00:51.96" dur="00:00:03.19">In this unstructured<br/>segment, there's a process</p>
+    <p begin="00:00:55.15" dur="00:00:02.73">"G" followed by a question "H".</p>
+    <p begin="00:00:57.88" dur="00:00:02.63">If "H" is no, there's<br/>a process "J".</p>
+    <p begin="00:01:00.51" dur="00:00:02.54">If "H" is yes, there's<br/>a question "I",</p>
+    <p begin="00:01:03.05" dur="00:00:03.33">and "I" performs<br/>either "J" or "K".</p>
+    <p begin="00:01:06.38" dur="00:00:04.29">Let's take this unstructured<br/>segment and make it structured.</p>
+    <p begin="00:01:10.67" dur="00:00:03.79">Start with the first<br/>step, which is step "G".</p>
+    <p begin="00:01:14.46" dur="00:00:02.25">"G" is a sequence.</p>
+    <p begin="00:01:16.71" dur="00:00:02.18">It's a sequence of<br/>only one step.</p>
+    <p begin="00:01:18.89" dur="00:00:02.71">A sequence might have<br/>two, three, five, twenty,</p>
+    <p begin="00:01:21.60" dur="00:00:03.07">any number of steps, but<br/>as long as there are steps</p>
+    <p begin="00:01:24.67" dur="00:00:04.22">with no chances to branch<br/>away, you have a sequence.</p>
+    <p begin="00:01:28.89" dur="00:00:05.43">After "G" in the flowchart,<br/>the next item is question "H".</p>
+    <p begin="00:01:34.32" dur="00:00:03.31">"H" is the beginning<br/>of a selection.</p>
+    <p begin="00:01:37.63" dur="00:00:04.48">When "H" is no, "J"<br/>executes, and that's fine.</p>
+    <p begin="00:01:42.11" dur="00:00:02.41">That's half of a selection.</p>
+    <p begin="00:01:44.52" dur="00:00:05.63">When "H" is yes, another<br/>question executes, question "I".</p>
+    <p begin="00:01:50.15" dur="00:00:00.89">That's fine.</p>
+    <p begin="00:01:51.04" dur="00:00:03.18">You can have a selection<br/>structure nested inside a</p>
+    <p begin="00:01:54.22" dur="00:00:01.03">selection structure,</p>
+    <p begin="00:01:55.25" dur="00:00:05.31">so selection "I" is going to<br/>be nested inside selection "H".</p>
+    <p begin="00:02:00.56" dur="00:00:03.41">When "I" is no, however,<br/>you can't proceed</p>
+    <p begin="00:02:03.97" dur="00:00:02.17">to the existing step "J".</p>
+    <p begin="00:02:06.14" dur="00:00:04.19">That would violate the integrity<br/>of the "I" selection structure,</p>
+    <p begin="00:02:10.33" dur="00:00:01.80">so you repeat "J".</p>
+    <p begin="00:02:12.13" dur="00:00:03.31">When "I" is no, you<br/>execute the same steps</p>
+    <p begin="00:02:15.44" dur="00:00:03.12">that you execute when "H" is no.</p>
+    <p begin="00:02:18.56" dur="00:00:03.60">When "I" is yes, you<br/>execute step "K",</p>
+    <p begin="00:02:22.16" dur="00:00:03.54">then you can join<br/>together the "I" selection,</p>
+    <p begin="00:02:25.70" dur="00:00:03.19">and then finally you join<br/>together the "H" selection,</p>
+    <p begin="00:02:28.89" dur="00:00:04.89">and the "I" selection is nested<br/>entirely inside the "H" selection.</p>
+    <p begin="00:02:33.78" dur="00:00:03.26">Let's compare the<br/>two flowcharts,</p>
+    <p begin="00:02:37.04" dur="00:00:01.92">the original unstructured<br/>version</p>
+    <p begin="00:02:38.96" dur="00:00:02.36">and the newly structured<br/>version.</p>
+    <p begin="00:02:41.32" dur="00:00:03.67">In both cases, the first<br/>step to execute is "G".</p>
+    <p begin="00:02:44.99" dur="00:00:03.29">When "H" is asked<br/>if the answer is no,</p>
+    <p begin="00:02:48.28" dur="00:00:03.43">both flowcharts<br/>execute step "J".</p>
+    <p begin="00:02:51.71" dur="00:00:03.08">If you start over and<br/>do step "G" and ask "H"</p>
+    <p begin="00:02:54.79" dur="00:00:04.87">but the answer is yes, in both<br/>cases question "I" is asked.</p>
+    <p begin="00:02:59.66" dur="00:00:05.09">When "I" is no, in both<br/>cases step "J" executes.</p>
+    <p begin="00:03:04.75" dur="00:00:04.68">If you start over and do step<br/>"G" and ask "H" and ask "I",</p>
+    <p begin="00:03:09.43" dur="00:00:04.64">if "I" is yes, in both<br/>cases step "K" executes.</p>
+    <p begin="00:03:14.07" dur="00:00:03.06">The two flowcharts do<br/>exactly the same thing,</p>
+    <p begin="00:03:17.13" dur="00:00:01.95">but the first one<br/>is unstructured</p>
+    <p begin="00:03:19.08" dur="00:00:02.28">and the second one<br/>is structured.</p>
+    <p begin="00:03:21.36" dur="00:00:04.46">Let's take a different<br/>unstructured flowchart segment.</p>
+    <p begin="00:03:25.82" dur="00:00:03.87">In this case, there's step<br/>"L" followed by question "M",</p>
+    <p begin="00:03:29.69" dur="00:00:05.11">and if "M" is yes, you do step<br/>"N" then do step "L" again.</p>
+    <p begin="00:03:34.80" dur="00:00:02.35">Well, step "L" by<br/>itself is fine.</p>
+    <p begin="00:03:37.15" dur="00:00:02.97">That is part of the sequence.</p>
+    <p begin="00:03:40.12" dur="00:00:02.08">After "L", you ask "M".</p>
+    <p begin="00:03:42.20" dur="00:00:02.43">"M" is starting a loop.</p>
+    <p begin="00:03:44.63" dur="00:00:03.30">When the loop is<br/>yes, you do step "N",</p>
+    <p begin="00:03:47.93" dur="00:00:02.45">and then you do step "L".</p>
+    <p begin="00:03:50.38" dur="00:00:04.67">The loop has to repeat step "L"<br/>so that the logic after step</p>
+    <p begin="00:03:55.05" dur="00:00:03.96">"L" can travel right<br/>back to question "M".</p>
+    <p begin="00:03:59.01" dur="00:00:01.79">So the loop has "M",</p>
+    <p begin="00:04:00.80" dur="00:00:04.97">and it contains a<br/>sequence of "N" and "L".</p>
+    <p begin="00:04:05.77" dur="00:00:03.01">Let's compare the original<br/>and the structured version.</p>
+    <p begin="00:04:08.78" dur="00:00:05.11">In both cases, you perform<br/>step "L", then you ask "M".</p>
+    <p begin="00:04:13.89" dur="00:00:03.05">If the answer to "M" is<br/>yes, you do step "N",</p>
+    <p begin="00:04:16.94" dur="00:00:04.22">and in both cases<br/>you then do step "L".</p>
+    <p begin="00:04:21.16" dur="00:00:03.61">After "L", you always<br/>ask "M" again.</p>
+    <p begin="00:04:24.77" dur="00:00:05.87">If "M" is yes, you do "N"<br/>and "L", and ask "M" again.</p>
+    <p begin="00:04:30.64" dur="00:00:03.43">If "M" is no, the logic ends.</p>
+    <p begin="00:04:34.07" dur="00:00:02.25">Both flowcharts<br/>do the same thing,</p>
+    <p begin="00:04:36.32" dur="00:00:01.92">but the first one<br/>is unstructured,</p>
+    <p begin="00:04:38.24" dur="00:00:02.72">the second one is structured.</p>
+    <p begin="00:04:40.96" dur="00:00:00.91">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

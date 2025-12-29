@@ -1,0 +1,192 @@
+
+
+ 
+    
+  
+>> Joyce: Hi, this is Joyce Farrell. 
+
+    Let's take a first look at a simple computer program. 
+
+    Some basic programming operations occur 
+
+    in almost every computer program. 
+
+    First there's input, a user puts some data into a program, 
+
+    some facts and figures. 
+
+    Input devices that are used include keyboards and mice. 
+
+    Sometimes input data comes on a disk. 
+
+    Audio data might come through a microphone. 
+
+    After the data is input, it's processed. 
+
+    The piece of hardware 
+
+    that performs processing is the Central Processing Unit 
+
+    or the CPU. 
+
+    Processing might include doing some arithmetic 
+
+    or sorting the data or organizing it in some way. 
+
+    After data is input 
+
+    and processed, you can output the information that you've created. 
+
+    Output is available for a user to see, 
+
+    to see the results of the program. 
+
+    Output devices include monitors and printers. 
+
+    Audio output might come through speakers 
+
+    or sometimes output is sent to a disk and then 
+
+    that disk might be used as input into a new program. 
+
+    When programmers plan the logic 
+
+    for their programs they tend to use 1 of 2 tools. 
+
+    Flowcharts are pictorial representations 
+
+    of the logical steps in a program 
+
+    and pseudocode is the logical steps 
+
+    of a program written out in English form. 
+
+    Here's the logic for a program that adds 1 
+
+    to a user's input number. 
+
+    On the left is the flowchart of the program, 
+
+    on the top right is the pseudocode 
+
+    and on the bottom right is what the program might look 
+
+    like after it's been written and it's running 
+
+    in a Command Prompt window. 
+
+    In both the flowchart and pseudocode,  the first step is to start. 
+
+    In the Command Prompt window, you might type a command 
+
+    to run the program. 
+
+    The command will differ in every programming language 
+
+    that you use. 
+
+    This program happens to have been written in Java, 
+
+    so the command is Java and then OneMore, 
+
+    which is the name of the program. 
+
+    In both the flowchart and the pseudocode the next step is 
+
+    to input the user's entry. 
+
+    In a real program, you might add an output statement before input 
+
+    usersEntry to explain to the user what to do. 
+
+    In this very simple example, 
+
+    on the output screen, we'll just have a question mark asking the 
+
+    user for an entry, and then the user types 
+
+    in some data, let's say 16. 
+
+    The next step in both the flowchart 
+
+    and the pseudocode sets a spot in memory, called Result, 
+
+    to usersEntry + 1. 
+
+    Nothing happens on the screen during this step. 
+
+    This processing happens in the central processing unit 
+
+    and in memory, so result becomes one more than the user's entry. 
+
+    The next step in both the flowchart and the pseudocode is 
+
+    to output the words &quot;One more than&quot;, followed 
+
+    by the usersEntry, followed 
+
+    by the word &quot;is&quot;, and ending in result. 
+
+    On the screen it says, &quot;One more than 16 is 17&quot; 
+
+    because 17 is the value of result, 
+
+    and then the program ends. 
+
+    You can run the program again, start it, give the command 
+
+    to start it, ask for input, perhaps the user types 345. 
+
+    In memory, result is set to 346, 
+
+    but you don't see anything happen on the screen yet. 
+
+    When both the flowchart and the pseudocode get 
+
+    to the output statement, then on the screen you see, 
+
+    &quot;One more than 345 is 346,&quot; 
+
+    and both the flowchart and pseudocode stop. 
+
+    You don't have to run programs in a command line environment. 
+
+    Some programs are created to run 
+
+    in a GUI  environment. 
+
+    GUI means Graphical User Interface. 
+
+    For example, suppose you have the GUI screen that you see 
+
+    in the lower-right part of the screen. 
+
+    In the flowchart and the pseudocode, you still start 
+
+    the program. 
+
+    You still input the user's entry. 
+
+    Let's say the user types 67 into a textbox. 
+
+    In memory, the result becomes usersEntry + 1. 
+
+    You don't see anything happen on the screen. 
+
+    In both the flowchart and the pseudocode, the next step is 
+
+    to output one more than user's entry is result. 
+
+    And on the GUI screen you can see One more than 67 is 68. 
+
+    The flowchart and pseudocode 
+
+    for the GUI program are identical to what they were 
+
+    for the command line program. 
+
+    The logic is the same no matter what the environment is. 
+
+    Thanks for watching. 
+
+   

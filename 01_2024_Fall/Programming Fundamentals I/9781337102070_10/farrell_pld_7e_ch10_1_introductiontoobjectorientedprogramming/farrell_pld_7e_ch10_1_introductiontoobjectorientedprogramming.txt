@@ -1,0 +1,190 @@
+
+
+ 
+    
+  
+>> Hi, this is Joyce Farrell. 
+
+    This is an introduction to object-oriented programming. 
+
+    The features of object-oriented programming languages include 
+
+    several that are not included 
+
+    in procedural programming languages. 
+
+    For example, object-oriented programs have classes. 
+
+    Classes are categories of objects. 
+
+    They also have objects. 
+
+    Objects are instances of classes. 
+
+    Classes are similar to a blueprint or a recipe. 
+
+    It describes what an object will be 
+
+    like when one is actually created. 
+
+    An object is more like an actual house or an actual cookie, 
+
+    something that is already created 
+
+    from the blueprint or the recipe. 
+
+    Object-oriented programming languages also 
+
+    support encapsulation. 
+
+    That means that the data and methods that pertain 
+
+    to an object are stored as a single entity. 
+
+    Inheritance is another feature 
+
+    of object-oriented programming languages. 
+
+    Inheritance gives you the ability 
+
+    to extend existing classes and make new ones 
+
+    that are based on the originals. 
+
+    Object-oriented programming languages also 
+
+    support polymorphism. 
+
+    This is the ability of a method 
+
+    to act correctly even though it uses different object types. 
+
+    Let's take a look at a class. 
+
+    Suppose you decide to start a business that produces videos 
+
+    and you decide that the attributes 
+
+    of a video will include a title and a running time. 
+
+    You also decide methods you'll need include methods to create, 
+
+    distribute and play the videos. 
+
+    This is a class description. 
+
+    When you actually create an object, it will have a title 
+
+    and a running time and it will have access to all 
+
+    of the methods in its class. 
+
+    You then can create a different object 
+
+    that perhaps has a different title 
+
+    or a different running time and so on. 
+
+    You can create any number of objects 
+
+    from the original blueprint. 
+
+    Encapsulation is the feature of combining all of the attributes 
+
+    and methods into a single package. 
+
+    When you create an object from a class, it contains everything 
+
+    that belongs to the class. 
+
+    Therefore, when you write a method, such as one like this 
+
+    that accepts a video as a parameter, 
+
+    you can pass the object in as a group. 
+
+    You don't have to send the title, running time 
+
+    or other attributes separately and the method has access 
+
+    to everything that the class has. 
+
+    Inheritance is the ability 
+
+    to create a class from an existing one. 
+
+    Suppose you decide you're going to produce educational videos 
+
+    and you decide that their attributes should be a title, 
+
+    a running time and a grade level 
+
+    and that their methods should include create, 
+
+    distribute and play. 
+
+    Well you've already created most of this with a video. 
+
+    The only new thing here is the grade level. 
+
+    Everything else already exists in another class. 
+
+    So instead of creating the educational video 
+
+    from the start, you can inherit from video. 
+
+    When you create the educational video class, all you have 
+
+    to do is add one new attribute, grade level, 
+
+    and take everything else from the existing class. 
+
+    When you create an object that is an educational video, 
+
+    it not only has a grade level, it also has a title 
+
+    and a running time and access to all the video methods. 
+
+    If you create another educational video object, 
+
+    same thing, it could have the same or different title, 
+
+    same or different running time and same 
+
+    or different grade level. 
+
+    Polymorphism gives you the ability to write a single method 
+
+    that works appropriately with different kinds of objects. 
+
+    For example, suppose you create a video object. 
+
+    Then suppose you also create an educational video object. 
+
+    A method that accepts a video object knows how 
+
+    to work appropriately if you send it a video. 
+
+    It knows how to distribute a video, for example. 
+
+    And it also knows how to work appropriately 
+
+    if you send it an educational video. 
+
+    It knows how to distribute that. 
+
+    Polymorphism allows you to write one method that can work 
+
+    with multiple types of objects. 
+
+    Again, the features of object- oriented programs include 
+
+    classes and objects, encapsulation, 
+
+    inheritance and polymorphism. 
+
+    That's a brief introduction to object-oriented programming. 
+
+    Thanks for watching. 
+
+   

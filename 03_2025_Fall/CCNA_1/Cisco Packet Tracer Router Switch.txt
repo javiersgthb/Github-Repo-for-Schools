@@ -1,0 +1,37 @@
+enable
+configure terminal
+hostname Room-146
+!
+! Console Security (Correct)
+Switch(config)# line console 0
+Switch(config-line)# password cisco
+Switch(config-line)# login
+Switch(config-line)# exit
+!
+! Service Password Encryption (Correct)
+Switch(config)# service password-encryption
+!
+! Enable Secret (Correct)
+Switch(config)# enable secret class
+!
+! VLAN 1 Management Interface Addressing (Correct)
+Switch(config)# interface Vlan1
+Switch(config-if)# description Management Interface 10.10.11.0/24
+Switch(config-if)# ip address 10.10.11.100 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+!
+! Default Gateway for Management (10.10.11.1 is the router interface IP)
+Switch(config)# ip default-gateway 10.10.11.1
+!
+! VTY Lines (Password is correctly marked in screenshot, but we set it again for completeness)
+Switch(config)# line vty 0 15
+Switch(config-line)# password cisco
+Switch(config-line)# login
+Switch(config-line)# exit
+!
+! Banner MOTD (Correct)
+Switch(config)# banner motd #WARNING: Authorized access only.#
+!
+Switch(config)# end
+Switch# copy running-config startup-config

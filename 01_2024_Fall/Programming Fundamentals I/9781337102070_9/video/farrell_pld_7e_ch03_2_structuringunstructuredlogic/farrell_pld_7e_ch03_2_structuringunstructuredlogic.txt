@@ -1,0 +1,176 @@
+
+
+ 
+    &gt; Joyce Farrell: Hi. 
+
+    This is Joyce Farrell. 
+
+    In this video, we're going 
+
+    to structure some unstructured logic. 
+
+    The three structures 
+
+    in structured programming are sequence, selection, and loop. 
+
+    In sequence, one of them follows the other, 
+
+    with a selection a question is asked and one 
+
+    of two logical paths is traveled, and with a loop, 
+
+    a question is asked and while the question continues 
+
+    to be true, the loop body continues to execute. 
+
+    The three structures, sequence, selection, and loop, 
+
+    can be used to solve any programming problem. 
+
+    You must combine them by stacking them or nesting them, 
+
+    but if you get the right combinations, 
+
+    every programming problem can be solved using just these three. 
+
+    Let's take a look at an unstructured flowchart segment. 
+
+    In this unstructured segment, there's a process 
+
+    &quot;G&quot; followed by a question &quot;H&quot;. 
+
+    If &quot;H&quot; is no, there's a process &quot;J&quot;. 
+
+    If &quot;H&quot; is yes, there's a question &quot;I&quot;, 
+
+    and &quot;I&quot; performs either &quot;J&quot; or &quot;K&quot;. 
+
+    Let's take this unstructured segment and make it structured. 
+
+    Start with the first step, which is step &quot;G&quot;. 
+
+    &quot;G&quot; is a sequence. 
+
+    It's a sequence of only one step. 
+
+    A sequence might have two, three, five, twenty, 
+
+    any number of steps, but as long as there are steps 
+
+    with no chances to branch away, you have a sequence. 
+
+    After &quot;G&quot; in the flowchart, the next item is question &quot;H&quot;. 
+
+    &quot;H&quot; is the beginning of a selection. 
+
+    When &quot;H&quot; is no, &quot;J&quot; executes, and that's fine. 
+
+    That's half of a selection. 
+
+    When &quot;H&quot; is yes, another question executes, question &quot;I&quot;. 
+
+    That's fine. 
+
+    You can have a selection structure nested inside a 
+
+    selection structure, 
+
+    so selection &quot;I&quot; is going to be nested inside selection &quot;H&quot;. 
+
+    When &quot;I&quot; is no, however, you can't proceed 
+
+    to the existing step &quot;J&quot;. 
+
+    That would violate the integrity of the &quot;I&quot; selection structure, 
+
+    so you repeat &quot;J&quot;. 
+
+    When &quot;I&quot; is no, you execute the same steps 
+
+    that you execute when &quot;H&quot; is no. 
+
+    When &quot;I&quot; is yes, you execute step &quot;K&quot;, 
+
+    then you can join together the &quot;I&quot; selection, 
+
+    and then finally you join together the &quot;H&quot; selection, 
+
+    and the &quot;I&quot; selection is nested entirely inside the &quot;H&quot; selection. 
+
+    Let's compare the two flowcharts, 
+
+    the original unstructured version 
+
+    and the newly structured version. 
+
+    In both cases, the first step to execute is &quot;G&quot;. 
+
+    When &quot;H&quot; is asked if the answer is no, 
+
+    both flowcharts execute step &quot;J&quot;. 
+
+    If you start over and do step &quot;G&quot; and ask &quot;H&quot; 
+
+    but the answer is yes, in both cases question &quot;I&quot; is asked. 
+
+    When &quot;I&quot; is no, in both cases step &quot;J&quot; executes. 
+
+    If you start over and do step &quot;G&quot; and ask &quot;H&quot; and ask &quot;I&quot;, 
+
+    if &quot;I&quot; is yes, in both cases step &quot;K&quot; executes. 
+
+    The two flowcharts do exactly the same thing, 
+
+    but the first one is unstructured 
+
+    and the second one is structured. 
+
+    Let's take a different unstructured flowchart segment. 
+
+    In this case, there's step &quot;L&quot; followed by question &quot;M&quot;, 
+
+    and if &quot;M&quot; is yes, you do step &quot;N&quot; then do step &quot;L&quot; again. 
+
+    Well, step &quot;L&quot; by itself is fine. 
+
+    That is part of the sequence. 
+
+    After &quot;L&quot;, you ask &quot;M&quot;. 
+
+    &quot;M&quot; is starting a loop. 
+
+    When the loop is yes, you do step &quot;N&quot;, 
+
+    and then you do step &quot;L&quot;. 
+
+    The loop has to repeat step &quot;L&quot; so that the logic after step 
+
+    &quot;L&quot; can travel right back to question &quot;M&quot;. 
+
+    So the loop has &quot;M&quot;, 
+
+    and it contains a sequence of &quot;N&quot; and &quot;L&quot;. 
+
+    Let's compare the original and the structured version. 
+
+    In both cases, you perform step &quot;L&quot;, then you ask &quot;M&quot;. 
+
+    If the answer to &quot;M&quot; is yes, you do step &quot;N&quot;, 
+
+    and in both cases you then do step &quot;L&quot;. 
+
+    After &quot;L&quot;, you always ask &quot;M&quot; again. 
+
+    If &quot;M&quot; is yes, you do &quot;N&quot; and &quot;L&quot;, and ask &quot;M&quot; again. 
+
+    If &quot;M&quot; is no, the logic ends. 
+
+    Both flowcharts do the same thing, 
+
+    but the first one is unstructured, 
+
+    the second one is structured. 
+
+    Thanks for watching. 
+
+   

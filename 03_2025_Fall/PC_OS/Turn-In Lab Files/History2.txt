@@ -1,0 +1,49 @@
+A Brief History of Personal Computers
+
+The electronic computer is a relatively modern invention; 
+the first fully operable computer was developed about 60 
+years ago, toward the end of World War II, by a team at the 
+University of Pennsylvania's Moore School of Engineering.
+This team was headed by John Mauchly and J. Presper Eckert, 
+who named the new machine ENIAC, for Electronic Numerical 
+Integrator and Calculator. ENIAC was hardly a personal 
+computer, occupying a large room and weighing about 33 tons. 
+By today's standards, ENIAC was extremely slow, unreliable, 
+and expensive to operate. In 1945, on the other hand, it 
+was considered a marvel.
+
+Over the next 30 years, computers became smaller, faster, 
+and less expensive. However, most of these machines remained 
+isolated in their own air-conditioned rooms, tended by 
+specially trained personnel. By 1975, computers were in great 
+demand at universities, government agencies, and large 
+businesses, but relatively few people had ever come face-to-
+face with an actual computer. This all began to change in 
+the late 1970s.
+
+To understand why, let's take a closer look at the early 
+computers.  ENIAC and its immediate successors were large, 
+slow, and unreliable primarily because they used thousands 
+of large, slow, and unreliable vacuum tubes in their 
+electronic circuits. The vacuum tubes were glass cylinders, 
+typically about four inches high and an inch in diameter, 
+which generated a lot of heat and thus could not be placed 
+too close together. Then, in 1947, a momentous event occurred 
+at Bell Labs -- William Shockley, John Bardeen, and Walter 
+Brattain announced the invention of the transistor. 
+Only about an inch long and a quarter inch across, a 
+transistor produced very little heat, and did the same job as 
+a vacuum tube.
+
+The downsizing of computers began in the 1950s as transistors 
+replaced vacuum tubes, and continued into the 1960s with the 
+introduction of the integrated circuit (IC) -- an ice cube-
+sized package containing hundreds of transistors. By the late 
+1960s, microchips, consisting of thousands of electronic 
+components residing on a piece of silicon the size of a 
+postage stamp, had begun to replace ICs. At this time, some 
+minicomputers occupied a space no larger than a small filing 
+cabinet and cost less than $25,000. Then, in 1970, Ted 
+Hoff, Jr., working at Intel Corporation, invented the 
+microprocessor, a central processing unit on a chip. The 
+technological world was now ready for the personal computer.

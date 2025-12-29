@@ -1,0 +1,136 @@
+
+
+ 
+    
+  
+>> Hi, this is Joyce Farrell. 
+
+    Let's take a quick look 
+
+    at the logic behind merging files. 
+
+    You can merge files when you have two or more files 
+
+    that are in the same format. 
+
+    That means that the records 
+
+    in both files contain the same fields, in the same order. 
+
+    You also can merge files 
+
+    when the two files are sorted using the same field. 
+
+    In other words, if the two files hold customer records, 
+
+    both have to be sorted in ID number order, or both have 
+
+    to be sorted by last name of the customer, or maybe both have 
+
+    to be sorted by zip code. 
+
+    It doesn't matter which field they're sorted by, but they have 
+
+    to be sorted using the same field. 
+
+    For example, let's take a simple file 
+
+    that just stores the first name of your friends. 
+
+    You have 5 friends and they're in alphabetical order. 
+
+    Suppose I also have a file of friends, and my friends are 
+
+    in alphabetical order. 
+
+    What you might want to do is create a merged listed 
+
+    in which all the names are in alphabetical order 
+
+    and the merged file contains each record 
+
+    from the first two files. 
+
+    Here's how the logic would work. 
+
+    You read in one record from each of the files. 
+
+    So, in this case, your first friend is Beth, 
+
+    and my first friend is Ann. 
+
+    You compare the two and see which one is less. 
+
+    The one that's less alphabetically is the one 
+
+    that comes first alphabetically. 
+
+    In other words, in this case it's Ann. 
+
+    So, you would write Ann to the output file 
+
+    and read the next record in the My friends file. 
+
+    Then you compare Beth and Don. 
+
+    Beth is less alphabetically, so you write Beth 
+
+    to the output file, and read another record 
+
+    from the Your friends file, which is Carl. 
+
+    You compare Carl and Don. 
+
+    Carl is less, so you write Carl to output and read George. 
+
+    You compare Don and George, Don is less, so you write Don 
+
+    to output file, and read Emily from My friends file. 
+
+    When you compare George and Emily, Emily is less, 
+
+    so it gets sent to output and you read Fred. 
+
+    George and Fred, Fred is less, so you send Fred to output 
+
+    and you read past the end of the file. 
+
+    You can't quit the program yet because there are still more 
+
+    of Your friends to be sent to output. 
+
+    So, a trick the programmers use is to put a very high value 
+
+    in memory in the spot where the My friends name would be. 
+
+    By a high value, we mean something 
+
+    that alphabetically will always fall 
+
+    after every name in the list. 
+
+    In this case, ZZZZZ will work. 
+
+    If we were sorting on a numeric field, we might use a value 
+
+    like 99999. 
+
+    Anyhow, we now compare George and ZZZ, and George is less, 
+
+    so George is written to output and we read Hannah into memory. 
+
+    Hannah is less than ZZZ, so Hannah is sent 
+
+    to output and we read Iris. 
+
+    Iris is less than ZZZ, so we send Iris to output 
+
+    and set Your friends name to ZZZ. 
+
+    When both names are the Zs, that's the end of the program, 
+
+    and you've produced a final merged friends list. 
+
+    Thanks for watching. 
+
+   

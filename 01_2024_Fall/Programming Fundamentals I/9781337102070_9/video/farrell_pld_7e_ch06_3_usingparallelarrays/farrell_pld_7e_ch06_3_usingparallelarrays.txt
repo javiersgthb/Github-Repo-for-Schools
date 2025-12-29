@@ -1,0 +1,204 @@
+
+
+ 
+    
+  
+>> Hi, this is Joyce Farrell. 
+
+    I want to talk about using parallel arrays. 
+
+    What are parallel arrays? 
+
+    Well, parallel arrays occur when you have two or more arrays 
+
+    in memory, and they're parallel when the data in each element 
+
+    of one array logically corresponds to the data 
+
+    in the same relative position in the second array. 
+
+    For example, suppose you have four employees 
+
+    with different ID numbers, and different names, and you want 
+
+    to be able to write a program 
+
+    where a user can input the ID number 
+
+    and output the correct name. 
+
+    You would start by declaring an array of ID numbers as follows: 
+
+    numeric ID number -- four of them -- and then list them. 
+
+    In memory, the ID numbers would look like this. 
+
+    Then you declare an array of names. 
+
+    And in memory, they'd look like this. 
+
+    You'd need a few other variables. 
+
+    A numeric subscript used to cycle through the array looking 
+
+    for the correct ID number, a user entry 
+
+    where the user will type in the ID number 
+
+    that we're looking for, and a found name, 
+
+    where we're going to store the correct name when we find it. 
+
+    For right now, it's going to say, &quot;not found.&quot; 
+
+    When you start the program, the subscript is set to zero. 
+
+    Then you input the user's entry. 
+
+    Let's assume the user types in 172. 
+
+    You compare the subscript to four 
+
+    to make sure you've not gone past the end of the array, 
+
+    and the subscript is zero, so it is less than four, 
+
+    and then you compare the user's entry, 172, with the ID number 
+
+    at position zero, which is 121. 
+
+    They're not equal, so we'll end the if statement and wait 
+
+    until later to show what we do when they are equal. 
+
+    Then add one to the subscript, so it's one, and you reach the end 
+
+    of the body of the loop. 
+
+    You return to the top and compare the subscript to four. 
+
+    It's less, so you compare the user's entry, 172, 
+
+    with the ID number in position one, which is 135. 
+
+    They're not equal, so the if statement ends, 
+
+    and you add one more to sub. 
+
+    So, sub is now two. 
+
+    The loop is at the end, and you compare the subscript 
+
+    to four again. 
+
+    You're still within range, so the loop continues. 
+
+    When you compare the user entry, 172, with ID number two, 
+
+    this time they're equal. 
+
+    So, in the foundName you store the name 
+
+    at position two in the name array. 
+
+    The arrays are parallel because the ID number at position two 
+
+    in one array corresponds to the name 
+
+    and position two in the other array. 
+
+    Then you end the if statement, add one to the subscript, 
+
+    reach the bottom of the loop, compare the subscript to four. 
+
+    It is still less, so you compare 189 and 172. 
+
+    They're not equal, so the if statement ends. 
+
+    You increase the subscript. 
+
+    It's the end of the while loop. 
+
+    Now when you compare sub to four, it's not less than four, 
+
+    so the loop is over. 
+
+    You continue then to output the ID number, the user entry, 
+
+    which is 172, and the found name that goes 
+
+    with the user entry, Carl. 
+
+    You've successfully found the right name 
+
+    with the ID number that was entered. 
+
+    Now, if the array had had 100 elements instead of only four, 
+
+    the loop would have continued for a long while 
+
+    after you found ID number 172. 
+
+    You can make the loop a little more efficient by exiting 
+
+    as soon as you find the correct name, 
+
+    so let's start over. 
+
+    Let's make the loop efficient by changing the while statement 
+
+    to not only to compare the sub to four, but also to compare the 
+
+    found name to not found. 
+
+    While it still says &quot;not found,&quot; you want to keep going. 
+
+    Let's wipe everything out and start over. 
+
+    Wipe out the subscript and the user entry, 
+
+    and set foundName back to &quot;not found.&quot; 
+
+    This time when the code starts, you can set sub to zero. 
+
+    Let's say the user enters 121. Compare sub to four, 
+
+    it is less than four, 
+
+    and compare foundName to not found. 
+
+    It is not found, so enter the loop 
+
+    and compare the user entry to ID number zero. 
+
+    121 is 121, so you can take foundName 
+
+    and set it to name[0] 
+
+    foundName becomes Ann. 
+
+    That's the end of the if statement, and sub becomes one. 
+
+    That's the end of the loop, so you go back to the top. 
+
+    sub is less than four, but foundName is not &quot;not found.&quot; 
+
+    foundName is now Ann, 
+
+    so the while loop is over. 
+
+    It's not going to execute anymore. 
+
+    You can output the ID number, 121, and the foundName, Ann, 
+
+    by getting out of the loop early when 
+
+    foundName no longer was &quot;not found.&quot; 
+
+    You saved a lot of time. 
+
+    [ Silence ] 
+
+    Thanks for watching. 
+
+   

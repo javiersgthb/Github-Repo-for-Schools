@@ -1,0 +1,72 @@
+Router> enable
+Router# configure terminal
+Router(config)# hostname Floor14
+!
+! Banner MOTD (Correct)
+Router(config)# banner motd #WARNING: Authorized access only.#
+!
+! Basic Security (Correct)
+enable secret cisco
+line console 0
+password @Cons1234!
+login
+exit
+line vty 0 4
+password @Cons1234!
+login
+exit
+service password-encryption
+security passwords min-length 10
+!
+!Disable DNS
+no ip domain-lookup
+ip domain-name "name of domain"
+username NETadmin secret LogAdmin!9
+crypto key generate rsa
+!
+!Block attempts
+login block-for 180 attempts 4 within 120
+!
+!SSH Config
+line vty 0 15
+transport input ssh
+login local
+exec-timeout 5
+!
+! VLAN 1 Management Interface Addressing (Correct)
+Switch(config)# interface Vlan1
+Switch(config-if)# description Management Interface IP/prefix
+Switch(config-if)# ip address IP SUBNET
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+!
+! Default Gateway for Management (IP is the router interface IP)
+Switch(config)# ip default-gateway IP
+
+! IPv6 Routing (Correct)
+ipv6 unicast-routing
+!
+! Interface G0/0 (Correct)
+interface GigabitEthernet0/0
+description Link to Room-145 (10.10.10.0/24)
+ipv6 address 2001:DB8:ACAD:100::1/64
+ipv6 address FE80::2 link-local
+ip address 10.10.10.1 255.255.255.0
+no shutdown
+exit
+!
+! Interface G0/1 (Correct)
+interface GigabitEthernet0/1
+description Link to Room-146 (10.10.11.0/24)
+ipv6 address 2001:DB8:ACAD:200::1/64
+ipv6 address FE80::3 link-local
+ip address 10.10.11.1 255.255.255.0
+no shutdown
+exit
+!
+!shutting down interface(s)
+interface (range) F0/2-24, G0/2
+shutdown
+!
+end
+copy running-config startup-config

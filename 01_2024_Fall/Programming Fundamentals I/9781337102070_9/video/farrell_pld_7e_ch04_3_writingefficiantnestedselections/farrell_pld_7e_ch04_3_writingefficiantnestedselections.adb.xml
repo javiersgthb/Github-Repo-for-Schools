@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:01.29" dur="00:00:01.55">Hi. This is Joyce Farrell.</p>
+    <p begin="00:00:02.84" dur="00:00:01.43">I want to talk to you</p>
+    <p begin="00:00:04.27" dur="00:00:03.36">about writing efficient<br/>nested selections.</p>
+    <p begin="00:00:07.63" dur="00:00:03.31">Take a look at a<br/>typical nested selection.</p>
+    <p begin="00:00:10.94" dur="00:00:03.60">Assume you have customers and<br/>that if a customer owes more</p>
+    <p begin="00:00:14.54" dur="00:00:05.46">than $10 and is past<br/>due more than 15 days,</p>
+    <p begin="00:00:20.00" dur="00:00:04.03">you want to assign a penalty<br/>to the customer's total.</p>
+    <p begin="00:00:24.03" dur="00:00:04.19">In this case, the pastDue<br/>selection is nested entirely</p>
+    <p begin="00:00:28.22" dur="00:00:02.62">inside of the amount selection.</p>
+    <p begin="00:00:30.84" dur="00:00:03.30">Both conditions, amount greater<br/>than 10 and pastDue greater</p>
+    <p begin="00:00:34.14" dur="00:00:03.36">than 15, have to be true<br/>in order for the customer</p>
+    <p begin="00:00:37.50" dur="00:00:02.64">to be assigned a penalty.</p>
+    <p begin="00:00:40.14" dur="00:00:02.17">Let's walk through<br/>this flowchart</p>
+    <p begin="00:00:42.31" dur="00:00:02.66">with some typical, sample data.</p>
+    <p begin="00:00:44.97" dur="00:00:05.12">Assume your first customer owes<br/>$100 and is past due 30 days.</p>
+    <p begin="00:00:50.09" dur="00:00:01.77">Is the amount greater than 10?</p>
+    <p begin="00:00:51.86" dur="00:00:02.29">Yes. It's 100.</p>
+    <p begin="00:00:54.15" dur="00:00:02.05">Is pastDue greater than 15?</p>
+    <p begin="00:00:56.20" dur="00:00:01.65">Yes. It's 30.</p>
+    <p begin="00:00:57.85" dur="00:00:02.41">So, this customer gets a penalty.</p>
+    <p begin="00:01:00.26" dur="00:00:02.35">At this point, you've<br/>made two decisions</p>
+    <p begin="00:01:02.61" dur="00:00:03.30">and assigned one penalty.</p>
+    <p begin="00:01:05.91" dur="00:00:02.57">Assume the next customer<br/>owes $100,</p>
+    <p begin="00:01:08.48" dur="00:00:02.53">but is only ten days past due.</p>
+    <p begin="00:01:11.01" dur="00:00:01.68">Is the amount greater than 10?</p>
+    <p begin="00:01:12.69" dur="00:00:01.54">Yes. It's a hundred.</p>
+    <p begin="00:01:14.23" dur="00:00:02.24">Is pastDue greater than 15?</p>
+    <p begin="00:01:16.47" dur="00:00:02.86">No, so you do not<br/>assign a penalty.</p>
+    <p begin="00:01:19.33" dur="00:00:02.94">And, at this point, four<br/>decisions have been made,</p>
+    <p begin="00:01:22.27" dur="00:00:02.09">but only one penalty<br/>has been assigned --</p>
+    <p begin="00:01:24.36" dur="00:00:02.55">to the first customer.</p>
+    <p begin="00:01:26.91" dur="00:00:04.55">The next data has $10<br/>due, 30 days past due.</p>
+    <p begin="00:01:31.46" dur="00:00:01.86">Is amount greater than 10?</p>
+    <p begin="00:01:33.32" dur="00:00:03.59">No, it's equal to 10,<br/>but not greater than 10.</p>
+    <p begin="00:01:36.91" dur="00:00:01.93">So, you've made five decisions,</p>
+    <p begin="00:01:38.84" dur="00:00:03.21">but not assigned<br/>any new penalties.</p>
+    <p begin="00:01:42.05" dur="00:00:04.01">When you try the next<br/>customer, the customer owes $10</p>
+    <p begin="00:01:46.06" dur="00:00:02.05">and is ten days past due.</p>
+    <p begin="00:01:48.11" dur="00:00:01.55">Is amount more than 10?</p>
+    <p begin="00:01:49.66" dur="00:00:03.28">No, so at this point,<br/>you've made six decisions,</p>
+    <p begin="00:01:52.94" dur="00:00:03.61">but still only assigned<br/>one penalty.</p>
+    <p begin="00:01:56.55" dur="00:00:03.17">Assume the last four customers<br/>happen to have the same data;</p>
+    <p begin="00:01:59.72" dur="00:00:03.85">they all owe $500 and<br/>none of them are past due.</p>
+    <p begin="00:02:03.57" dur="00:00:04.44">So, this customer, is the<br/>amount greater than 10?</p>
+    <p begin="00:02:08.01" dur="00:00:02.90">Yes. Is pastDue<br/>greater than 15?</p>
+    <p begin="00:02:10.91" dur="00:00:01.55">No, it's zero.</p>
+    <p begin="00:02:12.46" dur="00:00:04.23">Eight decisions have been made,<br/>but no new penalties assigned.</p>
+    <p begin="00:02:16.69" dur="00:00:05.19">With the next customer, 500 and<br/>zero, ten decisions are made,</p>
+    <p begin="00:02:21.88" dur="00:00:02.71">but no new penalties assigned.</p>
+    <p begin="00:02:24.59" dur="00:00:03.02">With the next customer,<br/>500 and zero,</p>
+    <p begin="00:02:27.61" dur="00:00:02.23">you've now made twelve<br/>decisions,</p>
+    <p begin="00:02:29.84" dur="00:00:02.17">but a penalty has still<br/>only been assigned</p>
+    <p begin="00:02:32.01" dur="00:00:02.08">to the first customer.</p>
+    <p begin="00:02:34.09" dur="00:00:01.84">With the last customer,</p>
+    <p begin="00:02:35.93" dur="00:00:03.21">at the very end there have<br/>been fourteen decisions</p>
+    <p begin="00:02:39.14" dur="00:00:03.03">and one penalty assigned.</p>
+    <p begin="00:02:42.17" dur="00:00:03.25">Instead of asking amount<br/>greater than 10 first,</p>
+    <p begin="00:02:45.42" dur="00:00:02.29">let's reverse the<br/>order of the questions</p>
+    <p begin="00:02:47.71" dur="00:00:02.47">and ask amount greater<br/>than 10 second.</p>
+    <p begin="00:02:50.18" dur="00:00:04.56">A customer still must be<br/>past due 15 days and owe more</p>
+    <p begin="00:02:54.74" dur="00:00:02.13">than $10 to get the penalty,</p>
+    <p begin="00:02:56.87" dur="00:00:04.08">but you're just asking the<br/>questions in the reverse order.</p>
+    <p begin="00:03:00.95" dur="00:00:05.31">Using the exact same data, let's<br/>assume the customer owes $100</p>
+    <p begin="00:03:06.26" dur="00:00:02.02">and is 30 days past due.</p>
+    <p begin="00:03:08.28" dur="00:00:03.04">That customer was assigned<br/>a penalty last time.</p>
+    <p begin="00:03:11.32" dur="00:00:02.89">This time, pastDue<br/>greater than 15?</p>
+    <p begin="00:03:14.21" dur="00:00:01.46">Yes. It's 30.</p>
+    <p begin="00:03:15.67" dur="00:00:01.66">Amount greater than 10?</p>
+    <p begin="00:03:17.33" dur="00:00:01.52">Yes. It's 100.</p>
+    <p begin="00:03:18.85" dur="00:00:04.52">You've still made two decisions<br/>and assigned one penalty.</p>
+    <p begin="00:03:23.37" dur="00:00:04.13">The next customer owes $100<br/>and is ten days past due.</p>
+    <p begin="00:03:27.50" dur="00:00:02.06">Is pastDue more than 15?</p>
+    <p begin="00:03:29.56" dur="00:00:02.55">No. So you've made<br/>three decisions</p>
+    <p begin="00:03:32.11" dur="00:00:02.30">and assigned one penalty.</p>
+    <p begin="00:03:34.41" dur="00:00:04.30">The next customer owes $10<br/>and is thirty days past due.</p>
+    <p begin="00:03:38.71" dur="00:00:02.05">So, pastDue greater than 15?</p>
+    <p begin="00:03:40.76" dur="00:00:02.51">Yes. Amount greater than 10?</p>
+    <p begin="00:03:43.27" dur="00:00:03.40">No. You've made five decisions.</p>
+    <p begin="00:03:46.67" dur="00:00:03.71">A customer who owes $10<br/>and is ten days past due.</p>
+    <p begin="00:03:50.38" dur="00:00:01.93">pastDue more than 15?</p>
+    <p begin="00:03:52.31" dur="00:00:02.35">No, so you've made six decisions</p>
+    <p begin="00:03:54.66" dur="00:00:02.99">and still assigned<br/>just one penalty.</p>
+    <p begin="00:03:57.65" dur="00:00:06.39">The next four customers each owe<br/>$500 and are zero days past due.</p>
+    <p begin="00:04:04.04" dur="00:00:04.46">$500 and zero days past due.<br/>Is pastDue more than 15?</p>
+    <p begin="00:04:08.50" dur="00:00:02.99">No, so you've made<br/>seven decisions.</p>
+    <p begin="00:04:11.49" dur="00:00:03.71">500 and zero, pastDue<br/>not more than 15,</p>
+    <p begin="00:04:15.20" dur="00:00:02.18">so you've made eight decisions.</p>
+    <p begin="00:04:17.38" dur="00:00:03.78">500 and zero, you've<br/>made nine decisions.</p>
+    <p begin="00:04:21.16" dur="00:00:03.56">500 and zero, you've<br/>made ten decisions.</p>
+    <p begin="00:04:24.72" dur="00:00:03.24">Let's compare the<br/>nested selections.</p>
+    <p begin="00:04:27.96" dur="00:00:02.57">In the one on the left,</p>
+    <p begin="00:04:30.53" dur="00:00:02.50">where you ask the<br/>amount question first,</p>
+    <p begin="00:04:33.03" dur="00:00:04.62">it requires 14 decisions<br/>to process all the records.</p>
+    <p begin="00:04:37.65" dur="00:00:01.50">In the version on the right,</p>
+    <p begin="00:04:39.15" dur="00:00:02.11">where the amount<br/>question is asked second,</p>
+    <p begin="00:04:41.26" dur="00:00:04.10">it requires only ten decisions<br/>to process all the records.</p>
+    <p begin="00:04:45.36" dur="00:00:03.01">By eliminating as many<br/>records as possible</p>
+    <p begin="00:04:48.37" dur="00:00:01.74">from the second decision,</p>
+    <p begin="00:04:50.11" dur="00:00:02.82">you improve the performance<br/>of your program.</p>
+    <p begin="00:04:52.93" dur="00:00:01.46">The difference between 14</p>
+    <p begin="00:04:54.39" dur="00:00:03.01">and ten decisions is not<br/>significant, but the difference</p>
+    <p begin="00:04:57.40" dur="00:00:01.24">between 14 million</p>
+    <p begin="00:04:58.64" dur="00:00:03.18">and 10 million decisions might<br/>save a significant amount</p>
+    <p begin="00:05:01.82" dur="00:00:02.71">of processing time.</p>
+    <p begin="00:05:04.53" dur="00:00:00.95">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

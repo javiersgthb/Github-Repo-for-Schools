@@ -1,0 +1,224 @@
+
+
+ 
+    
+  
+>> Joyce: Hi, this is Joyce Farrell. 
+
+    Let's finish talking about the program development cycle. 
+
+    In the last two videos, you learned 
+
+    that when a programmer develops a program the first step is 
+
+    to understand the problem and we talked 
+
+    about a number doubling program that lets a user type in a value 
+
+    and find out what 2 times the value is. 
+
+    We then looked at planning the logic, 
+
+    and when we planned the logic, we looked at 2 tools: a flowchart 
+
+    and pseudocode, both of which express the logic 
+
+    of the program. 
+
+    In both of these, the user is allowed to input a number, 
+
+    the answer is computed as the number times 2, 
+
+    and then the answer is output. 
+
+    After the logic is planned, you can write the code 
+
+    in a computer programming language, and we looked 
+
+    at an example written in Java. 
+
+    After the code is written, you use a compiler or an interpreter 
+
+    to translate that code into 1s and 0s, 
+
+    it becomes machine language 
+
+    or the internal circuitry language of the computer. 
+
+    When the program is successfully translated, you can test 
+
+    the program. 
+
+    Testing the program involves executing it several times 
+
+    to make sure that the output is correct. 
+
+    For example, with the Java program, one way to run it is 
+
+    to go to the Command Prompt and type java 
+
+    and the name of the program. 
+
+    When you hit Enter, you see the prompt that was part 
+
+    of the program, Enter a number 
+
+    and 2 little right-facing arrows. 
+
+    You might type a 7 and when you hit Enter, the output is the 
+
+    Answer is 14. That's correct 
+
+    and you have one successful test of the program. 
+
+    An experienced programmer knows 
+
+    that you had better test the program many more times 
+
+    to make sure it's correct with other values as well, 
+
+    so you might run the program again and type in 124. 
+
+    If the answer comes up 248, you become increasingly confident 
+
+    that this program does, indeed, 
+
+    double numbers that the user inputs. 
+
+    You would then run the program many more times and, finally, 
+
+    you would be satisfied that it is correct. 
+
+    After the program has been tested, you can put it 
+
+    into production. 
+
+    Putting it into production means turning it 
+
+    over to the clients who will use it. 
+
+    It might also involve training the clients. 
+
+    You might hold a class for them in how to use the program. 
+
+    You might publish a booklet for them on how to use the program. 
+
+    It might involve all sorts of tasks to turn it over 
+
+    and make it a viable program. 
+
+    After a program is in production, over time you may need 
+
+    to maintain the program. 
+
+    For example, suppose your user comes to you and says, 
+
+    &quot;You know the number doubling program has been working great, 
+
+    but the other day something terrible happened. 
+
+    We were running the program and it said enter a number 
+
+    and a user typed in 7, s-e-v-e-n. 
+
+    The user pressed the Enter key, 
+
+    and, oh my goodness, all these error messages appeared 
+
+    and we didn't know what to do.&quot; 
+
+    Well, the problem, if you can read 
+
+    that first error message line and kind of figure 
+
+    out what it means it says, &quot;InputMismatchException.&quot; 
+
+    The problem is the user typed a word 
+
+    and the program was only expecting a digit. 
+
+    You might handle this in any number of ways. 
+
+    You might change the prompt to say something like, 
+
+    &quot;Enter a number and make sure it's a digit and not a word.&quot; 
+
+    You might instead allow the user to enter a word, 
+
+    but change the word 
+
+    into a number internally in the program. 
+
+    You might handle the problem in any number of ways. 
+
+    It's up to your client what they want you to do. 
+
+    But making the changes that are necessary is maintaining 
+
+    the program. 
+
+    Over time your client may come to you and say, &quot;You know, 
+
+    we'd like some more changes to this program.&quot; 
+
+    For example, what if the client wants 
+
+    to let the user multiply any 2 values, not just 2 
+
+    but maybe triple or quadruple any value? 
+
+    Or suppose the client says, &quot;You know, this program is 
+
+    so successful let's start charging money, and I want you 
+
+    to keep track of the money the user owes us 
+
+    and let's let the user put the fee on a credit card, 
+
+    so add that capability to the program.&quot; 
+
+    And, of course, if the user's going to put the fee 
+
+    on a credit card, let's have the program dial 
+
+    into the credit card company 
+
+    and make sure the user has money available on a credit card. 
+
+    And, you know, our good users, 
+
+    after they use the program 10 times, let's give them a discount 
+
+    and not charge $.10 per use but only $.08, 
+
+    and so on and so on and so on. 
+&quot;
+    And the user might have so many new requirements 
+
+    that you might say, &quot;Wait a minute, 
+
+    there's so many issues here, I better understand the problem 
+
+    all over again and let's sit down and talk 
+
+    about all the changes that need to be made.&quot; 
+
+    And when you understand the new problem, you might then want 
+
+    to plan the logic for the new program, write its code, 
+
+    translate that code into machine language, then test the new 
+
+    program and see if it works correctly, and put it 
+
+    into production with all the new instructions for the clients. 
+
+    And over time that new program may need to be maintained. 
+
+    And the program development cycle may continue over 
+
+    and over again many times over the life of the program. 
+
+    Thanks for watching. 
+
+   

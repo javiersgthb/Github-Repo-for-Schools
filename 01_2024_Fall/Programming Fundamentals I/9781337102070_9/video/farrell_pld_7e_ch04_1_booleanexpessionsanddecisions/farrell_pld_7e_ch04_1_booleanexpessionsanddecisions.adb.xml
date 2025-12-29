@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.87" dur="00:00:00.40">&gt;&gt; Joyce Farrell: Hi.</p>
+    <p begin="00:00:01.27" dur="00:00:01.68">This is Joyce Farrell.</p>
+    <p begin="00:00:02.95" dur="00:00:02.19">Let's take a look at<br/>Boolean expressions</p>
+    <p begin="00:00:05.14" dur="00:00:02.77">and how they're used<br/>in decisions.</p>
+    <p begin="00:00:07.91" dur="00:00:02.00">Here's a selection structure.</p>
+    <p begin="00:00:09.91" dur="00:00:03.30">With a selection structure,<br/>you ask a question.</p>
+    <p begin="00:00:13.21" dur="00:00:03.02">If the answer to the question<br/>is yes, you take one course</p>
+    <p begin="00:00:16.23" dur="00:00:03.07">of action, and if the answer<br/>to the question is no,</p>
+    <p begin="00:00:19.30" dur="00:00:03.53">you take a different<br/>course of action.</p>
+    <p begin="00:00:22.83" dur="00:00:03.11">The question in a<br/>selection structure is a</p>
+    <p begin="00:00:25.94" dur="00:00:02.08">Boolean expression.</p>
+    <p begin="00:00:28.02" dur="00:00:04.51">Boolean expression is one<br/>in which the result is one</p>
+    <p begin="00:00:32.53" dur="00:00:04.75">of two values - true or false.</p>
+    <p begin="00:00:37.28" dur="00:00:02.40">If you're talking to a<br/>human, you can ask a question</p>
+    <p begin="00:00:39.68" dur="00:00:02.29">like when is your birthday.</p>
+    <p begin="00:00:41.97" dur="00:00:03.70">The human can answer August 3rd.</p>
+    <p begin="00:00:45.67" dur="00:00:02.20">When you're talking<br/>to a computer and say</p>
+    <p begin="00:00:47.87" dur="00:00:01.59">when is your birthday,</p>
+    <p begin="00:00:49.46" dur="00:00:03.02">the computer cannot<br/>answer that question.</p>
+    <p begin="00:00:52.48" dur="00:00:03.75">The computer internally<br/>can only answer questions</p>
+    <p begin="00:00:56.23" dur="00:00:05.07">that are Boolean expressions<br/>that result in yes or no.</p>
+    <p begin="00:01:01.30" dur="00:00:04.81">So, you can ask a computer<br/>is your birthday June 24th,</p>
+    <p begin="00:01:06.11" dur="00:00:04.94">and the computer can say no<br/>or yes as the case may be.</p>
+    <p begin="00:01:11.05" dur="00:00:02.96">If you want to find out when<br/>the computer's birthday is,</p>
+    <p begin="00:01:14.01" dur="00:00:02.56">it could take a lot<br/>of questions.</p>
+    <p begin="00:01:16.57" dur="00:00:02.94">You might say, "Is your<br/>birthday January 1st?"</p>
+    <p begin="00:01:19.51" dur="00:00:01.64">The computer says no.</p>
+    <p begin="00:01:21.15" dur="00:00:02.03">"Is it January 2nd?"</p>
+    <p begin="00:01:23.18" dur="00:00:03.49">No. "Is it January 3rd?"</p>
+    <p begin="00:01:26.67" dur="00:00:04.16">No. Arg. This could<br/>take a long time</p>
+    <p begin="00:01:30.83" dur="00:00:05.36">to find the birthday, especially<br/>if it's in August or September.</p>
+    <p begin="00:01:36.19" dur="00:00:03.88">Fortunately, there are<br/>six comparison operators</p>
+    <p begin="00:01:40.07" dur="00:00:03.64">that you can use to<br/>create Boolean expressions.</p>
+    <p begin="00:01:43.71" dur="00:00:03.82">Not only can you see if one<br/>thing is equal to another,</p>
+    <p begin="00:01:47.53" dur="00:00:03.43">is your birthday August<br/>3rd, but you can see</p>
+    <p begin="00:01:50.96" dur="00:00:02.43">if one thing is greater<br/>than another,</p>
+    <p begin="00:01:53.39" dur="00:00:02.98">does your birthday<br/>come after August 3rd,</p>
+    <p begin="00:01:56.37" dur="00:00:03.21">or see if it's less<br/>than something else.</p>
+    <p begin="00:01:59.58" dur="00:00:03.30">Or you can compare two values,<br/>and see if one is greater than</p>
+    <p begin="00:02:02.88" dur="00:00:04.28">or equal to the other one, or<br/>if one is less than or equal</p>
+    <p begin="00:02:07.16" dur="00:00:03.96">to the other one, and finally<br/>you can ask a question are two</p>
+    <p begin="00:02:11.12" dur="00:00:03.38">things not equal to each other.</p>
+    <p begin="00:02:14.50" dur="00:00:03.63">So to find out the computer's<br/>birthday, perhaps using the less</p>
+    <p begin="00:02:18.13" dur="00:00:02.95">than or equal to operator,<br/>you might start in the middle</p>
+    <p begin="00:02:21.08" dur="00:00:04.25">and say is your birthday<br/>less than or equal to July 1st?</p>
+    <p begin="00:02:25.33" dur="00:00:02.80">Does it come before<br/>July 1st in the year?</p>
+    <p begin="00:02:28.13" dur="00:00:03.25">And supposing the computer's<br/>birthday is August 3rd,</p>
+    <p begin="00:02:31.38" dur="00:00:02.65">the computer says no.</p>
+    <p begin="00:02:34.03" dur="00:00:02.76">So then you might ask, OK, then.</p>
+    <p begin="00:02:36.79" dur="00:00:02.97">It's not before July 1st.</p>
+    <p begin="00:02:39.76" dur="00:00:05.95">Is it before or equal to October<br/>1st, and the computer then,</p>
+    <p begin="00:02:45.71" dur="00:00:03.88">assuming it's in<br/>August, might say yes.</p>
+    <p begin="00:02:49.59" dur="00:00:02.28">And then you might<br/>say, OK, then.</p>
+    <p begin="00:02:51.87" dur="00:00:01.53">We've narrowed it down.</p>
+    <p begin="00:02:53.40" dur="00:00:03.87">Is your birthday less than<br/>or equal to August 15th?</p>
+    <p begin="00:02:57.27" dur="00:00:04.09">And assuming it's August 3rd,<br/>the computer would say yes.</p>
+    <p begin="00:03:01.36" dur="00:00:01.36">And so on.</p>
+    <p begin="00:03:02.72" dur="00:00:02.58">By using the other<br/>comparison operators,</p>
+    <p begin="00:03:05.30" dur="00:00:02.65">you can ask questions<br/>much more efficiently</p>
+    <p begin="00:03:07.95" dur="00:00:05.27">than if you always had to<br/>ask equal to questions.</p>
+    <p begin="00:03:13.22" dur="00:00:02.82">Boolean expressions can<br/>become even more complicated.</p>
+    <p begin="00:03:16.04" dur="00:00:02.08">You can combine questions.</p>
+    <p begin="00:03:18.12" dur="00:00:04.66">You might ask someone is your<br/>birthday not December 19th,</p>
+    <p begin="00:03:22.78" dur="00:00:03.51">or is your birthday<br/>in April or May.</p>
+    <p begin="00:03:26.29" dur="00:00:03.37">Or is your birthday September<br/>2nd, and does that fall</p>
+    <p begin="00:03:29.66" dur="00:00:02.98">on a weekend, and are<br/>you free that night.</p>
+    <p begin="00:03:32.64" dur="00:00:03.59">We'll talk more about<br/>or and and operators</p>
+    <p begin="00:03:36.23" dur="00:00:02.47">and how they work<br/>in another video.</p>
+    <p begin="00:03:38.70" dur="00:00:02.11">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

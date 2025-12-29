@@ -1,0 +1,194 @@
+
+
+ 
+    
+  
+>> Joyce: Hi, this is Joyce Farrell. 
+
+    Let's continue to talk about the program development cycle. 
+
+    In the last video you learned the first step 
+
+    to developing a computer program is to understand the problem. 
+
+    And we talked about the problem of being able to write a program 
+
+    where you have a user type in a value, 
+
+    the program doubles the value for the user, 
+
+    and outputs the answer. 
+
+    We then talked about planning the logic to that problem, 
+
+    and we used 2 tools: a flowchart 
+
+    and a pseudocode to show the logic. 
+
+    The flowchart and the pseudocode look very similar. Both 
+
+    start. Both allow a user to input a value called myNumber. 
+
+    In both cases you set myAnswer equal to myNumber times 2 
+
+    and then you output  myAnswer and stop the program. 
+
+    After you understand the problem 
+
+    and plan its logic, you can write the code 
+
+    to the computer program. 
+
+    Writing the code means putting it 
+
+    into a computer programming language such as Visual Basic 
+
+    or C++ or Java. 
+
+    For example, here's some Java code. 
+
+    It looks confusing at first because there's dots 
+
+    and parentheses and semicolons, 
+
+    but basically what these 3 statements do is get a value 
+
+    from the keyboard and store it in myNumber. 
+
+    The middle statement computes the value of myAnswer 
+
+    as myNumber times 2. This one looks the most 
+
+    like the flowchart or the pseudocode statement. 
+
+    And then the last statement has some new words and some dots, 
+
+    but it outputs the words Answer is 
+
+    and then the value of myAnswer. 
+
+    Notice that each Java statement ends in a semicolon 
+
+    because that's required in Java. 
+
+    It's not required in pseudocode or in a flowchart, 
+
+    but Java has particular syntax that you have 
+
+    to learn before you can write this program in Java. 
+
+    In most computer programs, you would add a prompt 
+
+    for the user before the input statement. This one displays 
+
+    on the screen Enter a number 
+
+    and then shows 2 little right-facing arrows 
+
+    to show the user where to type in an answer. 
+
+    A complete Java program would have many more statements in it. 
+
+    You can see some statements before the core part 
+
+    of this program and some punctuation after, 
+
+    but the highlighted part of the screen shows 
+
+    that you prompt the user to enter a number, 
+
+    you get the number, you compute myAnswer, 
+
+    and you output the value of myAnswer. 
+
+    Here's the Java  NumberDoubling program 
+
+    with a mistake purposely entered into it. 
+
+    Because you're not familiar 
+
+    with Java, you might not notice the mistake right away, but it's 
+
+    in the last line of code that displays myAnswer. 
+
+    I've purposely left off the semicolon that Java requires 
+
+    at the end of every statement. 
+
+    I've purposely made this mistake 
+
+    because when you type a program it is very easy 
+
+    to make a typographical error, and I want 
+
+    to show you what happens when you make one. 
+
+    After you understand a problem, plan its logic, 
+
+    and write the code you're ready to translate the code. 
+
+    Translating the code means using a piece 
+
+    of software, called a compiler or an interpreter, 
+
+    and taking your code in the programming language 
+
+    and turning it into machine language, which is the 1 
+
+    and 0 circuitry language inside the computer. 
+
+    For example, one way to compile a Java program is to go 
+
+    to the Command Prompt and type javac, which stands 
+
+    for Java Compile, and type the name of the program. 
+
+    When you press the Enter key, in this case, you get a mistake. 
+
+    It says NumberDoubling.java12 because the mistake happens 
+
+    to be in line 12 of the program, 
+
+    and then it says semicolon expected. 
+
+    Well, that makes sense because I told you I purposely left off 
+
+    the semicolon in order to generate this mistake. 
+
+    The error message then continues with the line 
+
+    where the mistake is, System.out.println Answer is myAnswer, 
+
+    and way over on the right there's a little carrot pointing 
+
+    to the spot where Java noticed the mistake. 
+
+    If you understand this error message, you can go back 
+
+    into your program and add the semicolon 
+
+    and now the problem is fixed. 
+
+    You might then return to the Command Prompt, 
+
+    type the compiling statement again, press Enter, 
+
+    and this time there are no error messages 
+
+    and you have a successful compile of the program. 
+
+    The program has successfully been translated 
+
+    into machine language. 
+
+    After you have translated the code, you can test the program, 
+
+    then put the program into production, 
+
+    and then maintain the program. 
+
+    We'll talk about these next 3 steps in the next video. 
+
+    Thanks for watching. 
+
+   

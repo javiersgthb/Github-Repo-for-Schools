@@ -1,0 +1,108 @@
+
+
+ 
+    
+  
+>> Joyce: Hi, this is Joyce Farrell. 
+
+    Let's talk about the program development cycle. 
+
+    When you start to write a computer program, you first must 
+
+    understand the problem. 
+
+    For example, suppose a friend comes to you and says, 
+
+    &quot;You know I run a small accounting firm, 
+
+    and people keep stopping in the office and asking me 
+
+    to multiply numbers by 2 for them. So far I've been happy 
+
+    to do it, but it's taking up a lot of my time, 
+
+    and I was thinking maybe we could automate the process 
+
+    by writing a program and letting my clients use it and put 
+
+    in their own numbers and have the program multiply numbers 
+
+    by 2 for them.&quot; 
+
+    Once you've understood the problem, you are ready 
+
+    to plan the logic for this computer program. 
+
+    When programmers plan the logic 
+
+    for a program they typically use 1 of 2 tools. 
+
+    They either write pseudocode or they draw a flowchart. 
+
+    The pseudocode for the number doubling problem might look 
+
+    like this: you would say start 
+
+    and then you would say input myNumber. 
+
+    myNumber would just be a name you have chosen for a spot 
+
+    in memory where the user's number is stored. 
+
+    Then you might put a statement in like, 
+
+    set myAnswer equals myNumber times 2. 
+
+    myAnswer would be another name you have chosen for a spot 
+
+    in memory where the answer would be stored. 
+
+    Then you could output myAnswer 
+
+    so the user would see the result and stop the program. 
+
+    Instead of writing this pseudocode, you might prefer 
+
+    to draw a flowchart. 
+
+    If you drew a flowchart for the number-doubling program you 
+
+    would use a start symbol, then use an input symbol 
+
+    to say input myNumber. 
+
+    You'd add a processing symbol in which you set myAnswer equal 
+
+    to myNumber times 2, add an output symbol 
+
+    where you output the value of myAnswer and stop the program. 
+
+    If you look at the flowchart and the pseudocode side- 
+
+    by-side you can see that they contain exactly the same steps. 
+
+    One is in a more pictorial form. The other is more 
+
+    in paragraph form, but both get a number, double it, 
+
+    and produce the answer. 
+
+    After you've planned the logic for a computer program, you need 
+
+    to write the code, which means writing the program 
+
+    in a computer programming language, 
+
+    then you translate the code into machine language 
+
+    that the computer can understand, 
+
+    you test the program, then you put the program 
+
+    into production, and, finally, you maintain the program. 
+
+    We will talk about these last 5 steps in the next 2 videos. 
+
+    Thanks for watching. 
+
+   

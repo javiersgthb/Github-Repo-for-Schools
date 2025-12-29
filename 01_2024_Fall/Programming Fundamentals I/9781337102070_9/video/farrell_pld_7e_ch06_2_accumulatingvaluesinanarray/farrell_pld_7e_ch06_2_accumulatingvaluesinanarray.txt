@@ -1,0 +1,160 @@
+
+
+ 
+    
+  
+>> Hi, this is Joyce Farrell. 
+
+    Let's discuss how to accumulate values in an array. 
+
+    Suppose you want to create a dependents report 
+
+    that looks like this. 
+
+    It has headings, dependents and count, 
+
+    and then down the left-hand column it lists 0, 1, 2, 3, 
+
+    4, and 5 dependents, and in the right-hand column a count 
+
+    of how many employees have each number of dependents. 
+
+    For example, assume 43 of your employees have zero dependents. 
+
+    Here's the logic for the program. 
+
+    It starts and you declare the variables 
+
+    and constants you'll need. 
+
+    You need dep, that's 
+
+    where the user will enter the number 
+
+    of dependents the given employee has. 
+
+    You'll also create a six-element array called count, 
+
+    and each element will be set to zero. 
+
+    QUIT is a constant equal to 999. That's what the user will enter 
+
+    when there are no more employee values to be entered. 
+
+    You'll output enter dependents or 999 to quit 
+
+    to prompt the user for the first number of dependents. 
+
+    Assume the first employee has 3 dependents, so you'll input a 3. 
+
+    This value is not equal to 999, so you add 1 to the count 
+
+    that corresponds to the number of dependents. 
+
+    In other words, since dep is 3, 
+
+    you take count[3] and add 1 to it. 
+
+    Then you prompt the user to enter the next number 
+
+    of dependents or quit if it's time to quit. 
+
+    And let's just assume the next employee also has 3 dependents. 
+
+    This value is not 999, so you add another 1 to count[3]. 
+
+    count[3]is now 2. 
+
+    Prompt the user again and assume the next employee record has 
+
+    zero dependents. 
+
+    This isn't the quit value, so now you take count[0] 
+
+    and add 1 to it because the number of dependents 
+
+    for this employee is zero. 
+
+    Prompt the user again, 
+
+    and assume the next input value is 5. 
+
+    This is not the quit value, so you add 1 to count[5]. 
+
+    Prompt the user again and let's just say the next employee 
+
+    record also has zero dependents. 
+
+    This is not the quit value, so you add another 1 to count[0]. 
+
+    count[0] is now 2. 
+
+    At this point count[1], count[2], 
+
+    and count[4] haven't had anything added to them yet, 
+
+    but count[0] is 2, count[3] is 2, and count[5] is 1. 
+
+    Prompt the user again, and this time 
+
+    when you input the user's dependents lets just say the 
+
+    value is 999. 
+
+    The user is ready to quit. 
+
+    The value is quit, so you proceed to the finishUp module. 
+
+    When the finishUp module starts, 
+
+    you can output dependents and count at the top of the paper. 
+
+    Then set dep to zero. 
+
+    You're going to use dep as a subscript to walk 
+
+    through the array and display each value. 
+
+    dep is less than 6, so you output dep, which is zero, 
+
+    and count[dep], which is 2. 
+
+    So zero dependents, there were 2 employees who had that number. 
+
+    Then you add 1 to dep, so dep is now 1. 
+
+    It's still less than 6, so you output 1 
+
+    and count[1], which is zero. 
+
+    dep becomes 2. It's less than 6, so you output the next row, 
+
+    which is 2 dependents, count[0]. 
+
+    Add 1 to dep, it's now 3. 
+
+    It's less than 6, so you output 3 and the value of count[3], 
+
+    which was 2 employees. 
+
+    Add another 1 to dep. It's now 4. 
+
+    It's less than 6, so you output a 4 and count[4], 
+
+    the value of which is zero. 
+
+    dep becomes 5. It's still less than 6, so you output a 5 
+
+    and count[5], which is valued at 1. 
+
+    dep becomes 6. Now it's not less than 6, and you're ready 
+
+    to end this module and end the program. 
+
+    You've successfully used an array to accumulate the number 
+
+    of dependents for 0 through 5 dependents. 
+
+    Thanks for watching. 
+
+   

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.58" dur="00:00:01.91">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:02.49" dur="00:00:03.35">Let's take a look at<br/>the this reference.</p>
+    <p begin="00:00:05.84" dur="00:00:03.30">Suppose you decided to create<br/>a class called Apartment</p>
+    <p begin="00:00:09.14" dur="00:00:03.54">that holds data about apartments<br/>in an apartment building.</p>
+    <p begin="00:00:12.68" dur="00:00:01.88">Suppose you decide that the data</p>
+    <p begin="00:00:14.56" dur="00:00:02.40">that you need includes<br/>an apartment number</p>
+    <p begin="00:00:16.96" dur="00:00:02.30">and a monthly rent<br/>for the apartment.</p>
+    <p begin="00:00:19.26" dur="00:00:03.45">You might create a method,<br/>such as set apartment number,</p>
+    <p begin="00:00:22.71" dur="00:00:02.11">that accepts a parameter<br/>that you can assign</p>
+    <p begin="00:00:24.82" dur="00:00:01.56">to the apartment number.</p>
+    <p begin="00:00:26.38" dur="00:00:03.66">And similarly, you might<br/>have a method named set rent</p>
+    <p begin="00:00:30.04" dur="00:00:02.89">that accepts an amount for the<br/>monthly rent and assigns it</p>
+    <p begin="00:00:32.93" dur="00:00:01.89">to the rent in the apartment.</p>
+    <p begin="00:00:34.82" dur="00:00:02.02">You might also have<br/>a display method</p>
+    <p begin="00:00:36.84" dur="00:00:02.66">that outputs the data<br/>in a nice format.</p>
+    <p begin="00:00:39.50" dur="00:00:02.33">And that would be<br/>the apartment class.</p>
+    <p begin="00:00:41.83" dur="00:00:04.34">Suppose you had a program that<br/>declares two apartment objects.</p>
+    <p begin="00:00:46.17" dur="00:00:03.55">You might declare my<br/>apartment as an apartment.</p>
+    <p begin="00:00:49.72" dur="00:00:04.15">That would set up my apartment<br/>in memory at a specific address.</p>
+    <p begin="00:00:53.87" dur="00:00:03.18">Let's just say it's<br/>memory address 1000.</p>
+    <p begin="00:00:57.05" dur="00:00:02.09">And enough space<br/>would be reserved</p>
+    <p begin="00:00:59.14" dur="00:00:03.44">to eventually hold an<br/>apartment number and the rent.</p>
+    <p begin="00:01:02.58" dur="00:00:03.64">If you declare another object,<br/>let's say your apartment,</p>
+    <p begin="00:01:06.22" dur="00:00:02.46">that sets up another<br/>spot in memory.</p>
+    <p begin="00:01:08.68" dur="00:00:03.33">Let's just say it's at<br/>memory address 1020.</p>
+    <p begin="00:01:12.01" dur="00:00:01.50">And there would be<br/>enough room there</p>
+    <p begin="00:01:13.51" dur="00:00:03.61">to store an apartment number<br/>and a rent for that apartment.</p>
+    <p begin="00:01:17.12" dur="00:00:04.73">When you call an instance<br/>method, you use an object,</p>
+    <p begin="00:01:21.85" dur="00:00:01.94">a dot and a method name.</p>
+    <p begin="00:01:23.79" dur="00:00:04.26">So, for example, my apartment<br/>dot set apartment number can be</p>
+    <p begin="00:01:28.05" dur="00:00:04.08">used to set the apartment<br/>number of my apartment.</p>
+    <p begin="00:01:32.13" dur="00:00:03.37">When you call the set<br/>apartment number method,</p>
+    <p begin="00:01:35.50" dur="00:00:02.95">a this reference is<br/>passed to the method.</p>
+    <p begin="00:01:38.45" dur="00:00:02.62">The this reference is not<br/>something that you code</p>
+    <p begin="00:01:41.07" dur="00:00:03.12">in the method, but it's sent<br/>implicitly, and it's going</p>
+    <p begin="00:01:44.19" dur="00:00:01.58">to hold the address</p>
+    <p begin="00:01:45.77" dur="00:00:03.87">of the object whose apartment<br/>number is going to be sent.</p>
+    <p begin="00:01:49.64" dur="00:00:03.88">So when you call my apartment<br/>dot set apartment number,</p>
+    <p begin="00:01:53.52" dur="00:00:04.41">the address of my apartment<br/>1000 is sent to the method</p>
+    <p begin="00:01:57.93" dur="00:00:03.75">so the method knows<br/>what object to work on.</p>
+    <p begin="00:02:01.68" dur="00:00:04.86">The argument to the method<br/>107 is sent in as a parameter</p>
+    <p begin="00:02:06.54" dur="00:00:02.47">for the apartment number.</p>
+    <p begin="00:02:09.01" dur="00:00:01.94">When you call the method,</p>
+    <p begin="00:02:10.95" dur="00:00:03.90">the apartment number is<br/>actually this apartment number.</p>
+    <p begin="00:02:14.85" dur="00:00:03.40">You don't have to write this<br/>in the method, but this refers</p>
+    <p begin="00:02:18.25" dur="00:00:05.80">to this object at address<br/>1000, its apartment number.</p>
+    <p begin="00:02:24.05" dur="00:00:02.39">So the argument that comes</p>
+    <p begin="00:02:26.44" dur="00:00:03.76">in as the parameter<br/>107 can be assigned</p>
+    <p begin="00:02:30.20" dur="00:00:04.93">to the apartment<br/>number at address 1000.</p>
+    <p begin="00:02:35.13" dur="00:00:03.46">Similarly, you can call<br/>my apartment dot set rent</p>
+    <p begin="00:02:38.59" dur="00:00:02.34">and send in an argument.</p>
+    <p begin="00:02:40.93" dur="00:00:03.47">And a this reference is<br/>used in the method header.</p>
+    <p begin="00:02:44.40" dur="00:00:04.23">And a this reference can be<br/>used within the method itself.</p>
+    <p begin="00:02:48.63" dur="00:00:05.17">So when you call my apartment<br/>dot set rent, it gets the 1000,</p>
+    <p begin="00:02:53.80" dur="00:00:02.51">which is the address<br/>of my apartment,</p>
+    <p begin="00:02:56.31" dur="00:00:04.73">it sends it to the method, the<br/>rent is also sent to the method,</p>
+    <p begin="00:03:01.04" dur="00:00:05.39">and the value is assigned<br/>at 1000's rent location.</p>
+    <p begin="00:03:06.43" dur="00:00:04.36">So 600 goes into my<br/>apartment's rent.</p>
+    <p begin="00:03:10.79" dur="00:00:02.70">When you call my<br/>apartment display,</p>
+    <p begin="00:03:13.49" dur="00:00:05.08">a this reference is accepted by<br/>the method, and this can be used</p>
+    <p begin="00:03:18.57" dur="00:00:02.22">with the apartment number<br/>and the rent to indicate</p>
+    <p begin="00:03:20.79" dur="00:00:02.82">which object's data<br/>will be displayed.</p>
+    <p begin="00:03:23.61" dur="00:00:04.11">When you call my apartment<br/>dot display, 1000 is sent</p>
+    <p begin="00:03:27.72" dur="00:00:03.99">in as the reference, and the<br/>data that's accessed is this</p>
+    <p begin="00:03:31.71" dur="00:00:02.76">apartment number and this rent.</p>
+    <p begin="00:03:34.47" dur="00:00:03.27">So the output becomes<br/>apartment number 107 rents</p>
+    <p begin="00:03:37.74" dur="00:00:02.09">for $600 per month.</p>
+    <p begin="00:03:39.83" dur="00:00:03.28">You can write a statement<br/>in your program,</p>
+    <p begin="00:03:43.11" dur="00:00:02.42">your apartment dot<br/>set apartment number.</p>
+    <p begin="00:03:45.53" dur="00:00:03.68">And in this case, your<br/>apartment's address is sent</p>
+    <p begin="00:03:49.21" dur="00:00:03.80">to the method, and 108 is<br/>sent to the apartment number,</p>
+    <p begin="00:03:53.01" dur="00:00:03.43">and the appropriate<br/>assignments are made.</p>
+    <p begin="00:03:56.44" dur="00:00:03.70">Set rent with your<br/>apartment uses the address</p>
+    <p begin="00:04:00.14" dur="00:00:03.17">of your apartment and<br/>a different argument</p>
+    <p begin="00:04:03.31" dur="00:00:03.07">and the appropriate<br/>assignment is made.</p>
+    <p begin="00:04:06.38" dur="00:00:04.23">When you display this last piece<br/>of data from your apartment,</p>
+    <p begin="00:04:10.61" dur="00:00:03.33">the display method gets<br/>the correct address</p>
+    <p begin="00:04:13.94" dur="00:00:02.77">and knows whose data to display.</p>
+    <p begin="00:04:16.71" dur="00:00:03.52">And the output would<br/>be apartment 108 rents</p>
+    <p begin="00:04:20.23" dur="00:00:03.50">for $950 a month.</p>
+    <p begin="00:04:23.73" dur="00:00:03.76">That's a quick look at how the<br/>this reference is automatically</p>
+    <p begin="00:04:27.49" dur="00:00:04.39">used by instance<br/>methods in a class.</p>
+    <p begin="00:04:31.88" dur="00:00:01.17">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

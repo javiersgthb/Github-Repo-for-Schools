@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.55" dur="00:00:01.24">&gt;&gt; Joyce Farrell: Hi.</p>
+    <p begin="00:00:01.79" dur="00:00:02.10">This is Joyce Farrell.</p>
+    <p begin="00:00:03.89" dur="00:00:02.66">Let's talk about data types.</p>
+    <p begin="00:00:06.55" dur="00:00:02.80">There are data types in every<br/>computer programming language</p>
+    <p begin="00:00:09.35" dur="00:00:04.31">because a data type defines what<br/>values can be stored in an item,</p>
+    <p begin="00:00:13.66" dur="00:00:03.37">how much memory is allocated<br/>for the item, and what kinds</p>
+    <p begin="00:00:17.03" dur="00:00:03.68">of operations can be<br/>performed on the item.</p>
+    <p begin="00:00:20.71" dur="00:00:01.68">In every programming language,</p>
+    <p begin="00:00:22.39" dur="00:00:02.89">there are at least<br/>two broad data types.</p>
+    <p begin="00:00:25.28" dur="00:00:01.89">Numeric data is numbers.</p>
+    <p begin="00:00:27.17" dur="00:00:02.32">Numeric data can hold digits.</p>
+    <p begin="00:00:29.49" dur="00:00:03.09">It optionally can hold a<br/>plus or minus sign in front</p>
+    <p begin="00:00:32.58" dur="00:00:02.92">of the number to indicate<br/>positive or negative.</p>
+    <p begin="00:00:35.50" dur="00:00:03.31">Perhaps there can be a decimal<br/>point and decimal places,</p>
+    <p begin="00:00:38.81" dur="00:00:02.93">but there's no other punctuation<br/>allowed in numeric data.</p>
+    <p begin="00:00:41.74" dur="00:00:03.58">No dollar signs,<br/>percent signs, or commas.</p>
+    <p begin="00:00:45.32" dur="00:00:03.34">The other broad type<br/>of data is string data.</p>
+    <p begin="00:00:48.66" dur="00:00:03.36">Just about anything can be<br/>contained in string data as long</p>
+    <p begin="00:00:52.02" dur="00:00:01.97">as it's enclosed<br/>in quotation marks.</p>
+    <p begin="00:00:53.99" dur="00:00:03.18">There can be letters,<br/>digits, punctuation, spaces,</p>
+    <p begin="00:00:57.17" dur="00:00:02.52">anything as long as it's<br/>within quotation marks.</p>
+    <p begin="00:00:59.69" dur="00:00:05.20">Let's look at the data down the<br/>left-hand column of this table,</p>
+    <p begin="00:01:04.89" dur="00:00:04.48">and try to identify each piece<br/>of data as either numeric</p>
+    <p begin="00:01:09.37" dur="00:00:03.70">or string or neither<br/>and illegal.</p>
+    <p begin="00:01:13.07" dur="00:00:02.68">For example, 14?</p>
+    <p begin="00:01:15.75" dur="00:00:01.29">That's numeric data.</p>
+    <p begin="00:01:17.04" dur="00:00:02.01">That's a number.</p>
+    <p begin="00:01:19.05" dur="00:00:03.27">Ninety-eight point six<br/>contains a decimal point.</p>
+    <p begin="00:01:22.32" dur="00:00:02.36">That's numeric data.</p>
+    <p begin="00:01:24.68" dur="00:00:03.53">Joe in quotes is<br/>valid string data.</p>
+    <p begin="00:01:28.21" dur="00:00:02.38">String data is often<br/>something like a first name,</p>
+    <p begin="00:01:30.59" dur="00:00:02.91">a last name, a city, or a state.</p>
+    <p begin="00:01:33.50" dur="00:00:02.79">Negative 3, valid numeric data.</p>
+    <p begin="00:01:36.29" dur="00:00:03.89">How about 2,000 with<br/>a comma in it?</p>
+    <p begin="00:01:40.18" dur="00:00:02.34">At first, that looks<br/>like numeric data,</p>
+    <p begin="00:01:42.52" dur="00:00:03.80">but numeric data cannot have<br/>punctuation such as a comma.</p>
+    <p begin="00:01:46.32" dur="00:00:05.01">Therefore 2,000 with a<br/>comma in it is illegal.</p>
+    <p begin="00:01:51.33" dur="00:00:02.25">How about 58 in quotes?</p>
+    <p begin="00:01:53.58" dur="00:00:02.34">Fifty-eight might look<br/>like numeric data,</p>
+    <p begin="00:01:55.92" dur="00:00:02.90">but if it's in quotes,<br/>it's a string.</p>
+    <p begin="00:01:58.82" dur="00:00:03.12">A hundred dollars?</p>
+    <p begin="00:02:01.94" dur="00:00:04.49">Seems to be numeric, but numeric<br/>data cannot have a dollar sign,</p>
+    <p begin="00:02:06.43" dur="00:00:02.45">so a hundred dollars is illegal.</p>
+    <p begin="00:02:08.88" dur="00:00:04.38">What do you think about a<br/>hundred dollars in quotes?</p>
+    <p begin="00:02:13.26" dur="00:00:04.49">Anything in quotes<br/>is a valid string.</p>
+    <p begin="00:02:17.75" dur="00:00:04.30">So, negative 25 in<br/>quotes? If you said string,</p>
+    <p begin="00:02:22.05" dur="00:00:02.69">you're absolutely right.</p>
+    <p begin="00:02:24.74" dur="00:00:01.78">And 44 Pine Lane in quotes?</p>
+    <p begin="00:02:26.52" dur="00:00:03.10">It has digits, it has<br/>spaces, it has letters.</p>
+    <p begin="00:02:29.62" dur="00:00:02.42">It is a valid string.</p>
+    <p begin="00:02:33.54" dur="00:00:00.68">Numeric data.</p>
+    <p begin="00:02:34.22" dur="00:00:01.67">Again, digits,</p>
+    <p begin="00:02:35.89" dur="00:00:02.56">maybe plus or minus,<br/>maybe decimal point.</p>
+    <p begin="00:02:38.45" dur="00:00:02.48">String in double quotes.</p>
+    <p begin="00:02:40.93" dur="00:00:02.10">Any digits that are<br/>in combination</p>
+    <p begin="00:02:43.03" dur="00:00:03.39">with other characters that<br/>are not inside quotes,</p>
+    <p begin="00:02:46.42" dur="00:00:02.09">those pieces of data<br/>are illegal.</p>
+    <p begin="00:02:48.51" dur="00:00:03.56">Why are there data types?</p>
+    <p begin="00:02:52.07" dur="00:00:04.38">A data type defines what values<br/>can be stored in an item.</p>
+    <p begin="00:02:56.45" dur="00:00:05.32">7, 70, minus 7,<br/>7.77 are all numeric.</p>
+    <p begin="00:03:01.77" dur="00:00:03.99">Book in quotes, 234 in<br/>quotes, Hello Sam in quotes,</p>
+    <p begin="00:03:05.76" dur="00:00:01.58">those are all strings.</p>
+    <p begin="00:03:07.34" dur="00:00:04.10">A data type tells you how<br/>much memory is allocated</p>
+    <p begin="00:03:11.44" dur="00:00:01.29">for the item.</p>
+    <p begin="00:03:12.73" dur="00:00:03.42">This differs between programming<br/>languages, but for example,</p>
+    <p begin="00:03:16.15" dur="00:00:04.11">in some languages, a number like<br/>7 might be stored in four bytes</p>
+    <p begin="00:03:20.26" dur="00:00:03.94">of memory, but a string<br/>like book might be stored</p>
+    <p begin="00:03:24.20" dur="00:00:02.12">in 16 bytes of memory.</p>
+    <p begin="00:03:26.32" dur="00:00:03.04">A data type also<br/>tells you what kinds</p>
+    <p begin="00:03:29.36" dur="00:00:03.41">of operations are<br/>allowed with the data.</p>
+    <p begin="00:03:32.77" dur="00:00:02.80">If you put a plus sign<br/>between numeric items,</p>
+    <p begin="00:03:35.57" dur="00:00:03.01">that always creates an<br/>arithmetic expression</p>
+    <p begin="00:03:38.58" dur="00:00:01.86">that performs addition.</p>
+    <p begin="00:03:40.44" dur="00:00:03.80">And the value of 7 plus 2 is 9.</p>
+    <p begin="00:03:44.24" dur="00:00:03.50">If you place a plus<br/>between two strings,</p>
+    <p begin="00:03:47.74" dur="00:00:04.29">in many programming languages,<br/>that concatenates the strings.</p>
+    <p begin="00:03:52.03" dur="00:00:02.97">It means adds them end<br/>to end, and the result</p>
+    <p begin="00:03:55.00" dur="00:00:02.54">of book plus keeper<br/>is bookkeeper.</p>
+    <p begin="00:03:57.54" dur="00:00:05.96">How about the string<br/>7 plus the string 2?</p>
+    <p begin="00:04:03.50" dur="00:00:03.10">They're strings, so<br/>they're concatenated,</p>
+    <p begin="00:04:06.60" dur="00:00:03.52">and the result is<br/>the string 72.</p>
+    <p begin="00:04:11.66" dur="00:00:01.84">In every programming language,</p>
+    <p begin="00:04:13.50" dur="00:00:02.85">two numeric values<br/>can be subtracted.</p>
+    <p begin="00:04:16.35" dur="00:00:04.92">Seven minus 2, that<br/>expression has the value 5.</p>
+    <p begin="00:04:21.27" dur="00:00:03.87">But in most programming<br/>languages, book minus keeper,</p>
+    <p begin="00:04:25.14" dur="00:00:04.16">minus is not defined for string<br/>values, and that's illegal</p>
+    <p begin="00:04:29.30" dur="00:00:03.65">and will cause an<br/>error in your program.</p>
+    <p begin="00:04:32.95" dur="00:00:04.18">That's a summary of data types.</p>
+    <p begin="00:04:37.13" dur="00:00:02.59">Thanks for watching.</p>
+    <p begin="00:04:39.72" dur="00:00:00.06">[ Silence ]</p>
+   </div>
+  </body>
+</tt>

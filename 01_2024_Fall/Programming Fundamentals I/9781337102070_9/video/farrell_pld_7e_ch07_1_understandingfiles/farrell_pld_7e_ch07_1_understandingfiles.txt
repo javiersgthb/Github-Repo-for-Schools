@@ -1,0 +1,264 @@
+
+
+ 
+    
+  
+>> Hi, this is Joyce Farrell. 
+
+    I want to talk to you about understanding computer files. 
+
+    When you store data in a computer, you have two choices. 
+
+    Temporary volatile memory, also called RAM, which stands 
+
+    for random access memory. 
+
+    This is where you store data that the program 
+
+    that you're using currently is working with. 
+
+    You also can store data in permanent, nonvolatile storage 
+
+    for longer periods of time, maybe days 
+
+    or weeks between using it. 
+
+    Hardware devices that are used 
+
+    for nonvolatile storage include hard disks, DVDs, USB drives, 
+
+    and on larger systems, 
+
+    frequently reels of magnetic tape. 
+
+    Every file that you store in a computer system has a name. 
+
+    And the name often ends with a dot and an extension, 
+
+    and the extension tells you the type of file that it is. 
+
+    For example, you might store a document called TermPaper.doc. 
+
+    And the .doc would indicate that it's a word-processing document 
+
+    that can be used by a word-processing program. 
+
+    Another file might be called GraduationPhoto.jpg. 
+
+    And jpg is an extension that means it's a photograph file. 
+
+    Employees.dat might be a data file. 
+
+    This might be a file that holds the facts and figures 
+
+    about your employees that could be used by a personnel program 
+
+    or a payroll program in your organization. 
+
+    Besides a name, every file has a date and a time 
+
+    that it was last modified. 
+
+    And that information is stored on your system. 
+
+    And besides a name and a time, every file has a size. 
+
+    The size of computer files is measured 
+
+    in bits at the lowest level. 
+
+    Bits are the little zeros and ones that make up the circuitry 
+
+    of the computer system. 
+
+    Bits are so small that when people talk about data, 
+
+    they seldom refer to bits. 
+
+    Instead, they refer to bytes. 
+
+    It takes eight bits to make a byte. 
+
+    And typically, eight bits are required to store a character, 
+
+    such as an A or a B or a 7. 
+
+    Bytes are so small that when people talk about data, 
+
+    they more frequently talk about kilobytes. 
+
+    A kilobyte is approximately 1,000 bytes. 
+
+    So, a small file might be one or two kilobytes in size. 
+
+    Sometimes kilobytes are too small to refer to large files, 
+
+    so you might talk about megabytes, 
+
+    which are millions of bytes. 
+
+    And computer memory itself is often measured in gigabytes, 
+
+    which are billions of bytes. 
+
+    There are also additional terms that refer 
+
+    to larger quantities of storage. 
+
+    When you store files on a hardware device, 
+
+    such as a hard drive, you might organize the files into folders. 
+
+    And within a folder, you might have additional subfolders. 
+
+    And within a subfolder, 
+
+    you might have even more additional subfolders. 
+
+    The complete list of the hardware device, 
+
+    plus all the folders that lead to the ultimate file location, 
+
+    is called the file's path. 
+
+    Let's take a look at some typical files stored 
+
+    on a computer. 
+
+    For example, if you're using the Vista operating system 
+
+    and you open up the computer icon, 
+
+    you might see some hardware devices 
+
+    that are part of your computer. 
+
+    This computer happens to have an E drive, 
+
+    an E Drive and a C drive. 
+
+    If you open up the C Ddrive by double-clicking, 
+
+    you might see some folders that are stored on that drive. 
+
+    And I have one called FileDemonstration. 
+
+    If I open up FileDemonstration, 
+
+    you can see that the path is the C drive, 
+
+    the FileDemonstration folder, 
+
+    and then there are some individual files stored there. 
+
+    For example, I have one called ShoppingList. 
+
+    It has a date and time that it was last modified. 
+
+    And it's a text document. 
+
+    And that means you can read it. 
+
+    And it's one kilobyte in size, approximately 1,000 bytes. 
+
+    If you open up the shopping list, 
+
+    you can see that it's just a short shopping list. 
+
+    As a matter of fact, it has far fewer 
+
+    than 1,000 bytes stored in it. 
+
+    If you right-click on ShoppingList and choose its properties, 
+
+    you can see the name of the file and what program opens it. 
+
+    And you can see that it is only 35 bytes in size. 
+
+    That's how many letters it took to store the shopping list. 
+
+    But when you look into my computer, the smallest size 
+
+    that is ever shown is one kilobyte. 
+
+    So, it's showing you the least number it can show you for this. 
+
+    I also have something called TestDraw. 
+
+    It's a CLASS file. 
+
+    It happens to be a program written 
+
+    in the Java programming language that has been compiled. 
+
+    If you open up this file, it's not very readable. 
+
+    There's a few words in there that you can identify, 
+
+    but there's also a lot of other codes. 
+
+    These codes are in binary and are readable to the computer, 
+
+    but not very readable to you. 
+
+    I happen to have a JPEG file, which is 105 kilobytes, 
+
+    much larger than any of these other files. 
+
+    Pictures take up a lot of storage. 
+
+    If you open that, you see a picture. 
+
+    The employee file is a data file. 
+
+    It's very typical of the kinds of files you'll use as inputs 
+
+    into computer programs. 
+
+    For example, this one happens to have employee ID numbers, 
+
+    employees' last names, first names, and pay rates. 
+
+    And if you wrote a computer program, 
+
+    you might have a statement such as input, ID number, 
+
+    last name, first name, pay rate. 
+
+    And it would use this employee data file. 
+
+    Let's take a little closer look at the Employees data file 
+
+    and talk for a minute about the data hierarchy. 
+
+    The smallest piece of data that's useful 
+
+    to humans is the character. 
+
+    For example, the M here in Mary Ann. 
+
+    Characters are grouped together to make up fields. 
+
+    A field is a unit of information, 
+
+    such as a first name, highlighted here. 
+
+    Other fields in this data file seem to be an employee number 
+
+    and a last name and a rate of pay. 
+
+    Fields are grouped together to make up records. 
+
+    A record consists of all the fields that have to do 
+
+    with one entity, such as a person, place, or thing. 
+
+    And records are grouped together to make up files. 
+
+    A data file consists of all of the records that go together 
+
+    to solve some business problem. 
+
+    Thanks for watching. 
+
+   

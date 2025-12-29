@@ -1,0 +1,150 @@
+
+
+ 
+    
+  
+>> Joyce: Hi, this is Joyce Farrell. 
+
+    Let's talk about arithmetic operator precedence. 
+
+    When you have arithmetic statements 
+
+    in a computer program, there are rules of precedence. 
+
+    These are the rules that dictate the order 
+
+    in which arithmetic operations are carried out. 
+
+    When you have more than one operation 
+
+    in a statement, anything within parentheses is evaluated first. 
+
+    After expressions 
+
+    within parentheses are evaluated, multiplication 
+
+    and division are evaluated moving from left to right. 
+
+    After all multiplication 
+
+    and division have been evaluated, addition 
+
+    and subtraction are evaluated moving from left to right. 
+
+    Finally, if there is an assignment operation 
+
+    in the statement, assignment executes last. 
+
+    Let's look at an example. 
+
+    Suppose you have a programming statement answer equals 2 plus 3 
+
+    times parentheses 5 minus 1. 
+
+    Looking at the rules 
+
+    of precedence, the first one is do anything within parentheses. 
+
+    In this case, 5 minus 1 is within parentheses, so that evaluates 
+
+    to 4, so the expression becomes answer equals 2 plus 3 times 4. 
+
+    When the expression inside parentheses has been reduced 
+
+    to a single value, you can eliminate the parentheses, 
+
+    so the expression becomes answer equals 2 plus 3 times 4. 
+
+    The next rule of precedence is to do multiplication 
+
+    and division moving from left to right. 
+
+    There's no division in this statement, 
+
+    so the first multiplication statement multiplies 3 times 4, 
+
+    so the expression becomes answer equals 2 plus 12. 
+
+    There's no more multiplication or division, so you can look 
+
+    at the third rule of precedence, 
+
+    which says do any addition or subtraction. 
+
+    In this case, there's some addition, 
+
+    so 2 plus 12 is 14, answer equals 14. 
+
+    The last rule of precedence says 
+
+    use the assignment operator to assign the value to 14, 
+
+    and at this point, in memory, the spot called answer gets a 14 
+
+    stored in it. 
+
+    Let's look at another example: 
+
+    result equals 24 divided by 2 divided 
+
+    by parentheses 2 times parentheses 1 plus 2. 
+
+    Notice that for every opening parentheses there's always a 
+
+    closing parentheses. 
+
+    Looking at the rules of precedence, number 1 says 
+
+    do the operations inside parentheses. 
+
+    When there are multiple sets 
+
+    of parentheses, you take the inside parentheses first. 
+
+    The inside parentheses, in this case, contain 1 plus 2, 
+
+    so the expression changes to result is 24 divided 
+
+    by 2 divided by 2 times 3, because of 1 plus 2 is 3. 
+
+    The rules of precedence still say parentheses are operated 
+
+    on next. So 2 times 3 is 6, 
+
+    so result becomes 24 divided by 2 divided by 6. 
+
+    Since there are no more parentheses, you can look 
+
+    at the next rule of precedence that says do multiplication 
+
+    or division from left to right. 
+
+    So moving from left to right, 24 divided by 2 is 12, 
+
+    so the expression becomes 12 divided by 6. 
+
+    Then still doing multiplication or division from left 
+
+    to right, 12 divided by 6 is 2. 
+
+    Looking at the next rule 
+
+    of precedence we do any addition or subtraction. 
+
+    In this case, there is no addition or subtraction. 
+
+    That's okay, we just move to the next rule of precedence. 
+
+    The last one says make the assignment, 
+
+    so in memory, a spot called result finally has the value 2 
+
+    assigned to it. 
+
+    Those are the rules of precedence 
+
+    in arithmetic expressions. 
+
+    Thanks for watching. 
+
+   

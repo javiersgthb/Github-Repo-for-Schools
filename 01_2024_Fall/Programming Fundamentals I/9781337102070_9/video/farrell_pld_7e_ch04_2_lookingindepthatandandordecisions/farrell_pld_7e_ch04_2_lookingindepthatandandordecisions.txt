@@ -1,0 +1,178 @@
+>> Joyce Farrell: Hi, this is Joyce Farrell. 
+
+    Let's look in depth at AND and OR decisions. 
+
+    With an AND decision, two conditions must be true 
+
+    to result in an action; for example, in your company, 
+
+    if a customer's amount due is greater than 10, 
+
+    AND the customer is past due more than 15 days, then you want 
+
+    to assign a penalty to the customer. 
+
+    That's an AND selection. 
+
+    You can use the AND operator to combine operands 
+
+    to make an AND selection. 
+
+    For example, you can ask in a single question amount greater 
+
+    than 10 AND past due greater than 15. 
+
+    If so, assign a penalty. 
+
+    A truth table helps you understand operations; 
+
+    for example, if x is true and y is true, 
+
+    then the expression x and y is true. 
+
+    For example if it's true that you like chocolate and it's true 
+
+    that you like coconut, then it's true that you'll 
+
+    like my chocolate and coconut dessert. 
+
+    If x is true and y is false, 
+
+    then the expression x and y is false. 
+
+    If you like chocolate but you don't like coconut, 
+
+    you're not going to like the combination 
+
+    coconut/chocolate dessert. 
+
+    If x is false and y is true, again x and y is false. 
+
+    If you don't like chocolate but you do like coconut, 
+
+    you're not going to like the dessert. 
+
+    And if x is false and y is false, 
+
+    then the whole expression x and y is false. 
+
+    If you don't like either part of the combination, 
+
+    you're not going to like the dessert. 
+
+    You can use 1s and 0s to represent true and false; 
+
+    for example, if x is true and y is true, you can think 
+
+    of them both as value 1. 
+
+    The AND operator works like multiplication, 
+
+    so when you multiply 1 by 1 you get 1, 
+
+    which is a true answer.However, if you multiply 1 
+
+    by 0, it's a false answer. 
+
+    And if you multiply 0 by 1, again, it's a false answer. 
+
+    And false times false, 0 times 0, once again, 
+
+    is a false combination. 
+
+    So in short, using the AND operator, 
+
+    both x and y must be true for an entire expression to be true. 
+
+    With an OR selection, either of two conditions must be true 
+
+    to result in an action; for example, perhaps the policy 
+
+    at your company is if a customer's amount due is greater 
+
+    than ten, then assign a penalty to the customer's total. 
+
+    Otherwise, if the customer is past due greater than 15, 
+
+    then assign a penalty to the customer's total. 
+
+    One OR the other must be true 
+
+    for the customer to get the penalty. 
+
+    You can use an OR operator to combine two expressions 
+
+    into one, amount greater than 10 OR past due greater than 15. 
+
+    If the entire expression is true, assign the penalty. 
+
+    Here's the truth table for the OR operator. 
+
+    If x is true and y is true, then x or y is true. 
+
+    If x is true and y is false, then x or y is still true, 
+
+    only one of them has to be true. 
+
+    If x is false and y is true, the entire or expression is true. 
+
+    And if x is false and y is false, 
+
+    then and only then is the expression x or y false. 
+
+    If you want to think of trues and falses as 0 and non-0 value, 
+
+    then you can think of x and y being true as 1s. 
+
+    The OR operator works like addition, so when you add 1 
+
+    and 1 you get a non-0 value, which is true. 
+
+    When you add a true and a false, 
+
+    you get a non-0 value, which is true. 
+
+    And a false and a true add up to 1 not 0, so it's true. 
+
+    Only when both parts of an 
+
+    OR expression are false does the addition result 
+
+    in 0, which is also false. 
+
+    So in short, with an OR operator, 
+
+    both parts of the expression have to be false 
+
+    for the entire thing to be false, otherwise it's true. 
+
+    You can combine AND and OR operators 
+
+    into a single expression; for example, 
+
+    if you have an expression that's true and false or true, 
+
+    you can think of it as 1 times 0 plus 1. 
+
+    You know from arithmetic precedence that 1 times 0 is 0, 
+
+    and when you add 1, you get 1, 
+
+    so the entire expression is true. 
+
+    [ Pause ] 
+
+    As another example, if you have false or false and true, 
+
+    you can think of it as 0 plus 0 times 1. 
+
+    Multiplication takes place first, 
+
+    so the result is 0 plus 0, the answer is 0, which is false. 
+
+    That's a deeper look at AND and OR expressions. 
+
+    Thanks for watching. 
+
+   
+ 

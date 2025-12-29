@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.51" dur="00:00:01.84">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:02.35" dur="00:00:03.81">Let's take a look<br/>at typical file operations.</p>
+    <p begin="00:00:06.16" dur="00:00:03.30">When you write a computer<br/>program that uses data files,</p>
+    <p begin="00:00:09.46" dur="00:00:04.79">typical operations include<br/>opening the files, reading data</p>
+    <p begin="00:00:14.25" dur="00:00:03.23">from the input file, which<br/>means making a copy of the data</p>
+    <p begin="00:00:17.48" dur="00:00:04.14">and putting it into memory,<br/>writing the information</p>
+    <p begin="00:00:21.62" dur="00:00:03.99">in memory to an output file, so<br/>it can be stored for later use,</p>
+    <p begin="00:00:25.61" dur="00:00:02.02">and closing the files.</p>
+    <p begin="00:00:27.63" dur="00:00:03.23">For example, let's assume you<br/>have an employee data file</p>
+    <p begin="00:00:30.86" dur="00:00:02.40">with name, address, and<br/>pay rate, and you want</p>
+    <p begin="00:00:33.26" dur="00:00:02.58">to give each employee<br/>a $2 raise.</p>
+    <p begin="00:00:35.84" dur="00:00:01.17">You would open the files,</p>
+    <p begin="00:00:37.01" dur="00:00:02.56">then read the first<br/>record into memory.</p>
+    <p begin="00:00:39.57" dur="00:00:02.83">In memory, you would alter<br/>the employee's pay rate</p>
+    <p begin="00:00:42.40" dur="00:00:02.19">to increase it by $2.</p>
+    <p begin="00:00:44.59" dur="00:00:03.75">So, instead of $12, this<br/>employee should make $14,</p>
+    <p begin="00:00:48.34" dur="00:00:04.47">and you'd write all the<br/>information to an output file.</p>
+    <p begin="00:00:52.81" dur="00:00:02.87">Then you could read the next<br/>input record, this one happens</p>
+    <p begin="00:00:55.68" dur="00:00:04.06">to make $15.75, so you<br/>output the same information</p>
+    <p begin="00:00:59.74" dur="00:00:02.33">with $17.75.</p>
+    <p begin="00:01:02.07" dur="00:00:03.41">The next record is $10, so<br/>you'll output it with $12.</p>
+    <p begin="00:01:05.48" dur="00:00:04.06">And the last record is $21,<br/>so you output it with $23.</p>
+    <p begin="00:01:09.54" dur="00:00:02.90">When you're done, you have<br/>two files in your possession,</p>
+    <p begin="00:01:12.44" dur="00:00:02.38">one has the original data,</p>
+    <p begin="00:01:14.82" dur="00:00:03.94">and the new, updated file<br/>has the current, improved</p>
+    <p begin="00:01:18.76" dur="00:00:01.66">or altered data.</p>
+    <p begin="00:01:20.42" dur="00:00:04.31">Let's look at a program<br/>that performs this process.</p>
+    <p begin="00:01:24.73" dur="00:00:03.11">You start the program and<br/>make your declarations.</p>
+    <p begin="00:01:27.84" dur="00:00:02.11">You declare a spot in<br/>memory where the name</p>
+    <p begin="00:01:29.95" dur="00:00:02.35">of the input file can be stored.</p>
+    <p begin="00:01:32.30" dur="00:00:02.85">We're calling our<br/>spot employeeData.</p>
+    <p begin="00:01:35.15" dur="00:00:03.41">You also declare a location<br/>for the output file.</p>
+    <p begin="00:01:38.56" dur="00:00:02.63">We're calling our's updatedData.</p>
+    <p begin="00:01:41.19" dur="00:00:02.13">You then have some<br/>variables and a constant</p>
+    <p begin="00:01:43.32" dur="00:00:01.14">to use in the program.</p>
+    <p begin="00:01:44.46" dur="00:00:02.39">We have a spot for the<br/>name, address, and pay rate</p>
+    <p begin="00:01:46.85" dur="00:00:04.48">of each employee, and a<br/>constant to hold the $2 raise.</p>
+    <p begin="00:01:51.33" dur="00:00:02.65">You can then call the<br/>housekeeping module.</p>
+    <p begin="00:01:53.98" dur="00:00:04.92">And in that module you can<br/>open the EmployeeData.dat file.</p>
+    <p begin="00:01:58.90" dur="00:00:02.46">Opening the file<br/>locates it on the disk</p>
+    <p begin="00:02:01.36" dur="00:00:03.85">and associates the file name<br/>with our program's internal name,</p>
+    <p begin="00:02:05.21" dur="00:00:02.72">which is employeeData.</p>
+    <p begin="00:02:07.93" dur="00:00:03.01">Similarly, you can<br/>open the output file</p>
+    <p begin="00:02:10.94" dur="00:00:03.29">by finding a location for<br/>it on the storage device,</p>
+    <p begin="00:02:14.23" dur="00:00:03.67">and associating its name with<br/>our program's internal name,</p>
+    <p begin="00:02:17.90" dur="00:00:02.28">which is updatedData.</p>
+    <p begin="00:02:20.18" dur="00:00:02.59">Then when you input the<br/>name, address, and pay rate</p>
+    <p begin="00:02:22.77" dur="00:00:03.33">from the input file you make<br/>copies of the information</p>
+    <p begin="00:02:26.10" dur="00:00:03.78">and store it in memory at<br/>the respective locations.</p>
+    <p begin="00:02:29.88" dur="00:00:02.83">After you've read this<br/>first record into memory,</p>
+    <p begin="00:02:32.71" dur="00:00:03.01">you can return from the<br/>housekeeping section and go back</p>
+    <p begin="00:02:35.72" dur="00:00:01.96">to the mainline logic.</p>
+    <p begin="00:02:37.68" dur="00:00:02.50">It's not end of file, because<br/>you've just read the first</p>
+    <p begin="00:02:40.18" dur="00:00:03.77">record into memory, so you<br/>can perform the detailLoop.</p>
+    <p begin="00:02:43.95" dur="00:00:03.88">In the detailLoop, you<br/>can take the pay rate</p>
+    <p begin="00:02:47.83" dur="00:00:01.97">in memory and add the raise.</p>
+    <p begin="00:02:49.80" dur="00:00:03.87">So the $12 pay rate becomes $14.</p>
+    <p begin="00:02:53.67" dur="00:00:03.36">Then you're ready to output the<br/>same name, the same address,</p>
+    <p begin="00:02:57.03" dur="00:00:04.55">and the new updated pay<br/>rate to the output file.</p>
+    <p begin="00:03:01.58" dur="00:00:03.03">Then you can get the next<br/>record from the file,</p>
+    <p begin="00:03:04.61" dur="00:00:02.21">in this case let's<br/>assume it's Zimmerman</p>
+    <p begin="00:03:06.82" dur="00:00:02.94">with a $15.75 pay rate.</p>
+    <p begin="00:03:09.76" dur="00:00:03.86">You return from the detailLoop<br/>and check for end of file.</p>
+    <p begin="00:03:13.62" dur="00:00:01.46">Because it's not end of file,</p>
+    <p begin="00:03:15.08" dur="00:00:02.99">you could go apply the pay<br/>raise, get the next record,</p>
+    <p begin="00:03:18.07" dur="00:00:02.57">and continue on until<br/>one time when you read</p>
+    <p begin="00:03:20.64" dur="00:00:03.53">from the input file,<br/>it is end of file.</p>
+    <p begin="00:03:24.17" dur="00:00:03.28">You then can perform<br/>the finish module.</p>
+    <p begin="00:03:27.45" dur="00:00:03.73">In the finish module, you<br/>close the employeeData file</p>
+    <p begin="00:03:31.18" dur="00:00:02.87">as you close the<br/>updatedData file.</p>
+    <p begin="00:03:34.05" dur="00:00:03.67">When you return from finish,<br/>you're ready to end the program,</p>
+    <p begin="00:03:37.72" dur="00:00:03.79">and you've successfully<br/>created a new file</p>
+    <p begin="00:03:41.51" dur="00:00:02.09">with new, updated information.</p>
+    <p begin="00:03:43.60" dur="00:00:02.75">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

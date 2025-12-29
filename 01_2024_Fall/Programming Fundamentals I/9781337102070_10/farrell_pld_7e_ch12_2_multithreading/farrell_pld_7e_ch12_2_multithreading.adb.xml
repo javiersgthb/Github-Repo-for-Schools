@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:01.45" dur="00:00:01.99">&gt;&gt; Hi. This is Joyce Farrell.</p>
+    <p begin="00:00:03.44" dur="00:00:02.14">Let's take a quick look<br/>at multi-threading.</p>
+    <p begin="00:00:05.58" dur="00:00:04.89">When you run programs on a<br/>computer with a single CPU,</p>
+    <p begin="00:00:10.47" dur="00:00:02.82">you can run one process<br/>at a time.</p>
+    <p begin="00:00:13.29" dur="00:00:03.10">Typically, one process<br/>runs, and when it's done,</p>
+    <p begin="00:00:16.39" dur="00:00:03.18">a second one might<br/>follow until it's done.</p>
+    <p begin="00:00:19.57" dur="00:00:01.72">When you have multi-threading,</p>
+    <p begin="00:00:21.29" dur="00:00:02.83">you can run two processes<br/>concurrently.</p>
+    <p begin="00:00:24.12" dur="00:00:02.64">For example, you might<br/>start one process</p>
+    <p begin="00:00:26.76" dur="00:00:02.06">and then while it's<br/>waiting for something,</p>
+    <p begin="00:00:28.82" dur="00:00:02.04">perhaps a second<br/>process can run.</p>
+    <p begin="00:00:30.86" dur="00:00:01.96">And while it's waiting<br/>for something,</p>
+    <p begin="00:00:32.82" dur="00:00:01.87">the first one can<br/>take a turn again,</p>
+    <p begin="00:00:34.69" dur="00:00:02.50">and so on in round robin-fashion</p>
+    <p begin="00:00:37.19" dur="00:00:03.16">until both processes<br/>are complete.</p>
+    <p begin="00:00:40.35" dur="00:00:03.48">Sometimes problems arise if<br/>you have two threads that need</p>
+    <p begin="00:00:43.83" dur="00:00:01.46">to use the same resource.</p>
+    <p begin="00:00:45.29" dur="00:00:03.17">For example, if there's only one<br/>printer and both threads need</p>
+    <p begin="00:00:48.46" dur="00:00:03.27">to print, one will have<br/>to wait for the other.</p>
+    <p begin="00:00:51.73" dur="00:00:03.82">Or perhaps both threads are<br/>accessing the same database.</p>
+    <p begin="00:00:55.55" dur="00:00:03.67">Assume there are two operators<br/>selling concert seat tickets</p>
+    <p begin="00:00:59.22" dur="00:00:01.35">on the telephone.</p>
+    <p begin="00:01:00.57" dur="00:00:02.57">And assume the first<br/>operator gets a call</p>
+    <p begin="00:01:03.14" dur="00:00:02.37">and the caller requests<br/>two seats.</p>
+    <p begin="00:01:05.51" dur="00:00:02.79">It's checked and found that<br/>those seats are available,</p>
+    <p begin="00:01:08.30" dur="00:00:01.97">and the "holds" needs to be put</p>
+    <p begin="00:01:10.27" dur="00:00:03.20">on those seats while<br/>credit card data is checked</p>
+    <p begin="00:01:13.47" dur="00:00:03.50">and the operator takes down<br/>other data from the caller.</p>
+    <p begin="00:01:16.97" dur="00:00:04.52">While they're waiting, perhaps<br/>the second operator gets a call.</p>
+    <p begin="00:01:21.49" dur="00:00:03.40">Perhaps that caller<br/>requests one of the seats</p>
+    <p begin="00:01:24.89" dur="00:00:02.64">that the first caller<br/>has a hold on.</p>
+    <p begin="00:01:27.53" dur="00:00:03.74">In that case, the seats<br/>will be said to be locked</p>
+    <p begin="00:01:31.27" dur="00:00:03.60">and the second caller will<br/>not have access to them.</p>
+    <p begin="00:01:34.87" dur="00:00:02.08">Then while the second<br/>caller's thinking,</p>
+    <p begin="00:01:36.95" dur="00:00:03.11">perhaps the first caller<br/>will get the credit card data</p>
+    <p begin="00:01:40.06" dur="00:00:02.62">and reserve those two seats.</p>
+    <p begin="00:01:42.68" dur="00:00:03.82">Then maybe the second caller<br/>will select two other seats,</p>
+    <p begin="00:01:46.50" dur="00:00:02.37">and maybe one of<br/>those is already sold</p>
+    <p begin="00:01:48.87" dur="00:00:01.49">and will be rejected.</p>
+    <p begin="00:01:50.36" dur="00:00:04.67">And then maybe the second caller<br/>will select two new seats,</p>
+    <p begin="00:01:55.03" dur="00:00:01.54">and maybe a hold can be put</p>
+    <p begin="00:01:56.57" dur="00:00:02.42">on those while the<br/>credit card data is taken</p>
+    <p begin="00:01:58.99" dur="00:00:01.71">from the second caller.</p>
+    <p begin="00:02:00.70" dur="00:00:03.09">Meanwhile, while we're waiting<br/>to check the credit card data,</p>
+    <p begin="00:02:03.79" dur="00:00:01.59">maybe the first caller decides</p>
+    <p begin="00:02:05.38" dur="00:00:01.55">that they really<br/>need a third ticket,</p>
+    <p begin="00:02:06.93" dur="00:00:03.70">and perhaps they request<br/>one where there's a hold.</p>
+    <p begin="00:02:10.63" dur="00:00:03.36">That request will be<br/>rejected, and so on.</p>
+    <p begin="00:02:13.99" dur="00:00:02.59">The two processes can<br/>be run concurrently,</p>
+    <p begin="00:02:16.58" dur="00:00:02.95">sharing the same<br/>data, if care is taken</p>
+    <p begin="00:02:19.53" dur="00:00:04.29">to lock the data while<br/>it's under processing.</p>
+    <p begin="00:02:23.82" dur="00:00:03.05">That's a quick look<br/>at multi-threading.</p>
+    <p begin="00:02:26.87" dur="00:00:01.01">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

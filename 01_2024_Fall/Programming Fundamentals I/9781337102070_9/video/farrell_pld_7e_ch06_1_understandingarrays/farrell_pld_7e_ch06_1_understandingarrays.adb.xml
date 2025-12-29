@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/10/ttaf1" xmlns:tts="http://www.w3.org/2006/10/ttaf1#styling">
+  <head>
+   <styling>
+    <style id="1" tts:textAlign="center" tts:color="#FFFFFF" tts:backgroundColor="#000000" tts:fontSize="16" tts:fontFamily="Verdana" tts:wrapOption="wrap"/>
+   </styling>
+  </head>
+  <body>
+   <div xml:lang="en" style="1">
+    <p begin="00:00:00.62" dur="00:00:01.84">&gt;&gt; Hi, this is Joyce Farrell.</p>
+    <p begin="00:00:02.46" dur="00:00:02.49"> Let's<br/>talk about arrays.</p>
+    <p begin="00:00:04.95" dur="00:00:02.92">An array is a list of<br/>continuous values stored</p>
+    <p begin="00:00:07.87" dur="00:00:02.09">in computer memory.</p>
+    <p begin="00:00:09.96" dur="00:00:03.21">Every array has a<br/>specified size.</p>
+    <p begin="00:00:13.17" dur="00:00:04.98">Every array is made up of a<br/>number of items called elements.</p>
+    <p begin="00:00:18.15" dur="00:00:04.34">Each element in an array<br/>must have the same data type.</p>
+    <p begin="00:00:22.49" dur="00:00:03.06">And every element can be<br/>accessed using a subscript.</p>
+    <p begin="00:00:25.55" dur="00:00:04.58">A subscript is a whole number<br/>value ranging from zero</p>
+    <p begin="00:00:30.13" dur="00:00:03.17">to one less than the<br/>size of the array.</p>
+    <p begin="00:00:33.30" dur="00:00:01.28">For example, if you want</p>
+    <p begin="00:00:34.58" dur="00:00:04.10">to declare a four-element numeric<br/>array, you give it a data type,</p>
+    <p begin="00:00:38.68" dur="00:00:02.82">num, and<br/>a name like money,</p>
+    <p begin="00:00:41.50" dur="00:00:02.61">and then you indicate<br/>the size of the array.</p>
+    <p begin="00:00:44.11" dur="00:00:02.08">In this case, it's<br/>a four-element array,</p>
+    <p begin="00:00:46.19" dur="00:00:03.16">so four memory locations<br/>are reserved.</p>
+    <p begin="00:00:49.35" dur="00:00:03.73">The names of those<br/>locations are money[0],</p>
+    <p begin="00:00:53.08" dur="00:00:04.05">money[1], money[2], and money[3].</p>
+    <p begin="00:00:57.13" dur="00:00:02.88">The subscripts appearing within<br/>the square brackets range</p>
+    <p begin="00:01:00.01" dur="00:00:04.70">from zero to one less than<br/>the size of the array.</p>
+    <p begin="00:01:04.71" dur="00:00:02.31">You can assign a value<br/>to an array element.</p>
+    <p begin="00:01:07.02" dur="00:00:03.83">For example, perhaps you want<br/>to say money[0] equals 14.</p>
+    <p begin="00:01:10.85" dur="00:00:04.00">That assigns 14 to<br/>element zero of the array.</p>
+    <p begin="00:01:14.85" dur="00:00:02.18">You don't have to<br/>assign values in order.</p>
+    <p begin="00:01:17.03" dur="00:00:04.22">The next statement you make<br/>might be money[3] equals 82,</p>
+    <p begin="00:01:21.25" dur="00:00:03.18">and that would assign an<br/>82 to the last element</p>
+    <p begin="00:01:24.43" dur="00:00:02.63">of this array, money[3].</p>
+    <p begin="00:01:27.06" dur="00:00:03.11">You then might say<br/>money[1] equals 6.</p>
+    <p begin="00:01:30.17" dur="00:00:03.00">Or you might change a value<br/>at an element in the array</p>
+    <p begin="00:01:33.17" dur="00:00:04.09">and say money[0] equals<br/>9 and change its value.</p>
+    <p begin="00:01:37.26" dur="00:00:01.54">You can perform arithmetic;</p>
+    <p begin="00:01:38.80" dur="00:00:02.81">money[0] plus 10 is<br/>assigned to money[3].</p>
+    <p begin="00:01:41.61" dur="00:00:02.97">So now money[3] has the value 19.</p>
+    <p begin="00:01:44.58" dur="00:00:04.46">What happens if you try to<br/>assign money[2] to money[1]?</p>
+    <p begin="00:01:49.04" dur="00:00:02.26">In this case, it's illegal,</p>
+    <p begin="00:01:51.30" dur="00:00:02.48">because money[2] has<br/>not been initialized,</p>
+    <p begin="00:01:53.78" dur="00:00:04.09">so it has garbage value<br/>and cannot be assigned.</p>
+    <p begin="00:01:57.87" dur="00:00:03.41">How about if you try to<br/>assign 20 to money[4]?</p>
+    <p begin="00:02:01.28" dur="00:00:03.14">In this case, because<br/>it's a four-element array,</p>
+    <p begin="00:02:04.42" dur="00:00:04.35">that statement is not valid,<br/>because there is no element 4.</p>
+    <p begin="00:02:08.77" dur="00:00:05.68">A four-element array only has<br/>spots 0, 1, 2, and 3.</p>
+    <p begin="00:02:14.45" dur="00:00:02.41">You can initialize an<br/>array when you declare it,</p>
+    <p begin="00:02:16.86" dur="00:00:01.99">by giving it values to start.</p>
+    <p begin="00:02:18.85" dur="00:00:03.30">For example, if you want all<br/>zeros, you might make a statement</p>
+    <p begin="00:02:22.15" dur="00:00:04.36">like num money[4] equals<br/>and then list the zeros.</p>
+    <p begin="00:02:26.51" dur="00:00:03.16">You can use a loop<br/>with an array,</p>
+    <p begin="00:02:29.67" dur="00:00:01.60">which is often the<br/>most efficient way</p>
+    <p begin="00:02:31.27" dur="00:00:01.30">to handle an array.</p>
+    <p begin="00:02:32.57" dur="00:00:03.65">For example, suppose you declare<br/>a numeric variable named x,</p>
+    <p begin="00:02:36.22" dur="00:00:02.10">and assign it zero.</p>
+    <p begin="00:02:38.32" dur="00:00:03.05">Then you could start a loop,<br/>while x is less than 4.</p>
+    <p begin="00:02:41.37" dur="00:00:02.77">Well, it is because it's zero.</p>
+    <p begin="00:02:44.14" dur="00:00:04.43">You could assign money[x], which<br/>is money[0], the value zero.</p>
+    <p begin="00:02:48.57" dur="00:00:04.20">That stores as zero at<br/>the spot money[0].</p>
+    <p begin="00:02:52.77" dur="00:00:02.61">Then you add 1 to x making it 1,</p>
+    <p begin="00:02:55.38" dur="00:00:02.62">and reach the end<br/>of the loop body.</p>
+    <p begin="00:02:58.00" dur="00:00:01.73">When you go to the top<br/>of the loop and check</p>
+    <p begin="00:02:59.73" dur="00:00:04.05">to see whether x is less than<br/>4, it is, because it's 1,</p>
+    <p begin="00:03:03.78" dur="00:00:02.47">so you enter the loop<br/>and assign it a zero</p>
+    <p begin="00:03:06.25" dur="00:00:03.28">to money[x], which is money[1].</p>
+    <p begin="00:03:09.53" dur="00:00:03.24">Then you add 1 to x making<br/>it 2, and reach the end</p>
+    <p begin="00:03:12.77" dur="00:00:02.44">of the loop body<br/>and check again.</p>
+    <p begin="00:03:15.21" dur="00:00:04.15">And since 2 is less than 4,<br/>you enter the loop body again.</p>
+    <p begin="00:03:19.36" dur="00:00:05.49">You can assign a zero to money[2];<br/>add 1 to x making it 3,</p>
+    <p begin="00:03:24.85" dur="00:00:02.37">reach the end of the loop body.</p>
+    <p begin="00:03:27.22" dur="00:00:05.26">3 is less than 4, so you<br/>assign a zero to spot money[3].</p>
+    <p begin="00:03:32.48" dur="00:00:02.69">Then x becomes 4, and<br/>you reached the end</p>
+    <p begin="00:03:35.17" dur="00:00:01.79">of the loop body.</p>
+    <p begin="00:03:36.96" dur="00:00:03.36">Now when you check if x is<br/>less than 4, it's not less</p>
+    <p begin="00:03:40.32" dur="00:00:02.13">than 4, because it is 4.</p>
+    <p begin="00:03:42.45" dur="00:00:04.09">So, the loop ends, and you have<br/>successfully assigned zero</p>
+    <p begin="00:03:46.54" dur="00:00:03.12">to each array element.</p>
+    <p begin="00:03:49.66" dur="00:00:01.49">Thanks for watching.</p>
+   </div>
+  </body>
+</tt>

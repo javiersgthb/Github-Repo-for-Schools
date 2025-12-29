@@ -1,0 +1,214 @@
+
+
+ 
+    Hi. This is Joyce Farrell. 
+
+    I want to talk to you 
+
+    about writing efficient nested selections. 
+
+    Take a look at a typical nested selection. 
+
+    Assume you have customers and that if a customer owes more 
+
+    than $10 and is past due more than 15 days, 
+
+    you want to assign a penalty to the customer's total. 
+
+    In this case, the pastDue selection is nested entirely 
+
+    inside of the amount selection. 
+
+    Both conditions, amount greater than 10 and pastDue greater 
+
+    than 15, have to be true in order for the customer 
+
+    to be assigned a penalty. 
+
+    Let's walk through this flowchart 
+
+    with some typical, sample data. 
+
+    Assume your first customer owes $100 and is past due 30 days. 
+
+    Is the amount greater than 10? 
+
+    Yes. It's 100. 
+
+    Is pastDue greater than 15? 
+
+    Yes. It's 30. 
+
+    So, this customer gets a penalty. 
+
+    At this point, you've made two decisions 
+
+    and assigned one penalty. 
+
+    Assume the next customer owes $100, 
+
+    but is only ten days past due. 
+
+    Is the amount greater than 10? 
+
+    Yes. It's a hundred. 
+
+    Is pastDue greater than 15? 
+
+    No, so you do not assign a penalty. 
+
+    And, at this point, four decisions have been made, 
+
+    but only one penalty has been assigned -- 
+
+    to the first customer. 
+
+    The next data has $10 due, 30 days past due. 
+
+    Is amount greater than 10? 
+
+    No, it's equal to 10, but not greater than 10. 
+
+    So, you've made five decisions, 
+
+    but not assigned any new penalties. 
+
+    When you try the next customer, the customer owes $10 
+
+    and is ten days past due. 
+
+    Is amount more than 10? 
+
+    No, so at this point, you've made six decisions, 
+
+    but still only assigned one penalty. 
+
+    Assume the last four customers happen to have the same data; 
+
+    they all owe $500 and none of them are past due. 
+
+    So, this customer, is the amount greater than 10? 
+
+    Yes. Is pastDue greater than 15? 
+
+    No, it's zero. 
+
+    Eight decisions have been made, but no new penalties assigned. 
+
+    With the next customer, 500 and zero, ten decisions are made, 
+
+    but no new penalties assigned. 
+
+    With the next customer, 500 and zero, 
+
+    you've now made twelve decisions, 
+
+    but a penalty has still only been assigned 
+
+    to the first customer. 
+
+    With the last customer, 
+
+    at the very end there have been fourteen decisions 
+
+    and one penalty assigned. 
+
+    Instead of asking amount greater than 10 first, 
+
+    let's reverse the order of the questions 
+
+    and ask amount greater than 10 second. 
+
+    A customer still must be past due 15 days and owe more 
+
+    than $10 to get the penalty, 
+
+    but you're just asking the questions in the reverse order. 
+
+    Using the exact same data, let's assume the customer owes $100 
+
+    and is 30 days past due. 
+
+    That customer was assigned a penalty last time. 
+
+    This time, pastDue greater than 15? 
+
+    Yes. It's 30. 
+
+    Amount greater than 10? 
+
+    Yes. It's 100. 
+
+    You've still made two decisions and assigned one penalty. 
+
+    The next customer owes $100 and is ten days past due. 
+
+    Is pastDue more than 15? 
+
+    No. So you've made three decisions 
+
+    and assigned one penalty. 
+
+    The next customer owes $10 and is thirty days past due. 
+
+    So, pastDue greater than 15? 
+
+    Yes. Amount greater than 10? 
+
+    No. You've made five decisions. 
+
+    A customer who owes $10 and is ten days past due. 
+
+    pastDue more than 15? 
+
+    No, so you've made six decisions 
+
+    and still assigned just one penalty. 
+
+    The next four customers each owe $500 and are zero days past due. 
+
+    $500 and zero days past due. Is pastDue more than 15? 
+
+    No, so you've made seven decisions. 
+
+    500 and zero, pastDue not more than 15, 
+
+    so you've made eight decisions. 
+
+    500 and zero, you've made nine decisions. 
+
+    500 and zero, you've made ten decisions. 
+
+    Let's compare the nested selections. 
+
+    In the one on the left, 
+
+    where you ask the amount question first, 
+
+    it requires 14 decisions to process all the records. 
+
+    In the version on the right, 
+
+    where the amount question is asked second, 
+
+    it requires only ten decisions to process all the records. 
+
+    By eliminating as many records as possible 
+
+    from the second decision, 
+
+    you improve the performance of your program. 
+
+    The difference between 14 
+
+    and ten decisions is not significant, but the difference 
+
+    between 14 million 
+
+    and 10 million decisions might save a significant amount 
+
+    of processing time. 
+
+    Thanks for watching. 
+
+   
