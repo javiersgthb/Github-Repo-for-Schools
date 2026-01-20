@@ -1,0 +1,2 @@
+#This script adds a user, sets a full name comment, expiration, custom home directory location, and default shell. Edit the name information for each new user.
+useradd -c "kai garcia" -e 2030-1-1 -d /home/developers/ -s /bin/ksh kgarcia

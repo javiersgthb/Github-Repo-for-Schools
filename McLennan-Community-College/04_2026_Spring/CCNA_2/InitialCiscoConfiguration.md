@@ -15,16 +15,22 @@ enable secret *password*
 !secure user exec
 line console 0
 password *password*
+exec-timeout *minutes* *seconds*
 login
 
 !secure passwords
 service password-encryption
+security passwords min-length *length*
+login block-for *seconds* attempts *number* within *seconds*
 
-!secure remote TELNET/SSH access
+!Set Domain, RSA, and username
 ip domain-name cisco.com
 crypto key generate rsa
 username *username* secret *password*
+
+!Configure SSH/Telnet
 line vty 0 15
+exec-timeout *minutes* *seconds*
 transport input ssh
 login (local)
 exit
@@ -50,6 +56,9 @@ interface loopback *number*
 ip address *ip-address* *subnet-mask*
 ipv6 address *ip-address*
 exit
+
+!setting the clock
+clock set hh:mm:ss day month year
 
 !switching VLANs
 vlan *number*
