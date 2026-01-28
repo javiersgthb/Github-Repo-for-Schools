@@ -49,6 +49,13 @@ ipv6 address *ip-address* link local
 no shutdown
 exit
 
+!configure switch virtual interface
+interface vlan *number*
+ip address *ipv4* *subnet-mask*
+ipv6 address *ipv6address/prefix-length*
+no shutdown
+exit
+
 ip default-gateway *ipv4*
 
 !configure loopback
