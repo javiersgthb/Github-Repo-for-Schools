@@ -2,14 +2,17 @@
 # VLAN Trunking Configuration
 
 ## Overview
+
 VLAN trunking allows multiple VLANs to traverse a single physical link between network devices using encapsulation protocols.
 
 ## Encapsulation Methods
 
 ### 802.1Q (Dot1Q)
+
 Industry standard, open protocol.
 
 ### ISL (Inter-Switch Link)
+
 Cisco proprietary protocol (legacy).
 
 ## Configuration Steps
