@@ -19,31 +19,36 @@ Cisco proprietary protocol (legacy).
 
 ### Enable Trunking on Interface
 
-```bash
-# Enter interface configuration mode
+## Enter interface configuration mode
+
 configure terminal
 interface GigabitEthernet0/1
 
-# Set encapsulation protocol
+## Set encapsulation protocol
+
 encapsulation dot1q 1
 
-# Enable trunking mode
+## Enable trunking mode
+
 switchport mode trunk
 
-# Optional: Specify allowed VLANs
+## Set static trunking mode
+
+switchport trunk encapsulation dot1q
+
+## Optional: Specify allowed VLANs
+
 switchport trunk allowed vlan 1,10,20,30
 
-# Exit and save
+## Exit and save
+
 exit
 write memory
-```
 
-### Verify Configuration
+## Verify Configuration
 
-```bash
 show interfaces trunk
 show interfaces GigabitEthernet0/1 switchport
-```
 
 ## Best Practices
 
@@ -51,3 +56,33 @@ show interfaces GigabitEthernet0/1 switchport
 - Explicitly define allowed VLANs
 - Assign native VLAN explicitly
 - Monitor trunk status regularly
+
+## Troubleshooting Commands
+
+### Verify Trunk Status
+
+show interfaces trunk
+show interfaces GigabitEthernet0/1 trunk
+
+### Check VLAN Configuration
+
+show vlan brief
+show vlan id 10
+
+### Diagnose Encapsulation Issues
+
+do show interfaces GigabitEthernet0/1 switchport
+do show interfaces trunk
+do show vlan summary
+
+### Monitor Trunk Errors
+
+show interfaces GigabitEthernet0/1 counters errors
+show interfaces GigabitEthernet0/1 status
+
+### Common Issues
+
+- **Mismatched encapsulation**: Verify both sides use same protocol
+- **VLAN not allowed**: Check `switchport trunk allowed vlan`
+- **Native VLAN mismatch**: Can cause spanning tree issues
+- **Port in access mode**: Confirm `switchport mode trunk` is set
