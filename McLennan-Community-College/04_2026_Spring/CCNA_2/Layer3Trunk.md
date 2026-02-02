@@ -44,3 +44,12 @@ switchport access vlan 10
 show ip route
 show vlan brief
 show interface vlan 10
+
+### 5. Configure OSPF Routing
+
+router ospf 1
+network 192.168.10.0 0.0.0.255 area 0
+network 192.168.20.0 0.0.0.255 area 0
+
+show ip ospf neighbor
+show ip ospf interface
