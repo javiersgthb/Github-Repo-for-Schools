@@ -1,4 +1,5 @@
 import json
+import importlib
 import os
 import re
 from datetime import datetime, timedelta
@@ -7,13 +8,6 @@ try:
     from pypdf import PdfReader
 except ImportError:
     PdfReader = None
-
-try:
-    from PIL import Image
-    import pytesseract
-except ImportError:
-    Image = None
-    pytesseract = None
 
 class BudgetManager:
     def __init__(self, filename="budget_data.json"):
@@ -56,9 +50,12 @@ class BudgetManager:
                 "state_withholding": 0.05,
                 "social_security": 0.062,
                 "medicare": 0.0145,
+            },
+            "retirement_percentages": {
                 "traditional_401k": 0.03,
                 "roth_401k": 0.03,
             },
+            "retirement_start_after_paychecks": 2,
             "fixed_deductions": {
                 "health_insurance": 0
             },
@@ -86,6 +83,10 @@ class BudgetManager:
                             for deduction_key in default_data["fixed_deductions"]:
                                 if deduction_key not in loaded_data[key]:
                                     loaded_data[key][deduction_key] = default_data["fixed_deductions"][deduction_key]
+                        elif key == "retirement_percentages" and isinstance(loaded_data[key], dict):
+                            for deduction_key in default_data["retirement_percentages"]:
+                                if deduction_key not in loaded_data[key]:
+                                    loaded_data[key][deduction_key] = default_data["retirement_percentages"][deduction_key]
                         elif key == "expenses" and isinstance(loaded_data[key], dict):
                             for category in default_data["expenses"]:
                                 if category not in loaded_data[key]:
@@ -94,6 +95,24 @@ class BudgetManager:
                             for tracking_key in default_data["tracking"]:
                                 if tracking_key not in loaded_data[key]:
                                     loaded_data[key][tracking_key] = default_data["tracking"][tracking_key]
+
+                    # Backward compatibility: migrate old 401(k) keys out of tax withholding settings.
+                    loaded_data.setdefault("retirement_percentages", default_data["retirement_percentages"].copy())
+                    old_traditional = loaded_data["deduction_percentages"].pop("traditional_401k", None)
+                    old_roth = loaded_data["deduction_percentages"].pop("roth_401k", None)
+                    if old_traditional is not None and "traditional_401k" not in loaded_data["retirement_percentages"]:
+                        loaded_data["retirement_percentages"]["traditional_401k"] = old_traditional
+                    if old_roth is not None and "roth_401k" not in loaded_data["retirement_percentages"]:
+                        loaded_data["retirement_percentages"]["roth_401k"] = old_roth
+
+                    # Enforce VA compensation exclusion from withholding/retirement deduction math.
+                    for source_data in loaded_data.get("income_sources", {}).values():
+                        if not isinstance(source_data, dict):
+                            continue
+                        if source_data.get("source_type") == "va_compensation":
+                            source_data["exclude_from_deductions"] = True
+                            source_data["tax_free"] = True
+
                     return loaded_data
             except json.JSONDecodeError:
                 print("Warning: Budget file is corrupted. Creating new budget.")
@@ -103,14 +122,20 @@ class BudgetManager:
         with open(self.filename, 'w') as f:
             json.dump(self.data, f, indent=2)
         print("Budget saved successfully!")
+
+    def _is_yes(self, value):
+        """Treat yes/y in any case as True."""
+        return str(value).strip().lower() in ("yes", "y")
     
     def add_income_source(self):
         """Add a new income source with pay frequency"""
         print("\n--- ADD/UPDATE INCOME SOURCE ---")
         source_name = input("Enter income source name (e.g., Primary Job, Side Gig): ")
+        name_lower = source_name.strip().lower()
+        is_va_comp_source = "va" in name_lower and "comp" in name_lower
         if source_name in self.data["income_sources"]:
             update = input(f"'{source_name}' already exists. Update it? (yes/no): ").lower()
-            if update != 'yes':
+            if not self._is_yes(update):
                 return
         
         try:
@@ -127,39 +152,84 @@ class BudgetManager:
                 # Validate date
                 datetime.strptime(next_pay_date, "%Y-%m-%d")
                 
-                is_prorated = input("Was this pay period prorated (mid-period hire)? (yes/no): ").lower() == 'yes'
+                is_prorated = self._is_yes(input("Was this pay period prorated (mid-period hire)? (yes/no): "))
                 
                 if is_prorated:
                     hourly_rate = float(input("Enter hourly rate: $"))
                     hours_paid = float(input("Enter number of hours paid for this period: "))
-                    amount_per_period = hourly_rate * hours_paid
-                    print(f"Calculated pay: ${hourly_rate:.2f}/hr × {hours_paid} hrs = ${amount_per_period:.2f}")
+                    base_amount = hourly_rate * hours_paid
+
+                    has_extra_deductions = self._is_yes(
+                        input("Any additional deductions beyond standard withholdings? (yes/no): ")
+                    )
+                    extra_deductions = 0.0
+                    if has_extra_deductions:
+                        extra_deductions = float(input("Enter total additional deduction amount for this period: $"))
+                        if extra_deductions < 0:
+                            print("Deduction amount cannot be negative.")
+                            return
+
+                    amount_per_period = base_amount - extra_deductions
+                    if amount_per_period < 0:
+                        print("Deductions exceed calculated pay. Please review entries.")
+                        return
+
+                    print(f"Calculated pay: ${hourly_rate:.2f}/hr × {hours_paid} hrs = ${base_amount:.2f}")
+                    if has_extra_deductions:
+                        print(f"Adjusted for additional deductions: -${extra_deductions:.2f}")
+                        print(f"Amount used for this pay period: ${amount_per_period:.2f}")
                 else:
                     amount_per_period = float(input("Enter amount per biweekly paycheck: $"))
                 
-                is_tax_free = input("Is this income tax-free? (yes/no): ").lower() == 'yes'
+                if is_va_comp_source:
+                    is_tax_free = True
+                    print("VA compensation is set as tax-free and excluded from withholding/401(k) calculations.")
+                else:
+                    is_tax_free = self._is_yes(input("Is this income tax-free? (yes/no): "))
                 
                 self.data["income_sources"][source_name] = {
                     "amount_per_period": amount_per_period,
                     "frequency": frequency,
                     "next_pay_date": next_pay_date,
-                    "tax_free": is_tax_free
+                    "tax_free": is_tax_free,
+                    "exclude_from_deductions": bool(is_va_comp_source),
+                    "source_type": "va_compensation" if is_va_comp_source else "employment",
                 }
                 print(f"Added '{source_name}': ${amount_per_period:.2f} biweekly (starting {next_pay_date})")
                 
             else:  # monthly
                 amount = float(input(f"Enter monthly amount for {source_name}: $"))
-                is_tax_free = input("Is this income tax-free? (yes/no): ").lower() == 'yes'
+                if is_va_comp_source:
+                    is_tax_free = True
+                    print("VA compensation is set as tax-free and excluded from withholding/401(k) calculations.")
+                else:
+                    is_tax_free = self._is_yes(input("Is this income tax-free? (yes/no): "))
                 
                 self.data["income_sources"][source_name] = {
                     "amount": amount,
                     "frequency": frequency,
-                    "tax_free": is_tax_free
+                    "tax_free": is_tax_free,
+                    "exclude_from_deductions": bool(is_va_comp_source),
+                    "source_type": "va_compensation" if is_va_comp_source else "employment",
                 }
                 print(f"Added '{source_name}': ${amount:.2f} monthly")
                 
         except ValueError as e:
             print(f"Invalid input: {e}")
+
+    def add_income_source_with_method(self):
+        """Choose how to add/update income source: manual entry or payslip upload."""
+        print("\n--- ADD/UPDATE INCOME SOURCE ---")
+        print("1. Manual entry")
+        print("2. Upload payslip")
+
+        method_choice = input("Choose method (1-2): ").strip()
+        if method_choice == "1":
+            self.add_income_source()
+        elif method_choice == "2":
+            self.add_income_from_payslip()
+        else:
+            print("Invalid choice. Returning to menu.")
 
     def _parse_date_string(self, value):
         """Convert common date formats to YYYY-MM-DD."""
@@ -214,10 +284,15 @@ class BudgetManager:
 
         image_extensions = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp"}
         if extension in image_extensions:
-            if Image is None or pytesseract is None:
-                raise RuntimeError("Missing dependencies: install 'pillow' and 'pytesseract' for image OCR.")
-            with Image.open(file_path) as image:
-                return pytesseract.image_to_string(image)
+            try:
+                image_module = importlib.import_module("PIL.Image")
+                pytesseract_module = importlib.import_module("pytesseract")
+            except ImportError as import_error:
+                raise RuntimeError(
+                    "Missing dependencies: install 'pillow' and 'pytesseract' for image OCR."
+                ) from import_error
+            with image_module.open(file_path) as image:
+                return pytesseract_module.image_to_string(image)
 
         raise ValueError("Unsupported file type. Use .txt, .pdf, or an image file.")
 
@@ -230,10 +305,98 @@ class BudgetManager:
         date_match = re.search(date_pattern, text, flags=re.IGNORECASE)
         pay_date = self._parse_date_string(date_match.group(1)) if date_match else None
 
+        # Fallback for table-style slips that label this as Check Date.
+        if pay_date is None:
+            check_date_match = re.search(
+                r"check\s*date\D+(\d{1,2}[/-]\d{1,2}[/-]\d{4})",
+                text,
+                flags=re.IGNORECASE,
+            )
+            if check_date_match:
+                pay_date = self._parse_date_string(check_date_match.group(1))
+
+        # Additional fallback for lines that contain pay period begin/end/check date values.
+        if pay_date is None:
+            period_line_match = re.search(
+                r"(\d{1,2}[/-]\d{1,2}[/-]\d{4})\s+"
+                r"(\d{1,2}[/-]\d{1,2}[/-]\d{4})\s+"
+                r"(\d{1,2}[/-]\d{1,2}[/-]\d{4})",
+                text,
+            )
+            if period_line_match:
+                pay_date = self._parse_date_string(period_line_match.group(3))
+
+        # VA letters often include an Effective Date instead of a check date.
+        if pay_date is None:
+            effective_date_match = re.search(
+                r"effective\s*date\s*[:\-]?\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})",
+                text,
+                flags=re.IGNORECASE,
+            )
+            if effective_date_match:
+                try:
+                    pay_date = datetime.strptime(
+                        effective_date_match.group(1), "%B %d, %Y"
+                    ).strftime("%Y-%m-%d")
+                except ValueError:
+                    pay_date = None
+
         gross_pay = self._extract_first_amount(
             r"(?:gross\s*pay|gross\s*wages?|total\s*gross)\s*[:\-]?\s*\$?\s*([0-9,]+(?:\.[0-9]{1,2})?)",
             text,
         )
+
+        # VA benefit verification letter: Gross Benefit Amount <newline> $X,XXX.XX
+        if gross_pay is None:
+            va_gross_match = re.search(
+                r"gross\s*benefit\s*amount\s*\$?\s*([0-9,]+(?:\.[0-9]{2})?)",
+                text,
+                flags=re.IGNORECASE,
+            )
+            if va_gross_match:
+                try:
+                    gross_pay = float(va_gross_match.group(1).replace(",", ""))
+                except ValueError:
+                    gross_pay = None
+
+        # VA summary letter: Your current monthly award amount is: <newline> $X,XXX.XX
+        if gross_pay is None:
+            va_award_match = re.search(
+                r"current\s*monthly\s*award\s*amount\s*is\s*:?\s*\$?\s*([0-9,]+(?:\.[0-9]{2})?)",
+                text,
+                flags=re.IGNORECASE,
+            )
+            if va_award_match:
+                try:
+                    gross_pay = float(va_award_match.group(1).replace(",", ""))
+                except ValueError:
+                    gross_pay = None
+
+        # Fallback for table-style slips: Current <gross> <pre-tax> <taxes> <post-tax> <net>
+        if gross_pay is None:
+            current_row_match = re.search(
+                r"current\s+([0-9,]+\.[0-9]{2})\s+[0-9,]+\.[0-9]{2}\s+[0-9,]+\.[0-9]{2}\s+[0-9,]+\.[0-9]{2}\s+[0-9,]+\.[0-9]{2}",
+                text,
+                flags=re.IGNORECASE,
+            )
+            if current_row_match:
+                try:
+                    gross_pay = float(current_row_match.group(1).replace(",", ""))
+                except ValueError:
+                    gross_pay = None
+
+        # Extra fallback for earnings summary line: Earnings <amount> <ytd>
+        if gross_pay is None:
+            earnings_row_match = re.search(
+                r"earnings\s+([0-9,]+\.[0-9]{2})\s+[0-9,]+\.[0-9]{2}",
+                text,
+                flags=re.IGNORECASE,
+            )
+            if earnings_row_match:
+                try:
+                    gross_pay = float(earnings_row_match.group(1).replace(",", ""))
+                except ValueError:
+                    gross_pay = None
         hourly_rate = self._extract_first_amount(
             r"(?:hourly\s*rate|rate\s*per\s*hour|pay\s*rate)\s*[:\-]?\s*\$?\s*([0-9,]+(?:\.[0-9]{1,4})?)",
             text,
@@ -242,6 +405,21 @@ class BudgetManager:
             r"(?:hours?\s*(?:worked|paid)?|regular\s*hours?)\s*[:\-]?\s*([0-9,]+(?:\.[0-9]{1,2})?)",
             text,
         )
+
+        # Fallback for table-style row: Regular Hourly <dates> <hours> <rate> <amount> <ytd>
+        regular_hourly_row = re.search(
+            r"regular\s+hourly\s+\S+\s+([0-9]+(?:\.[0-9]+)?)\s+([0-9]+(?:\.[0-9]+)?)\s+[0-9,]+\.[0-9]{2}",
+            text,
+            flags=re.IGNORECASE,
+        )
+        if regular_hourly_row:
+            try:
+                if hours_paid is None:
+                    hours_paid = float(regular_hourly_row.group(1))
+                if hourly_rate is None:
+                    hourly_rate = float(regular_hourly_row.group(2))
+            except ValueError:
+                pass
 
         return {
             "pay_date": pay_date,
@@ -270,11 +448,24 @@ class BudgetManager:
             print(f"Could not parse payslip: {error}")
             return
 
+        text_lower = payslip_text.lower()
+        is_va_comp_letter = (
+            "department of veterans affairs" in text_lower
+            or "gross benefit amount" in text_lower
+            or "current monthly award amount" in text_lower
+        )
+
         print("\nExtracted values (review before saving):")
-        print(f"  Pay date: {extracted['pay_date'] or 'Not found'}")
+        if is_va_comp_letter:
+            print(f"  Effective date (reference): {extracted['pay_date'] or 'Not found'}")
+        else:
+            print(f"  Pay date: {extracted['pay_date'] or 'Not found'}")
         print(f"  Gross pay: ${extracted['gross_pay']:.2f}" if extracted["gross_pay"] is not None else "  Gross pay: Not found")
         print(f"  Hourly rate: ${extracted['hourly_rate']:.2f}" if extracted["hourly_rate"] is not None else "  Hourly rate: Not found")
         print(f"  Hours paid: {extracted['hours_paid']}" if extracted["hours_paid"] is not None else "  Hours paid: Not found")
+
+        if is_va_comp_letter:
+            print("  Detected VA compensation letter: defaulting to monthly income.")
 
         source_name = input("\nEnter income source name (e.g., Primary Job, Side Gig): ").strip()
         if not source_name:
@@ -283,22 +474,33 @@ class BudgetManager:
 
         if source_name in self.data["income_sources"]:
             update = input(f"'{source_name}' already exists. Update it? (yes/no): ").lower()
-            if update != "yes":
+            if not self._is_yes(update):
                 return
 
-        print("\nPay Frequency Options:")
-        print("1. Biweekly (every 2 weeks - 26 periods/year)")
-        print("2. Monthly")
+        existing_source = self.data["income_sources"].get(source_name, {})
+        existing_paychecks_recorded = existing_source.get("paychecks_recorded")
 
-        frequency_choice = input("Select frequency (1-2): ")
-        frequency = "biweekly" if frequency_choice == "1" else "monthly"
+        if is_va_comp_letter:
+            use_monthly = self._is_yes(
+                input("Use monthly frequency for VA compensation? (yes/no): ")
+            )
+            frequency = "monthly" if use_monthly else "biweekly"
+            if frequency == "biweekly":
+                print("Note: VA compensation is typically monthly. Biweekly selected by user.")
+        else:
+            print("\nPay Frequency Options:")
+            print("1. Biweekly (every 2 weeks - 26 periods/year)")
+            print("2. Monthly")
+
+            frequency_choice = input("Select frequency (1-2): ")
+            frequency = "biweekly" if frequency_choice == "1" else "monthly"
 
         try:
             if frequency == "biweekly":
                 pay_date = extracted["pay_date"]
                 if pay_date:
                     use_extracted = input(f"Use extracted pay date {pay_date}? (yes/no): ").lower()
-                    if use_extracted != "yes":
+                    if not self._is_yes(use_extracted):
                         pay_date = None
 
                 if not pay_date:
@@ -308,61 +510,102 @@ class BudgetManager:
                         print("Invalid date format.")
                         return
 
-                is_prorated = input("Was this pay period prorated (mid-period hire)? (yes/no): ").lower() == "yes"
+                is_prorated = self._is_yes(input("Was this pay period prorated (mid-period hire)? (yes/no): "))
 
                 if is_prorated:
                     hourly_rate = extracted["hourly_rate"]
                     hours_paid = extracted["hours_paid"]
 
                     if hourly_rate is not None:
-                        use_rate = input(f"Use extracted hourly rate ${hourly_rate:.2f}? (yes/no): ").lower() == "yes"
+                        use_rate = self._is_yes(input(f"Use extracted hourly rate ${hourly_rate:.2f}? (yes/no): "))
                         if not use_rate:
                             hourly_rate = None
                     if hourly_rate is None:
                         hourly_rate = float(input("Enter hourly rate: $"))
 
                     if hours_paid is not None:
-                        use_hours = input(f"Use extracted hours paid {hours_paid}? (yes/no): ").lower() == "yes"
+                        use_hours = self._is_yes(input(f"Use extracted hours paid {hours_paid}? (yes/no): "))
                         if not use_hours:
                             hours_paid = None
                     if hours_paid is None:
                         hours_paid = float(input("Enter number of hours paid for this period: "))
 
-                    amount_per_period = hourly_rate * hours_paid
-                    print(f"Calculated pay: ${hourly_rate:.2f}/hr x {hours_paid} hrs = ${amount_per_period:.2f}")
+                    base_amount = hourly_rate * hours_paid
+
+                    has_extra_deductions = self._is_yes(
+                        input("Any additional deductions beyond standard withholdings? (yes/no): ")
+                    )
+                    extra_deductions = 0.0
+                    if has_extra_deductions:
+                        extra_deductions = float(input("Enter total additional deduction amount for this period: $"))
+                        if extra_deductions < 0:
+                            print("Deduction amount cannot be negative.")
+                            return
+
+                    amount_per_period = base_amount - extra_deductions
+                    if amount_per_period < 0:
+                        print("Deductions exceed calculated pay. Please review entries.")
+                        return
+
+                    print(f"Calculated pay: ${hourly_rate:.2f}/hr x {hours_paid} hrs = ${base_amount:.2f}")
+                    if has_extra_deductions:
+                        print(f"Adjusted for additional deductions: -${extra_deductions:.2f}")
+                        print(f"Amount used for this pay period: ${amount_per_period:.2f}")
                 else:
                     amount_per_period = extracted["gross_pay"]
                     if amount_per_period is not None:
-                        use_gross = input(f"Use extracted gross pay ${amount_per_period:.2f}? (yes/no): ").lower() == "yes"
+                        use_gross = self._is_yes(input(f"Use extracted gross pay ${amount_per_period:.2f}? (yes/no): "))
                         if not use_gross:
                             amount_per_period = None
                     if amount_per_period is None:
                         amount_per_period = float(input("Enter amount per biweekly paycheck: $"))
 
-                is_tax_free = input("Is this income tax-free? (yes/no): ").lower() == "yes"
+                if is_va_comp_letter:
+                    is_tax_free = True
+                    print("VA compensation is set as tax-free and excluded from withholding/401(k) calculations.")
+                else:
+                    is_tax_free = self._is_yes(input("Is this income tax-free? (yes/no): "))
 
                 self.data["income_sources"][source_name] = {
                     "amount_per_period": amount_per_period,
                     "frequency": "biweekly",
                     "next_pay_date": pay_date,
                     "tax_free": is_tax_free,
+                    "exclude_from_deductions": bool(is_va_comp_letter),
+                    "source_type": "va_compensation" if is_va_comp_letter else "employment",
+                    "paychecks_recorded": (
+                        existing_paychecks_recorded + 1
+                        if isinstance(existing_paychecks_recorded, int) and existing_paychecks_recorded >= 1
+                        else 1
+                    ),
                 }
                 print(f"Added '{source_name}': ${amount_per_period:.2f} biweekly (starting {pay_date})")
             else:
                 amount = extracted["gross_pay"]
                 if amount is not None:
-                    use_gross = input(f"Use extracted monthly amount ${amount:.2f}? (yes/no): ").lower() == "yes"
+                    use_gross = self._is_yes(input(f"Use extracted monthly amount ${amount:.2f}? (yes/no): "))
                     if not use_gross:
                         amount = None
                 if amount is None:
                     amount = float(input(f"Enter monthly amount for {source_name}: $"))
 
-                is_tax_free = input("Is this income tax-free? (yes/no): ").lower() == "yes"
+                if is_va_comp_letter:
+                    is_tax_free = True
+                    print("VA compensation is set as tax-free and excluded from withholding/401(k) calculations.")
+                else:
+                    is_tax_free = self._is_yes(input("Is this income tax-free? (yes/no): "))
 
                 self.data["income_sources"][source_name] = {
                     "amount": amount,
                     "frequency": "monthly",
                     "tax_free": is_tax_free,
+                    "exclude_from_deductions": bool(is_va_comp_letter),
+                    "source_type": "va_compensation" if is_va_comp_letter else "employment",
+                    "paychecks_recorded": (
+                        existing_paychecks_recorded + 1
+                        if isinstance(existing_paychecks_recorded, int) and existing_paychecks_recorded >= 1
+                        else 1
+                    ),
                 }
                 print(f"Added '{source_name}': ${amount:.2f} monthly")
         except ValueError as error:
@@ -400,11 +643,11 @@ class BudgetManager:
         item_name = input("Enter item name (e.g., Overtime, Mileage Reimbursement): ")
         if item_name in self.data["overtime_reimbursements"]:
             update = input(f"'{item_name}' already exists. Update it? (yes/no): ").lower()
-            if update != 'yes':
+            if not self._is_yes(update):
                 return
         try:
             amount = float(input(f"Enter monthly amount for {item_name}: $"))
-            is_tax_free = input("Is this tax-free? (yes/no): ").lower() == 'yes'
+            is_tax_free = self._is_yes(input("Is this tax-free? (yes/no): "))
             self.data["overtime_reimbursements"][item_name] = {
                 "amount": amount,
                 "tax_free": is_tax_free
@@ -469,6 +712,77 @@ class BudgetManager:
             current_pay_date += timedelta(days=period_days)
         
         return count
+
+    def _get_pay_period_indices_in_month(self, year, month, start_date_str, frequency):
+        """Return pay dates in month with their global paycheck index from the start date."""
+        if not start_date_str or frequency not in ["biweekly", "weekly"]:
+            return []
+
+        start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
+        month_start = datetime(year, month, 1)
+        if month == 12:
+            month_end = datetime(year + 1, 1, 1) - timedelta(days=1)
+        else:
+            month_end = datetime(year, month + 1, 1) - timedelta(days=1)
+
+        period_days = 14 if frequency == "biweekly" else 7
+        paycheck_index = 1
+        current_pay_date = start_date
+
+        if current_pay_date < month_start:
+            days_diff = (month_start - current_pay_date).days
+            periods_to_add = days_diff // period_days
+            current_pay_date += timedelta(days=period_days * periods_to_add)
+            paycheck_index += periods_to_add
+            while current_pay_date < month_start:
+                current_pay_date += timedelta(days=period_days)
+                paycheck_index += 1
+
+        paychecks = []
+        while current_pay_date <= month_end:
+            if current_pay_date >= month_start:
+                paychecks.append((current_pay_date, paycheck_index))
+            current_pay_date += timedelta(days=period_days)
+            paycheck_index += 1
+
+        return paychecks
+
+    def get_retirement_eligible_income_for_month(self, year, month):
+        """Income base used for retirement contributions for a given month."""
+        start_after = int(self.data.get("retirement_start_after_paychecks", 2))
+        eligible_income = 0.0
+
+        for source_data in self.data["income_sources"].values():
+            if not isinstance(source_data, dict):
+                continue
+            if source_data.get("exclude_from_deductions", False):
+                continue
+            if source_data.get("tax_free", False):
+                continue
+
+            frequency = source_data.get("frequency")
+            if frequency in ["biweekly", "weekly"]:
+                amount_per_period = source_data.get("amount_per_period", 0)
+                paychecks = self._get_pay_period_indices_in_month(
+                    year,
+                    month,
+                    source_data.get("next_pay_date"),
+                    frequency,
+                )
+                recorded_paychecks = source_data.get("paychecks_recorded")
+                if isinstance(recorded_paychecks, int) and recorded_paychecks >= 0:
+                    eligible_count = sum(
+                        1 for _, pay_idx in paychecks
+                        if start_after <= pay_idx <= recorded_paychecks
+                    )
+                else:
+                    eligible_count = sum(1 for _, pay_idx in paychecks if pay_idx >= start_after)
+                eligible_income += amount_per_period * eligible_count
+            elif frequency == "monthly":
+                # For monthly sources, apply contribution percentage to monthly amount.
+                eligible_income += source_data.get("amount", 0)
+
+        return eligible_income
     
     def get_gross_income(self):
         """Calculate total monthly gross income accounting for pay frequency"""
@@ -509,6 +823,8 @@ class BudgetManager:
         # Regular income sources
         for source_data in self.data["income_sources"].values():
             if isinstance(source_data, dict):
+                if source_data.get("exclude_from_deductions", False):
+                    continue
                 if not source_data.get("tax_free", False):
                     if source_data.get("frequency") == "monthly":
                         taxable += source_data.get("amount", 0)
@@ -532,12 +848,18 @@ class BudgetManager:
     
     def calculate_deductions(self):
         """Calculate total deductions from taxable income"""
+        now = datetime.now()
         taxable_income = self.get_taxable_income()
+        retirement_income = self.get_retirement_eligible_income_for_month(now.year, now.month)
         
-        # Calculate percentage-based deductions
+        # Calculate tax withholding deductions.
         deductions = {}
         for deduction_type, percentage in self.data["deduction_percentages"].items():
             deductions[deduction_type] = taxable_income * percentage
+
+        # Calculate retirement contributions separately from tax withholdings.
+        for deduction_type, percentage in self.data.get("retirement_percentages", {}).items():
+            deductions[deduction_type] = retirement_income * percentage
         
         # Add fixed deductions
         for deduction_type, amount in self.data["fixed_deductions"].items():
@@ -586,6 +908,8 @@ class BudgetManager:
         # Regular income sources
         for source_data in self.data["income_sources"].values():
             if isinstance(source_data, dict):
+                if source_data.get("exclude_from_deductions", False):
+                    continue
                 if not source_data.get("tax_free", False):
                     if source_data.get("frequency") == "monthly":
                         taxable += source_data.get("amount", 0)
@@ -608,13 +932,13 @@ class BudgetManager:
         return taxable
     
     def set_deduction_percentages(self):
-        """Set percentage-based deductions"""
-        print("\n--- SET DEDUCTION PERCENTAGES ---")
-        print("WARNING: Deduction percentages are typically updated only when tax laws change.")
+        """Set tax withholding percentages."""
+        print("\n--- SET TAX WITHHOLDING PERCENTAGES ---")
+        print("WARNING: Tax withholding percentages are typically updated only when tax laws change.")
         print("These are applied to your taxable income for the entire year.\n")
         
         confirm = input("Continue with updating deduction percentages? (yes/no): ").lower()
-        if confirm != 'yes':
+        if not self._is_yes(confirm):
             return
         
         print("(Enter as decimals, e.g., 0.12 for 12%. Press Enter to keep current value)\n")
@@ -624,8 +948,6 @@ class BudgetManager:
             "state_withholding": "State Income Tax Withholding",
             "social_security": "Social Security (FICA)",
             "medicare": "Medicare (FICA)",
-            "traditional_401k": "Traditional 401(k) Contribution",
-            "roth_401k": "Roth 401(k) Contribution",
         }
         
         changes_made = False
@@ -644,9 +966,59 @@ class BudgetManager:
                 print("Invalid input. Keeping previous value.")
         
         if changes_made:
-            print("\nPercentage-based deductions updated!")
+            print("\nTax withholding percentages updated!")
         else:
             print("\nNo changes made.")
+
+    def set_retirement_contributions(self):
+        """Set 401(k) contribution rates and paycheck start rule."""
+        print("\n--- SET RETIREMENT CONTRIBUTIONS ---")
+        print("These are separate from tax withholding and typically begin after enrollment.")
+        print("(Enter as decimals, e.g., 0.03 for 3%. Press Enter to keep current value)\n")
+
+        self.data.setdefault("retirement_percentages", {
+            "traditional_401k": 0.03,
+            "roth_401k": 0.03,
+        })
+
+        try:
+            current_start = int(self.data.get("retirement_start_after_paychecks", 2))
+            start_value = input(
+                f"Start applying 401(k) after paycheck number (current: {current_start}): "
+            ).strip()
+            if start_value:
+                parsed_start = int(start_value)
+                if parsed_start < 1:
+                    print("Paycheck number must be at least 1.")
+                    return
+                self.data["retirement_start_after_paychecks"] = parsed_start
+        except ValueError:
+            print("Invalid paycheck number. Keeping previous value.")
+
+        retirement_labels = {
+            "traditional_401k": "Traditional 401(k) Contribution",
+            "roth_401k": "Roth 401(k) Contribution",
+        }
+
+        changes_made = False
+        for key, label in retirement_labels.items():
+            try:
+                current = self.data["retirement_percentages"].get(key, 0)
+                new_value = input(f"{label} (current: {current*100:.2f}%): ").strip()
+                if new_value:
+                    percentage = float(new_value)
+                    if percentage < 0 or percentage > 1:
+                        print("Percentage must be between 0 and 1.")
+                        continue
+                    self.data["retirement_percentages"][key] = percentage
+                    changes_made = True
+            except ValueError:
+                print("Invalid input. Keeping previous value.")
+
+        if changes_made:
+            print("\nRetirement contribution settings updated!")
+        else:
+            print("\nNo contribution percentage changes made.")
     
     def set_fixed_deductions(self):
         """Set fixed dollar amount deductions"""
@@ -670,18 +1042,29 @@ class BudgetManager:
     
     def view_deduction_percentages(self):
         """View current deduction percentages"""
-        print("\n--- DEDUCTION PERCENTAGES ---")
+        print("\n--- DEDUCTION SETTINGS ---")
         deduction_labels = {
             "federal_withholding": "Federal Income Tax Withholding",
             "state_withholding": "State Income Tax Withholding",
             "social_security": "Social Security (FICA)",
             "medicare": "Medicare (FICA)",
+        }
+
+        retirement_labels = {
             "traditional_401k": "Traditional 401(k) Contribution",
             "roth_401k": "Roth 401(k) Contribution",
         }
-        
+
+        print("\nTax Withholding Percentages:")
         for key, label in deduction_labels.items():
             percentage = self.data["deduction_percentages"].get(key, 0)
+            print(f"  {label}: {percentage*100:.2f}%")
+
+        print("\nRetirement Contributions:")
+        start_after = int(self.data.get("retirement_start_after_paychecks", 2))
+        print(f"  Start after paycheck number: {start_after}")
+        for key, label in retirement_labels.items():
+            percentage = self.data.get("retirement_percentages", {}).get(key, 0)
             print(f"  {label}: {percentage*100:.2f}%")
         
         health_insurance = self.data["fixed_deductions"].get("health_insurance", 0)
@@ -711,7 +1094,7 @@ class BudgetManager:
         if category not in self.data["expenses"]:
             # New category - ask if they want to create it
             confirm = input(f"Category '{category}' doesn't exist. Create it? (yes/no): ").lower()
-            if confirm != 'yes':
+            if not self._is_yes(confirm):
                 return
             self.data["expenses"][category] = {}
         
@@ -807,7 +1190,7 @@ class BudgetManager:
         self.data.setdefault("savings_accounts", {})
         allocate = input("Would you like to set up savings allocations? (yes/no): ").lower()
         
-        if allocate != 'yes':
+        if not self._is_yes(allocate):
             return
         
         accounts = {
@@ -994,24 +1377,8 @@ class BudgetManager:
         current_month_str = f"Based on {now.strftime('%B %Y')}"
         print(f"\n{current_month_str}")
         
-        # Get current month's expected income accounting for pay frequency
-        gross_income = self.get_gross_income()
-        
-        # Calculate deductions
-        taxable_income = self.get_taxable_income()
-        deductions = {}
-        for deduction_type, percentage in self.data["deduction_percentages"].items():
-            deductions[deduction_type] = taxable_income * percentage
-        
-        # Add fixed deductions
-        for deduction_type, amount in self.data["fixed_deductions"].items():
-            if deduction_type in deductions:
-                deductions[deduction_type] += amount
-            else:
-                deductions[deduction_type] = amount
-        
-        total_deductions = sum(deductions.values())
-        net_income = gross_income - total_deductions
+        # Get current month's expected income accounting for pay frequency.
+        gross_income, total_deductions, net_income, deductions = self.calculate_net_income()
         
         print(f"\nINCOME SOURCES:")
         if self.data["income_sources"]:
@@ -1052,7 +1419,7 @@ class BudgetManager:
         print(f"\nGross Income: ${gross_income:.2f}")
         
         # Deductions breakdown
-        print(f"\nDEDUCTIONS (based on taxable income):")
+        print(f"\nDEDUCTIONS:")
         deduction_labels = {
             "federal_withholding": "Federal Income Tax",
             "state_withholding": "State Income Tax",
@@ -1124,75 +1491,155 @@ class BudgetManager:
             print(f"Monthly savings needed: ${monthly_needed:.2f}")
         print("="*60 + "\n")
     
+    def income_menu(self):
+        while True:
+            print("\n--- INCOME MANAGEMENT ---")
+            print("1. Add/Update income source")
+            print("2. Remove income source")
+            print("3. Add/Update overtime or reimbursement")
+            print("4. Remove overtime or reimbursement")
+            print("5. Back")
+
+            choice = input("Enter your choice (1-5): ")
+
+            if choice == "1":
+                self.add_income_source_with_method()
+            elif choice == "2":
+                self.remove_income_source()
+            elif choice == "3":
+                self.add_overtime_reimbursement()
+            elif choice == "4":
+                self.remove_overtime_reimbursement()
+            elif choice == "5":
+                return
+            else:
+                print("Invalid choice. Please try again.")
+
+    def deductions_menu(self):
+        while True:
+            print("\n--- DEDUCTIONS ---")
+            print("1. Set tax withholding percentages")
+            print("2. Set retirement contributions (401k)")
+            print("3. Set fixed deductions")
+            print("4. View deduction settings")
+            print("5. Back")
+
+            choice = input("Enter your choice (1-5): ")
+
+            if choice == "1":
+                self.set_deduction_percentages()
+            elif choice == "2":
+                self.set_retirement_contributions()
+            elif choice == "3":
+                self.set_fixed_deductions()
+            elif choice == "4":
+                self.view_deduction_percentages()
+            elif choice == "5":
+                return
+            else:
+                print("Invalid choice. Please try again.")
+
+    def expenses_menu(self):
+        while True:
+            print("\n--- EXPENSES ---")
+            print("1. View expense categories")
+            print("2. Add/Update expense")
+            print("3. Remove expense")
+            print("4. Back")
+
+            choice = input("Enter your choice (1-4): ")
+
+            if choice == "1":
+                self.view_expense_categories()
+            elif choice == "2":
+                self.add_expense()
+            elif choice == "3":
+                self.remove_expense()
+            elif choice == "4":
+                return
+            else:
+                print("Invalid choice. Please try again.")
+
+    def savings_menu(self):
+        while True:
+            print("\n--- SAVINGS ---")
+            print("1. Set savings goal")
+            print("2. Allocate savings accounts")
+            print("3. View savings allocations")
+            print("4. Back")
+
+            choice = input("Enter your choice (1-4): ")
+
+            if choice == "1":
+                self.set_savings_goal()
+            elif choice == "2":
+                self.allocate_savings()
+            elif choice == "3":
+                self.update_savings_accounts()
+            elif choice == "4":
+                return
+            else:
+                print("Invalid choice. Please try again.")
+
+    def tracking_menu(self):
+        while True:
+            print("\n--- PAYCHECK TRACKING ---")
+            print("1. Add bi-weekly paycheck entry")
+            print("2. View bi-weekly entries")
+            print("3. Calculate monthly from bi-weekly")
+            print("4. View monthly & yearly totals")
+            print("5. Back")
+
+            choice = input("Enter your choice (1-5): ")
+
+            if choice == "1":
+                self.add_biweekly_entry()
+            elif choice == "2":
+                self.view_biweekly_entries()
+            elif choice == "3":
+                self.calculate_monthly_from_biweekly()
+            elif choice == "4":
+                self.view_monthly_totals()
+            elif choice == "5":
+                return
+            else:
+                print("Invalid choice. Please try again.")
+
     def main_menu(self):
         while True:
             print("\n--- BUDGET MANAGER ---")
-            print("1. Add/Update income source")
-            print("2. Add/Update income source from payslip")
-            print("3. Remove income source")
-            print("4. Add/Update overtime or reimbursement")
-            print("5. Remove overtime or reimbursement")
-            print("6. Set deduction percentages (Federal, State, FICA, Traditional & Roth 401K)")
-            print("7. Set fixed deductions (Health Insurance)")
-            print("8. View deduction percentages")
-            print("9. View expense categories")
-            print("10. Add/Update expense")
-            print("11. Remove expense")
-            print("12. Add debt or loan")
-            print("13. Set savings goal")
-            print("14. Allocate savings accounts")
-            print("15. View savings allocations")
-            print("16. Add bi-weekly paycheck entry")
-            print("17. View bi-weekly entries")
-            print("18. Calculate monthly from bi-weekly")
-            print("19. View monthly & yearly totals")
-            print("20. View budget summary (current month)")
-            print("21. Save and exit")
-            
-            choice = input("Enter your choice (1-21): ")
-            
+            print("1. Manage income")
+            print("2. Manage deductions")
+            print("3. Manage expenses")
+            print("4. Manage savings")
+            print("5. Add debt or loan")
+            print("6. Paycheck tracking")
+            print("7. View budget summary (current month)")
+            print("8. Exit")
+
+            choice = input("Enter your choice (1-8): ")
+
             if choice == "1":
-                self.add_income_source()
+                self.income_menu()
             elif choice == "2":
-                self.add_income_from_payslip()
+                self.deductions_menu()
             elif choice == "3":
-                self.remove_income_source()
+                self.expenses_menu()
             elif choice == "4":
-                self.add_overtime_reimbursement()
+                self.savings_menu()
             elif choice == "5":
-                self.remove_overtime_reimbursement()
-            elif choice == "6":
-                self.set_deduction_percentages()
-            elif choice == "7":
-                self.set_fixed_deductions()
-            elif choice == "8":
-                self.view_deduction_percentages()
-            elif choice == "9":
-                self.view_expense_categories()
-            elif choice == "10":
-                self.add_expense()
-            elif choice == "11":
-                self.remove_expense()
-            elif choice == "12":
                 self.add_debt()
-            elif choice == "13":
-                self.set_savings_goal()
-            elif choice == "14":
-                self.allocate_savings()
-            elif choice == "15":
-                self.update_savings_accounts()
-            elif choice == "16":
-                self.add_biweekly_entry()
-            elif choice == "17":
-                self.view_biweekly_entries()
-            elif choice == "18":
-                self.calculate_monthly_from_biweekly()
-            elif choice == "19":
-                self.view_monthly_totals()
-            elif choice == "20":
+            elif choice == "6":
+                self.tracking_menu()
+            elif choice == "7":
                 self.show_summary()
-            elif choice == "21":
-                self.save_data()
+            elif choice == "8":
+                save_choice = input("Save changes before exit? (yes/no): ").strip().lower()
+                if self._is_yes(save_choice):
+                    self.save_data()
+                elif save_choice.strip().lower() not in ["no", "n"]:
+                    print("Invalid choice. Returning to menu.")
+                    continue
                 print("Goodbye!")
                 break
             else:
