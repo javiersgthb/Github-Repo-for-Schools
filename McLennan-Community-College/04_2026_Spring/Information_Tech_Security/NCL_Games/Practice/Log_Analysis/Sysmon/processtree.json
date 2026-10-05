@@ -1,0 +1,263 @@
+[
+  {
+    "timestamp": "2024-07-15 09:01:34",
+    "process_name": "chrome.exe",
+    "process_id": 2744,
+    "parent_process_id": 2928,
+    "image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "command_line": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --start-maximized --single-argument https://agentinstall.layer.io/agent-WP1buGiXuuz5gPKdfu4Mxi.exe",
+    "md5": "83395EAB5B03DEA9720F8D7AC0D15CAA"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:34",
+    "process_name": "chrome.exe",
+    "process_id": 2748,
+    "parent_process_id": 2744,
+    "image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "command_line": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --mojo-platform-channel-handle=2208 --field-trial-handle=1948,i,7942633040049654687,13219867441246267391,262144 --disable-features=OptimizationGuideModelDownloading,OptimizationHints,OptimizationHintsFetching,OptimizationTargetPrediction /prefetch:8",
+    "md5": "83395EAB5B03DEA9720F8D7AC0D15CAA"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:37",
+    "process_name": "chrome.exe",
+    "process_id": 6712,
+    "parent_process_id": 2744,
+    "image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "command_line": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --type=utility --utility-sub-type=chrome.mojom.UtilReadIcon --lang=en-US --service-sandbox-type=icon_reader --mojo-platform-channel-handle=5628 --field-trial-handle=1948,i,7942633040049654687,13219867441246267391,262144 --disable-features=OptimizationGuideModelDownloading,OptimizationHints,OptimizationHintsFetching,OptimizationTargetPrediction /prefetch:8",
+    "md5": "83395EAB5B03DEA9720F8D7AC0D15CAA"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:49",
+    "process_name": "chrome.exe",
+    "process_id": 3724,
+    "parent_process_id": 2744,
+    "image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "command_line": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --type=utility --utility-sub-type=chrome.mojom.UtilReadIcon --lang=en-US --service-sandbox-type=icon_reader --mojo-platform-channel-handle=5800 --field-trial-handle=1948,i,7942633040049654687,13219867441246267391,262144 --disable-features=OptimizationGuideModelDownloading,OptimizationHints,OptimizationHintsFetching,OptimizationTargetPrediction /prefetch:8",
+    "md5": "83395EAB5B03DEA9720F8D7AC0D15CAA"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:49",
+    "process_name": "svchost.exe",
+    "process_id": 6656,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\System32\\svchost.exe",
+    "command_line": "C:\\Windows\\System32\\svchost.exe -k netsvcs -p -s BITS",
+    "md5": "B7F884C1B74A263F746EE12A5F7C9F6A"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:52",
+    "process_name": "rundll32.exe",
+    "process_id": 4980,
+    "parent_process_id": 804,
+    "image": "C:\\Windows\\System32\\rundll32.exe",
+    "command_line": "C:\\Windows\\System32\\rundll32.exe C:\\Windows\\System32\\shell32.dll,SHCreateLocalServerRunDll {9aa46009-3ce0-458a-a354-715610a075e6} -Embedding",
+    "md5": "EF3179D498793BF4234F708D3BE28633"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:55",
+    "process_name": "agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "process_id": 7160,
+    "parent_process_id": 4552,
+    "image": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "command_line": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "md5": "68A1F48C8D1AB3B54D2EEF7406600956"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:55",
+    "process_name": "svchost.exe",
+    "process_id": 5444,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\System32\\svchost.exe",
+    "command_line": "C:\\Windows\\System32\\svchost.exe -k NetworkService -p",
+    "md5": "B7F884C1B74A263F746EE12A5F7C9F6A"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:55",
+    "process_name": "agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "process_id": 6444,
+    "parent_process_id": 4552,
+    "image": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "command_line": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "md5": "68A1F48C8D1AB3B54D2EEF7406600956"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:56",
+    "process_name": "msiexec.exe",
+    "process_id": 6484,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\system32\\msiexec.exe",
+    "command_line": "C:\\Windows\\system32\\msiexec.exe /V",
+    "md5": "E5DA170027542E25EDE42FC54C929077"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:56",
+    "process_name": "SgrmBroker.exe",
+    "process_id": 6460,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\system32\\SgrmBroker.exe",
+    "command_line": "C:\\Windows\\system32\\SgrmBroker.exe",
+    "md5": "3BA1A18A0DC30A0545E7765CB97D8E63"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:57",
+    "process_name": "svchost.exe",
+    "process_id": 4008,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\System32\\svchost.exe",
+    "command_line": "C:\\Windows\\System32\\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc",
+    "md5": "B7F884C1B74A263F746EE12A5F7C9F6A"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:58",
+    "process_name": "svchost.exe",
+    "process_id": 2804,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\system32\\svchost.exe",
+    "command_line": "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s UsoSvc",
+    "md5": "B7F884C1B74A263F746EE12A5F7C9F6A"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:58",
+    "process_name": "svchost.exe",
+    "process_id": 7196,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\System32\\svchost.exe",
+    "command_line": "C:\\Windows\\System32\\svchost.exe -k LocalServiceNetworkRestricted -p -s wscsvc",
+    "md5": "B7F884C1B74A263F746EE12A5F7C9F6A"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:58",
+    "process_name": "msiexec.exe",
+    "process_id": 2820,
+    "parent_process_id": 6484,
+    "image": "C:\\Windows\\syswow64\\MsiExec.exe",
+    "command_line": "C:\\Windows\\syswow64\\MsiExec.exe -Embedding 91E24F4E2B86020E3F55760B7455E3BE",
+    "md5": "9D09DC1EDA745A5F87553048E57620CF"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:58",
+    "process_name": "layer_agent_svc.exe",
+    "process_id": 7184,
+    "parent_process_id": 6484,
+    "image": "C:\\Program Files (x86)\\LayerAgent\\layer_agent_svc.exe",
+    "command_line": "C:\\Program Files (x86)\\LayerAgent\\layer_agent_svc.exe -deploymentID edebc142-5462-4b62-a916-ea02d23376e2 -askForName=0",
+    "md5": "0915F113042460AD625950FF06CAB045"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:59",
+    "process_name": "powershell.exe",
+    "process_id": 7324,
+    "parent_process_id": 7184,
+    "image": "C:\\Windows\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "command_line": "C:\\Windows\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe -Command \"New-NetFirewallRule -DisplayName 'LayerAgent Service' -Name 'LayerAgent Service' -Direction Inbound -Program 'C:\\Program Files (x86)\\LayerAgent\\layer_agent_svc.exe' -Action Allow\"",
+    "md5": "04029E121A0CFA5991749937DD22A1D9"
+  },
+  {
+    "timestamp": "2024-07-15 09:01:59",
+    "process_name": "conhost.exe",
+    "process_id": 7332,
+    "parent_process_id": 7324,
+    "image": "C:\\Windows\\system32\\conhost.exe",
+    "command_line": "C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+    "md5": "0D698AF330FD17BEE3BF90011D49251D"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:13",
+    "process_name": "powershell.exe",
+    "process_id": 7644,
+    "parent_process_id": 7184,
+    "image": "C:\\Windows\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "command_line": "C:\\Windows\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe -Command \"New-NetFirewallRule -DisplayName 'LayerAgent Service' -Name 'LayerAgent Service Command' -Direction Inbound -Program 'C:\\Program Files (x86)\\LayerAgent\\layer_agent_svc.exe' -Action Allow\"",
+    "md5": "04029E121A0CFA5991749937DD22A1D9"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:13",
+    "process_name": "conhost.exe",
+    "process_id": 7652,
+    "parent_process_id": 7644,
+    "image": "C:\\Windows\\system32\\conhost.exe",
+    "command_line": "C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+    "md5": "0D698AF330FD17BEE3BF90011D49251D"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:30",
+    "process_name": "svchost.exe",
+    "process_id": 7248,
+    "parent_process_id": 660,
+    "image": "C:\\Windows\\system32\\svchost.exe",
+    "command_line": "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup",
+    "md5": "B7F884C1B74A263F746EE12A5F7C9F6A"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:39",
+    "process_name": "msiexec.exe",
+    "process_id": 7988,
+    "parent_process_id": 6484,
+    "image": "C:\\Windows\\syswow64\\MsiExec.exe",
+    "command_line": "C:\\Windows\\syswow64\\MsiExec.exe -Embedding 8B34BEB33F2906B620D721873356D5F1 E Global\\MSI0000",
+    "md5": "9D09DC1EDA745A5F87553048E57620CF"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:39",
+    "process_name": "layer_agent_svc.exe",
+    "process_id": 8024,
+    "parent_process_id": 660,
+    "image": "C:\\Program Files (x86)\\LayerAgent\\layer_agent_svc.exe",
+    "command_line": "C:\\Program Files (x86)\\LayerAgent\\layer_agent_svc.exe",
+    "md5": "0915F113042460AD625950FF06CAB045"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:50",
+    "process_name": "Taskmgr.exe",
+    "process_id": 8140,
+    "parent_process_id": 4552,
+    "image": "C:\\Windows\\system32\\taskmgr.exe",
+    "command_line": "C:\\Windows\\system32\\taskmgr.exe /4",
+    "md5": "58D5BC7895F7F32EE308E34F06F25DD5"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:51",
+    "process_name": "Taskmgr.exe",
+    "process_id": 8184,
+    "parent_process_id": 4552,
+    "image": "C:\\Windows\\system32\\taskmgr.exe",
+    "command_line": "C:\\Windows\\system32\\taskmgr.exe /4",
+    "md5": "58D5BC7895F7F32EE308E34F06F25DD5"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:59",
+    "process_name": "MpCmdRun.exe",
+    "process_id": 1704,
+    "parent_process_id": 7196,
+    "image": "C:\\Program Files\\Windows Defender\\mpcmdrun.exe",
+    "command_line": "\"C:\\Program Files\\Windows Defender\\mpcmdrun.exe\" -wdenable",
+    "md5": "B3676839B2EE96983F9ED735CD044159"
+  },
+  {
+    "timestamp": "2024-07-15 09:02:59",
+    "process_name": "conhost.exe",
+    "process_id": 4284,
+    "parent_process_id": 1704,
+    "image": "C:\\Windows\\system32\\conhost.exe",
+    "command_line": "C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+    "md5": "0D698AF330FD17BEE3BF90011D49251D"
+  },
+  {
+    "timestamp": "2024-07-15 09:03:13",
+    "process_name": "agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "process_id": 7324,
+    "parent_process_id": 4552,
+    "image": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "command_line": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "md5": "68A1F48C8D1AB3B54D2EEF7406600956"
+  },
+  {
+    "timestamp": "2024-07-15 09:03:14",
+    "process_name": "agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "process_id": 5016,
+    "parent_process_id": 4552,
+    "image": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "command_line": "C:\\Users\\user\\Downloads\\agent-WP1buGiXuuz5gPKdfu4Mxi (1).exe",
+    "md5": "68A1F48C8D1AB3B54D2EEF7406600956"
+  }
+]
