@@ -139,3 +139,7 @@ captures/
 ~$*.pptx
 # NCL practice wordlist - do not version (133MB, freely downloadable)
 rockyou.txt
+
+# macOS archive junk
+__MACOSX/
+.DS_Store
