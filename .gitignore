@@ -137,3 +137,5 @@ captures/
 ~$*.docx
 ~$*.xlsx
 ~$*.pptx
+# NCL practice wordlist - do not version (133MB, freely downloadable)
+rockyou.txt
